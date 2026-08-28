@@ -1,0 +1,23 @@
+name: Generate Stats
+on:
+  schedule: [{ cron: "0 */12 * * *" }]
+  workflow_dispatch:
+  push: { branches: ["main"] }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: anuraghazra/github-readme-stats@master
+      - name: Commit to output branch
+        run: |
+          git checkout -B output
+          mkdir -p .
+          curl -o stats.svg "https://github-readme-stats.vercel.app/api?username=NejamulHaque&show_icons=true&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=00D9FF&text_color=e8eeff"
+          curl -o top-langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=NejamulHaque&layout=compact&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=e8eeff"
+          curl -o streak.svg "https://streak-stats.demolab.com/?user=NejamulHaque&hide_border=true&background=0D1117&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=e8eeff&dates=7a8ab0&sideNums=00D9FF&currStreakNum=00D9FF"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add *.svg
+          git commit -m "Update stats" || echo "No changes"
+          git push -f origin output

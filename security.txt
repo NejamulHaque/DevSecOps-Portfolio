@@ -1,0 +1,5 @@
+Contact: https://github.com/NejamulHaque
+Contact: mailto:nejamulhaque.works@example.com
+Preferred-Languages: en
+Canonical: https://nejamulhaque.github.io/devsecops-portfolio/.well-known/security.txt
+Expires: 2027-08-28T07:11:49.000Z
