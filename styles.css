@@ -2416,10 +2416,10 @@ body.light .cmd-backdrop { background: rgba(240, 244, 255, 0.6); }
   border-bottom: 2px solid var(--card-border); padding-bottom: 1rem;
   flex-wrap: wrap; gap: 1rem;
 }
-.audit-doc-brand { display: flex; align-items: center; gap: 0.8rem; }
-.audit-doc-logo { font-size: 1.6rem; color: var(--accent); }
-.audit-doc-brand h4 { font-family: var(--fd); font-size: 0.95rem; font-weight: 800; margin: 0; letter-spacing: 0.05em; }
-.audit-doc-brand small { font-family: var(--fm); font-size: 0.68rem; color: var(--muted); }
+.audit-doc-brand { display: flex; align-items: flex-start; gap: 0.8rem; flex: 1; min-width: 0; }
+.audit-doc-logo { font-size: 1.6rem; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.audit-doc-brand h4 { font-family: var(--fd); font-size: clamp(0.82rem, 3.6vw, 0.95rem); font-weight: 800; margin: 0; letter-spacing: 0.04em; line-height: 1.35; word-break: break-word; }
+.audit-doc-brand small { font-family: var(--fm); font-size: 0.68rem; color: var(--muted); display: block; margin-top: 3px; }
 .audit-score-stamp {
   font-family: var(--fm); font-size: 0.85rem; font-weight: 800; color: var(--accent-3);
   background: rgba(0,255,157,0.12); border: 1px solid var(--accent-3);
@@ -2428,10 +2428,13 @@ body.light .cmd-backdrop { background: rgba(240, 244, 255, 0.6); }
 
 .audit-doc-body h5 { font-family: var(--fd); font-size: 0.88rem; font-weight: 700; color: var(--accent); margin: 0 0 0.5rem; }
 .audit-doc-body p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin: 0; }
-.audit-findings-table-wrap { margin: 1.2rem 0; }
-.audit-table { width: 100%; border-collapse: collapse; font-family: var(--fm); font-size: 0.75rem; }
-.audit-table th { text-align: left; padding: 0.6rem; border-bottom: 1px solid var(--card-border); color: var(--accent); }
-.audit-table td { padding: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text); }
+.audit-findings-table-wrap {
+  margin: 1.2rem 0; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--card-border); border-radius: 8px; background: rgba(0,0,0,0.3);
+}
+.audit-table { width: 100%; min-width: 600px; border-collapse: collapse; font-family: var(--fm); font-size: 0.75rem; }
+.audit-table th { text-align: left; padding: 0.65rem 0.8rem; border-bottom: 1px solid var(--card-border); color: var(--accent); white-space: nowrap; background: rgba(0,229,255,0.04); }
+.audit-table td { padding: 0.65rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text); white-space: nowrap; }
 .pass-pill { color: var(--accent-3); background: rgba(0,255,157,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700; }
 
 /* ============================================================
