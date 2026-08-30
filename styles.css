@@ -415,9 +415,9 @@ input:focus,textarea:focus{border-color:rgba(0,229,255,.4);background:rgba(0,229
 .back-to-top:hover{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#050810;transform:translateY(-3px);box-shadow:var(--glow-c)}
 .cursor-glow{position:fixed;width:350px;height:350px;pointer-events:none;background:radial-gradient(circle,rgba(0,229,255,.08),rgba(123,92,250,.04) 40%,transparent 70%);transform:translate(-50%,-50%);z-index:-1;border-radius:50%}
 .scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0%;z-index:9999;box-shadow:0 0 8px var(--accent)}
-::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:linear-gradient(var(--accent),var(--accent-2));border-radius:10px}
+::-webkit-scrollbar-thumb{background:rgba(100,160,255,0.25);border-radius:10px}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.active{opacity:1;transform:translateY(0)}
 
@@ -2465,13 +2465,15 @@ body.light .cmd-backdrop { background: rgba(240, 244, 255, 0.6); }
   display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem;
 }
 .mesh-pods-row {
-  display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
-  overflow-x: auto; padding: 0.5rem 0;
+  display: flex; align-items: center; justify-content: flex-start; gap: 0.6rem;
+  overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  padding: 0.5rem 0;
 }
+.mesh-pods-row::-webkit-scrollbar { display: none; }
 .k8s-pod-box {
   background: rgba(255,255,255,0.03); border: 1px solid var(--card-border);
-  padding: 0.9rem; border-radius: 10px; display: flex; flex-direction: column; gap: 0.25rem;
-  min-width: 120px; transition: all var(--t);
+  padding: 0.8rem 0.9rem; border-radius: 10px; display: flex; flex-direction: column; gap: 0.25rem;
+  min-width: 128px; flex-shrink: 0; transition: all var(--t);
 }
 .k8s-pod-box.active {
   border-color: var(--accent); background: rgba(0,229,255,0.1);
@@ -2482,14 +2484,14 @@ body.light .cmd-backdrop { background: rgba(240, 244, 255, 0.6); }
   box-shadow: 0 0 16px rgba(255,107,107,0.25);
 }
 .pod-ns { font-family: var(--fm); font-size: 0.62rem; color: var(--accent); text-transform: uppercase; }
-.k8s-pod-box strong { font-family: var(--fd); font-size: 0.8rem; color: var(--text); }
-.k8s-pod-box small { font-size: 0.65rem; color: var(--muted); font-family: var(--fm); }
+.k8s-pod-box strong { font-family: var(--fd); font-size: 0.82rem; color: var(--text); white-space: nowrap; }
+.k8s-pod-box small { font-size: 0.65rem; color: var(--muted); font-family: var(--fm); white-space: nowrap; }
 
 .mesh-conn-arrow {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  color: var(--muted); font-size: 0.75rem; flex-shrink: 0;
+  color: var(--muted); font-size: 0.75rem; flex-shrink: 0; padding: 0 0.2rem;
 }
-.conn-tag { font-family: var(--fm); font-size: 0.58rem; color: var(--accent-3); margin-bottom: 0.2rem; }
+.conn-tag { font-family: var(--fm); font-size: 0.58rem; color: var(--accent-3); margin-bottom: 0.2rem; white-space: nowrap; }
 
 .packet-flight-status {
   background: rgba(0,0,0,0.4); border: 1px solid var(--card-border);
@@ -2510,12 +2512,16 @@ body.light .cmd-backdrop { background: rgba(240, 244, 255, 0.6); }
 }
 .policy-toggle-group { display: flex; flex-direction: column; gap: 0.6rem; }
 .policy-switch-row {
-  display: flex; align-items: center; gap: 0.6rem; font-size: 0.78rem; color: var(--text);
-  cursor: pointer; background: rgba(255,255,255,0.02); padding: 0.5rem 0.7rem; border-radius: 6px;
-  border: 1px solid var(--card-border); transition: all var(--t);
+  display: flex; align-items: center; justify-content: flex-start; gap: 0.75rem;
+  font-size: 0.78rem; color: var(--text); cursor: pointer; background: rgba(255,255,255,0.02);
+  padding: 0.6rem 0.8rem; border-radius: 8px; border: 1px solid var(--card-border);
+  transition: all var(--t); text-align: left;
 }
 .policy-switch-row:hover { background: rgba(0,229,255,0.05); }
-.policy-switch-row input[type="checkbox"] { accent-color: var(--accent); cursor: pointer; }
+.policy-switch-row input[type="checkbox"] {
+  accent-color: var(--accent); cursor: pointer; flex-shrink: 0; width: 16px; height: 16px; margin: 0;
+}
+.policy-switch-row span { flex: 1; text-align: left; line-height: 1.4; }
 
 .probe-actions-group { display: flex; flex-direction: column; gap: 0.6rem; }
 .probe-btns-grid { display: flex; flex-direction: column; gap: 0.5rem; }
