@@ -525,6 +525,8 @@ body.light .support-section{background:rgba(0,20,80,.02)}
   .about-photo-wrap{max-width:420px;margin:0 auto}
   .contact-grid,.project-grid{grid-template-columns:1fr}
   .site-nav{justify-content:flex-start}
+}
+
 .header-actions{display:flex;align-items:center;gap:.5rem;flex-shrink:0}
 
 @media (max-width:700px){
