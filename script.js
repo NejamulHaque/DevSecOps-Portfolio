@@ -3611,13 +3611,13 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
   function renderProbeDetail(probe) {
     if (titleEl) titleEl.textContent = `${probe.target} · ${probe.ip}`;
     bodyEl.innerHTML = `
-      <div style="display:flex; flex-direction:column; gap:0.6rem; font-family:var(--fm); font-size:0.75rem;">
-        <div><strong style="color:var(--accent);">Attacker Headers:</strong><pre class="siem-output" style="margin-top:0.2rem; padding:0.5rem;"><code>${probe.headers}</code></pre></div>
-        <div><strong style="color:var(--accent-warm);">Intercepted Payload:</strong><pre class="siem-output" style="margin-top:0.2rem; padding:0.5rem;"><code>${probe.payload}</code></pre></div>
-        <div><strong style="color:var(--text);">Forensic Assessment:</strong> <span style="color:var(--muted);">${probe.analysis}</span></div>
-        <div style="background:rgba(0,255,157,0.06); padding:0.5rem 0.8rem; border-radius:6px; border:1px solid rgba(0,255,157,0.2);">
+      <div style="display:flex; flex-direction:column; gap:0.6rem; font-family:var(--fm); font-size:0.75rem; width:100%; max-width:100%; overflow:hidden;">
+        <div style="word-break:break-all;"><strong style="color:var(--accent);">Attacker Headers:</strong><pre class="siem-output" style="margin-top:0.2rem; padding:0.5rem; white-space:pre-wrap; word-break:break-all;"><code>${probe.headers}</code></pre></div>
+        <div style="word-break:break-all;"><strong style="color:var(--accent-warm);">Intercepted Payload:</strong><pre class="siem-output" style="margin-top:0.2rem; padding:0.5rem; white-space:pre-wrap; word-break:break-all;"><code>${probe.payload}</code></pre></div>
+        <div style="word-break:break-word;"><strong style="color:var(--text);">Forensic Assessment:</strong> <span style="color:var(--muted);">${probe.analysis}</span></div>
+        <div style="background:rgba(0,255,157,0.06); padding:0.5rem 0.8rem; border-radius:6px; border:1px solid rgba(0,255,157,0.2); word-break:break-all;">
           <strong style="color:var(--accent-3);">Automated Kernel Defense Action:</strong><br>
-          <code style="color:var(--accent-3);">${probe.action}</code>
+          <code style="color:var(--accent-3); word-break:break-all; white-space:pre-wrap;">${probe.action}</code>
         </div>
       </div>
     `;

@@ -76,7 +76,7 @@ body:not(.light) .theme-toggle i.fa-sun{display:none}
 body:not(.light) .theme-toggle i.fa-moon{display:inline-block}
 
 /* ---- Sections ---- */
-.section{width:min(1160px,93vw);margin:0 auto;padding:4.5rem 0}
+.section{width:100%;max-width:1200px;margin:0 auto;padding:4.5rem 1.25rem;box-sizing:border-box}
 .hero.section{padding-top:2rem}
 .section-head{margin-bottom:2.5rem}
 .eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-size:.72rem;font-weight:600;font-family:var(--fm);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
@@ -581,7 +581,7 @@ body.light .support-section{background:rgba(0,20,80,.02)}
 }
 
 @media (max-width:640px){
-  .section{padding:3rem 0}
+  .section{padding:3rem 1rem;width:100%;max-width:100%;box-sizing:border-box}
   .hero-content h1{font-size:clamp(1.85rem,7.5vw,2.4rem);word-break:break-word}
   .hero-badge{font-size:.66rem;flex-wrap:wrap}
   .typewriter-wrap{font-size:.85rem}
@@ -610,7 +610,7 @@ body.light .support-section{background:rgba(0,20,80,.02)}
 }
 
 @media (max-width:480px){
-  .section{padding:2.2rem 0;width:min(1160px,94vw)}
+  .section{padding:2.2rem .75rem;width:100%;max-width:100%;box-sizing:border-box}
   .brand{font-size:.85rem;gap:.4rem}
   .logo-orb{width:26px;height:26px;min-width:26px}
   .section-head h2{font-size:clamp(1.4rem,6.2vw,1.75rem)}
@@ -629,7 +629,7 @@ body.light .support-section{background:rgba(0,20,80,.02)}
   .gh-card-stats{gap:.5rem}
   .gh-stat{padding:.7rem .4rem}
   .actions{grid-template-columns:1fr}
-  .sandbox-container,.netpol-sim-wrap,.compliance-wrap,.stride-dfd-wrap,.honeypot-wrap,.knowledge-mesh-wrap,.audit-report-wrap,.interview-sim-wrap,.onboarding-wrap,.jd-matcher-wrap,.financial-roi-wrap,.defense-sim-container,.threat-globe-wrap{padding:1.1rem .9rem;border-radius:14px}
+  .sandbox-container,.netpol-sim-wrap,.compliance-wrap,.stride-dfd-wrap,.honeypot-wrap,.knowledge-mesh-wrap,.audit-report-wrap,.interview-sim-wrap,.onboarding-wrap,.jd-matcher-wrap,.financial-roi-wrap,.defense-sim-container,.threat-globe-wrap{padding:1.1rem .85rem;border-radius:14px;width:100%;max-width:100%;box-sizing:border-box}
   .jd-score-card{flex-direction:column;text-align:center;gap:.8rem}
   .jd-score-info h4{font-size:.92rem}
   .mesh-insp-head{flex-direction:column;align-items:flex-start;gap:.4rem}
