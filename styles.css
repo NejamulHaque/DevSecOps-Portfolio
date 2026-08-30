@@ -525,12 +525,17 @@ body.light .support-section{background:rgba(0,20,80,.02)}
   .about-photo-wrap{max-width:420px;margin:0 auto}
   .contact-grid,.project-grid{grid-template-columns:1fr}
   .site-nav{justify-content:flex-start}
-}
+.header-actions{display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+
 @media (max-width:700px){
-  .site-header{flex-wrap:wrap;row-gap:.35rem;padding:.55rem .8rem}
-  .site-nav{order:3;flex:1 0 100%;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:5px;scrollbar-width:none}
-  .site-nav a{padding:.55rem .7rem;font-size:.78rem}
-  .theme-toggle{width:40px;height:40px}
+  .site-header{flex-wrap:nowrap;justify-content:space-between;align-items:center;padding:.45rem .8rem;row-gap:0}
+  .header-actions{gap:.35rem}
+  .site-nav{display:none}
+  .nav-burger{display:flex}
+  .theme-toggle,.palette-toggle,.sound-toggle,.nav-burger{width:35px;height:35px;flex-shrink:0}
+  .brand-text{font-size:.88rem}
+  .logo-orb{width:28px;height:28px}
+  .analytics-dashboard-wrap{display:none!important}
   .skills-grid,.github-grid{grid-template-columns:1fr}
   .stack-grid{padding:1.3rem}
   .stack-icons{gap:1.4rem}

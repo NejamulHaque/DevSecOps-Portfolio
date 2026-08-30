@@ -81,39 +81,41 @@
       <a href="#certificates">Training</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
-    </button>
-    <!-- Dynamic Theme Palette Dropdown -->
-    <div class="palette-wrap">
-      <button class="palette-toggle" id="paletteToggle" aria-label="Change color theme">
-        <i class="fa-solid fa-palette"></i>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
       </button>
-      <div class="palette-dropdown" id="paletteDropdown">
-        <div class="palette-option active" data-palette="cyber">
-          <div class="palette-swatch" style="background: linear-gradient(135deg, #00e5ff, #7b5cfa)"></div>
-          Cyber (Default)
-        </div>
-        <div class="palette-option" data-palette="hacker">
-          <div class="palette-swatch" style="background: linear-gradient(135deg, #00ff41, #39ff14)"></div>
-          Hacker
-        </div>
-        <div class="palette-option" data-palette="royal">
-          <div class="palette-swatch" style="background: linear-gradient(135deg, #bf5af2, #ff375f)"></div>
-          Royal
-        </div>
-        <div class="palette-option" data-palette="ember">
-          <div class="palette-swatch" style="background: linear-gradient(135deg, #ff6b35, #ff2d55)"></div>
-          Ember
+      <!-- Dynamic Theme Palette Dropdown -->
+      <div class="palette-wrap">
+        <button class="palette-toggle" id="paletteToggle" aria-label="Change color theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="palette-dropdown" id="paletteDropdown">
+          <div class="palette-option active" data-palette="cyber">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #00e5ff, #7b5cfa)"></div>
+            Cyber (Default)
+          </div>
+          <div class="palette-option" data-palette="hacker">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #00ff41, #39ff14)"></div>
+            Hacker
+          </div>
+          <div class="palette-option" data-palette="royal">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #bf5af2, #ff375f)"></div>
+            Royal
+          </div>
+          <div class="palette-option" data-palette="ember">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #ff6b35, #ff2d55)"></div>
+            Ember
+          </div>
         </div>
       </div>
+      <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound effects" title="Toggle audio feedback">
+        <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-controls="mobileDrawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound effects" title="Toggle audio feedback">
-      <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
-    </button>
-    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-controls="mobileDrawer" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </header>
 
     <!-- Mobile slide-in drawer -->
@@ -147,7 +149,7 @@
           <span class="typewriter" id="typewriter"></span>
         </div>
         <div class="hero-cta">
-          <button class="btn btn-recruiter" id="recruiterModeBtn" type="button"><i class="fa-solid fa-briefcase"></i> 👔 Recruiter Briefing (30s TL;DR)</button>
+          <button class="btn btn-recruiter" id="recruiterModeBtn" type="button"><i class="fa-solid fa-user-tie"></i> Recruiter Briefing (30s TL;DR)</button>
           <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-shield-halved"></i> View Security Tools</a>
           <a class="btn btn-secondary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
           <button class="btn btn-secondary" id="printResumeBtn" type="button" title="Print or save as PDF"><i class="fa-solid fa-file-pdf"></i> Download Resume</button>
