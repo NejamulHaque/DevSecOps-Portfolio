@@ -4226,22 +4226,32 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
     requestAnimationFrame(render);
   }
 
-  canvas.addEventListener("click", (e) => {
+  function handleNodeSelect(clientX, clientY) {
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
-    const clickX = (e.clientX - rect.left) * scaleX;
-    const clickY = (e.clientY - rect.top) * scaleY;
+    const clickX = (clientX - rect.left) * scaleX;
+    const clickY = (clientY - rect.top) * scaleY;
 
     NODES.forEach(node => {
       const dist = Math.hypot(clickX - node.x, clickY - node.y);
-      if (dist < 28) {
+      if (dist < 32) {
         activeNodeId = node.id;
         updateInspector(node);
         CyberAudio.play("click");
       }
     });
+  }
+
+  canvas.addEventListener("click", (e) => {
+    handleNodeSelect(e.clientX, e.clientY);
   });
+
+  canvas.addEventListener("touchstart", (e) => {
+    if (e.touches && e.touches[0]) {
+      handleNodeSelect(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
 
   updateInspector(NODES[0]);
   render();
