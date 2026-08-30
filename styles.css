@@ -605,10 +605,12 @@ body.light .support-section{background:rgba(0,20,80,.02)}
   .back-to-top{right:0.75rem;bottom:calc(3.8rem + env(safe-area-inset-bottom,0px));width:36px;height:36px;z-index:119}
   .copy-toast{max-width:92vw;bottom:calc(4.5rem + env(safe-area-inset-bottom,0px))}
   .threat-table{min-width:760px}
+  .compliance-grid{grid-template-columns:1fr;gap:.75rem}
+  .comp-card{padding:1rem}
 }
 
 @media (max-width:480px){
-  .section{padding:2.75rem 0}
+  .section{padding:2.2rem 0;width:min(1160px,94vw)}
   .brand{font-size:.85rem;gap:.4rem}
   .logo-orb{width:26px;height:26px;min-width:26px}
   .section-head h2{font-size:clamp(1.4rem,6.2vw,1.75rem)}
@@ -627,11 +629,11 @@ body.light .support-section{background:rgba(0,20,80,.02)}
   .gh-card-stats{gap:.5rem}
   .gh-stat{padding:.7rem .4rem}
   .actions{grid-template-columns:1fr}
-  .sandbox-container,.netpol-sim-wrap,.knowledge-mesh-wrap,.audit-report-wrap,.interview-sim-wrap,.onboarding-wrap,.jd-matcher-wrap,.financial-roi-wrap,.defense-sim-container,.threat-globe-wrap{padding:1.15rem;border-radius:14px}
+  .sandbox-container,.netpol-sim-wrap,.compliance-wrap,.stride-dfd-wrap,.honeypot-wrap,.knowledge-mesh-wrap,.audit-report-wrap,.interview-sim-wrap,.onboarding-wrap,.jd-matcher-wrap,.financial-roi-wrap,.defense-sim-container,.threat-globe-wrap{padding:1.1rem .9rem;border-radius:14px}
   .jd-score-card{flex-direction:column;text-align:center;gap:.8rem}
   .jd-score-info h4{font-size:.92rem}
   .mesh-insp-head{flex-direction:column;align-items:flex-start;gap:.4rem}
-  .netpol-sim-head,.knowledge-mesh-head,.financial-roi-head,.onboarding-head,.interview-sim-head,.audit-report-head{flex-direction:column;align-items:flex-start;gap:.5rem}
+  .netpol-sim-head,.knowledge-mesh-head,.financial-roi-head,.onboarding-head,.interview-sim-head,.audit-report-head,.compliance-head{flex-direction:column;align-items:flex-start;gap:.5rem}
   .roi-head-actions{width:100%;justify-content:space-between}
   .roi-currency-selector{flex-wrap:wrap}
 }
@@ -1961,10 +1963,11 @@ body.light .cmd-backdrop { background: rgba(240, 244, 255, 0.6); }
   box-shadow: 0 0 20px rgba(0,229,255,0.15);
 }
 .comp-score-ring {
-  font-family: var(--fd); font-size: 1.3rem; font-weight: 800; color: var(--accent-3);
+  font-family: var(--fm); font-size: 1.22rem; font-weight: 800; color: var(--accent-3);
+  letter-spacing: -0.01em;
 }
-.comp-info h4 { font-family: var(--fd); font-size: 0.88rem; font-weight: 700; margin: 0 0 0.2rem; }
-.comp-info p { font-size: 0.75rem; color: var(--muted); margin: 0; line-height: 1.45; }
+.comp-info h4 { font-family: var(--fd); font-size: 0.9rem; font-weight: 700; margin: 0 0 0.25rem; }
+.comp-info p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.45; }
 
 .comp-detail-box {
   background: rgba(3,6,14,0.9); border: 1px solid var(--card-border);
