@@ -600,16 +600,20 @@ body.light .support-section{background:rgba(0,20,80,.02)}
     bottom:calc(0.75rem + env(safe-area-inset-bottom,0px));left:0.75rem;
     width:38px;height:38px;min-width:38px;min-height:38px;padding:0;
     font-size:.85rem;border-radius:50%;display:grid;place-items:center;
-    z-index:120;box-shadow:0 4px 18px rgba(0,255,157,0.4);
+    z-index:120;background:rgba(10,16,32,0.92);border:1.5px solid var(--accent-3);
+    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:var(--accent-3);
+    box-shadow:0 4px 18px rgba(0,0,0,0.6),0 0 12px rgba(0,255,157,0.25);
   }
   .support-fab-label{display:none!important}
   .copilot-fab{
     bottom:calc(0.75rem + env(safe-area-inset-bottom,0px));right:0.75rem;
     width:40px;height:40px;min-width:40px;min-height:40px;padding:0;
     border-radius:50%;display:grid;place-items:center;
-    z-index:120;box-shadow:0 4px 18px rgba(0,229,255,0.45);
+    z-index:120;background:rgba(10,16,32,0.92);border:1.5px solid var(--accent);
+    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    box-shadow:0 4px 18px rgba(0,0,0,0.6),0 0 12px rgba(0,229,255,0.25);
   }
-  .copilot-fab-orb{width:100%;height:100%;font-size:.9rem;background:transparent;color:#000}
+  .copilot-fab-orb{width:100%;height:100%;font-size:.92rem;background:transparent;color:var(--accent);display:grid;place-items:center}
   .copilot-fab-badge{display:none!important}
   .copilot-modal{position:fixed;bottom:calc(0.75rem + env(safe-area-inset-bottom,0px));left:0.75rem;right:0.75rem;width:calc(100vw - 1.5rem);max-width:440px;height:min(560px,84vh);max-height:84vh;border-radius:16px;z-index:10000;margin:0 auto}
   .back-to-top{right:0.75rem;bottom:calc(3.6rem + env(safe-area-inset-bottom,0px));width:34px;height:34px;font-size:.75rem;z-index:119}
@@ -1846,15 +1850,20 @@ body.light .cmd-backdrop { background: rgba(240, 244, 255, 0.6); }
   padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: 0.45rem;
   font-size: 0.78rem; color: var(--muted); line-height: 1.5;
 }
-.whys-list li strong { color: var(--text); }
 .capa-list {
-  list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;
+  list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.65rem;
 }
 .capa-list li {
-  font-size: 0.78rem; color: var(--muted); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.45;
+  font-size: 0.78rem; color: var(--muted); line-height: 1.55; position: relative; padding-left: 1.5rem; display: block;
 }
-.capa-list li i { color: var(--accent-3); margin-top: 0.2rem; font-size: 0.75rem; flex-shrink: 0; }
+.capa-list li i {
+  position: absolute; left: 0; top: 0.22rem; color: var(--accent-3); font-size: 0.75rem;
+}
 .capa-list li strong { color: var(--text); }
+.capa-list li code {
+  font-family: var(--fm); font-size: 0.72rem; color: var(--accent); background: rgba(0,229,255,0.08);
+  padding: 0.1rem 0.35rem; border-radius: 4px; border: 1px solid rgba(0,229,255,0.2); word-break: break-all;
+}
 
 /* ============================================================
    FEATURE: DEVSECOPS MATURITY & ROI CALCULATOR
