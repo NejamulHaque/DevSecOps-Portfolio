@@ -2099,11 +2099,11 @@ const CyberAudio = (function() {
 
   const KNOWLEDGE = [
     {
-      keywords: ["police", "up police", "amroha", "apcsip", "internship", "cyber cell", "forensics"],
+      keywords: ["police", "up police", "amroha", "apcsip", "internship", "cyber cell", "forensics", "law"],
       answer: "During the **APCSIP-2026 Cyber Security Program @ UP Police (Amroha Cyber Cell)**, I analyzed real-world cybercrime mechanisms, incident log traces, and digital forensics workflows under law enforcement frameworks. I audited server logs for brute-force attacks and network reconnaissance, converting findings directly into automated Linux/Bash/Python tools for server hardening."
     },
     {
-      keywords: ["kubeshield", "kubernetes", "k8s", "admission", "controller", "webhook", "pod security"],
+      keywords: ["kubeshield", "kubernetes", "k8s", "admission", "controller", "webhook", "pod security", "pss"],
       answer: "**KubeShield** is my custom Kubernetes Dynamic Admission Webhook written in Go/Rego. It intercepts pod creation manifests before scheduling, validates against the CIS Kubernetes Benchmark, blocks privileged containers running as root (UID 0), and auto-injects read-only root filesystems and non-root UID 10001."
     },
     {
@@ -2111,11 +2111,31 @@ const CyberAudio = (function() {
       answer: "**GitSLSA** is my SLSA Level 3 Software Supply Chain Security Pipeline. It generates verifiable SPDX Software Bill of Materials (SBOMs) using Syft, keylessly signs container images via Cosign and Sigstore OIDC, and enforces cryptographic admission gates at deployment time."
     },
     {
+      keywords: ["gitshield", "secret", "entropy", "shannon", "pre-commit", "gitleaks", "tokens"],
+      answer: "**GitShield** is my standalone pre-commit secret detection CLI engine combining Shannon entropy analysis with 40+ high-fidelity RegEx patterns. It prevents API keys, private keys, AWS secrets, and JWT tokens from ever being committed to git staging."
+    },
+    {
+      keywords: ["calico", "networkpolicy", "network policy", "netpol", "mesh", "east-west"],
+      answer: "**Calico Zero-Trust NetworkPolicy Visualizer** simulates Kubernetes container namespace isolation and micro-segmentation. It models default-deny ingress/egress rules, mTLS microservice communication, and drops unauthorized lateral pivots into backend databases."
+    },
+    {
+      keywords: ["ats", "job", "jd", "matcher", "keywords", "hiring", "fit"],
+      answer: "My **Job Description (JD) & ATS Keyword Matcher** scans real job descriptions against my verified technical competencies (Kubernetes PSS, Docker non-root, Terraform IaC, AWS IAM, GitHub Actions CI/CD) and computes a live candidate match score with 1-click tailored screening pitch generation."
+    },
+    {
+      keywords: ["stride", "threat model", "dfd", "data flow", "threats"],
+      answer: "My **STRIDE Threat Modeling Architecture** maps data flows across Cloudflare Edge WAF, AWS API Gateways, EKS clusters, and Vault databases, documenting mitigations against Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege."
+    },
+    {
+      keywords: ["honeypot", "deception", "shodan", "fuzz", "canary", "trap"],
+      answer: "My **Interactive Honeypot Deception Grid** streams real-time threat telemetry from decoy endpoints (`wp-login.php`, `.env`, Cowrie SSH on port 2222), showing automated kernel-level IP dropping via iptables and forensic log correlation."
+    },
+    {
       keywords: ["haque and sons", "startup", "haque", "sons", "testbed", "collabsheets", "proresume", "nestfy"],
       answer: "**Haque And Sons** (`haqueandsons.vercel.app`) is my personal software venture where I shipped 3 production SaaS applications (CollabSheets, ProResume-Builder, Nestfy). I used it as the real-world production testbed for rolling out GitShield, GitSLSA, and KubeShield — proving that zero-trust security and sub-30s CI build velocity can thrive together."
     },
     {
-      keywords: ["hire", "why hire", "placement", "skills", "job", "intern", "role", "looking"],
+      keywords: ["hire", "why hire", "placement", "skills", "candidate", "role", "looking", "fresher", "intern"],
       answer: "I bring a dual advantage to DevSecOps: I have **built & shipped production SaaS applications** (React/Next.js/Node/PostgreSQL) *and* engineered **automated security tooling & system defense**. I don't treat security as an auditor's checklist; I embed automated SAST, container checks, and least-privilege boundaries directly into developer pipelines."
     },
     {
@@ -2123,30 +2143,52 @@ const CyberAudio = (function() {
       answer: "**Sentinel Daemon** is my systemd-managed Python daemon that tails Linux auth logs in real-time with zero human in the loop. It correlates failed login bursts using a regex state machine and programmatically drops attacker IPs directly in the kernel via iptables, averaging 1.8ms detection-to-drop latency."
     },
     {
-      keywords: ["philosophy", "shift left", "ci/cd", "devsecops", "security"],
+      keywords: ["philosophy", "shift left", "ci/cd", "devsecops", "security", "pipeline"],
       answer: "My philosophy is **'Shifting Security Left'** — validating infrastructure and source code before it reaches production. Security should be a built-in infrastructure boundary (pre-commit hooks, container CVE scanning, SAST rules, cryptographic SLSA provenance), not a late-stage patch applied after an incident."
     },
     {
-      keywords: ["irus", "ai", "platform", "chat"],
-      answer: "**Irus AI** is a production-grade personal AI assistant platform deployed with a hardened DevSecOps CI/CD pipeline running Gitleaks, Bandit, pip-audit, Trivy, and Pytest. It supports streaming LLM chat, live web search, memory, and in-memory document intelligence."
+      keywords: ["ebpf", "syscall", "kernel", "tracee", "tetragon", "execve"],
+      answer: "My **eBPF Kernel Syscall Probe** sandbox models kernel-level observability for intercepted system calls (`sys_enter_execve`, `sys_enter_connect`), detecting interactive reverse shells and unauthorized crypto-miners in real time without modifying userspace application code."
     },
     {
-      keywords: ["contact", "email", "reach", "hire", "linkedin", "phone"],
-      answer: "You can reach Nejamul via the **Contact Form** on this site, or directly connect via LinkedIn at `linkedin.com/in/NejamulHaque` and GitHub at `github.com/NejamulHaque`."
+      keywords: ["terraform", "iac", "opentofu", "linter", "cis", "remediation"],
+      answer: "My **Terraform / OpenTofu IaC Linter & Auto-Fixer** statically analyzes HCL configuration files against CIS AWS Foundation Benchmarks, instantly identifying insecure S3 ACLs, open security groups (0.0.0.0/0), and unencrypted volumes with 1-click automated remediation."
+    },
+    {
+      keywords: ["roi", "cost", "financial", "breach", "savings", "calculator"],
+      answer: "My **DevSecOps Financial ROI Calculator** models the cost-of-breach savings derived from shifting security left — demonstrating an estimated **₹1.84M+ / $22,000+** in annual breach prevention savings through automated pre-commit and admission-time gate enforcement."
+    },
+    {
+      keywords: ["contact", "email", "reach", "hire", "linkedin", "phone", "resume"],
+      answer: "You can reach Nejamul via the **Contact Form** on this site, or directly connect via LinkedIn at `linkedin.com/in/NejamulHaque` and GitHub at `github.com/NejamulHaque`. You can also click the **Recruiter Briefing** button above for a 30s candidate dossier!"
     }
   ];
 
   function openCopilot() {
     modal.classList.add("open");
+    fab.style.transform = "scale(0.85)";
     setTimeout(() => input?.focus(), 150);
     CyberAudio.play("blip");
   }
   function closeCopilot() {
     modal.classList.remove("open");
+    fab.style.transform = "";
   }
 
   fab.addEventListener("click", openCopilot);
   if (closeBtn) closeBtn.addEventListener("click", closeCopilot);
+
+  // Close modal when tapping outside or pressing Escape
+  document.addEventListener("click", (e) => {
+    if (modal.classList.contains("open") && !modal.contains(e.target) && !fab.contains(e.target)) {
+      closeCopilot();
+    }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("open")) {
+      closeCopilot();
+    }
+  });
 
   function appendMessage(text, isUser = false) {
     const msg = document.createElement("div");
@@ -2166,7 +2208,7 @@ const CyberAudio = (function() {
     appendMessage(query, true);
     CyberAudio.play("click");
 
-    let reply = "I'm trained on Nejamul's DevSecOps portfolio. You can ask about his **UP Police Cyber Internship**, **Sentinel Daemon**, **CI/CD security philosophy**, or **2026-2027 placement readiness**!";
+    let reply = "I'm trained on Nejamul's DevSecOps portfolio. You can ask about his **UP Police Cyber Internship**, **KubeShield**, **GitSLSA**, **Sentinel Daemon**, **STRIDE Threat Model**, or **2026-2027 placement readiness**!";
     for (const k of KNOWLEDGE) {
       if (k.keywords.some(kw => q.includes(kw))) {
         reply = k.answer;
@@ -2181,15 +2223,15 @@ const CyberAudio = (function() {
       let idx = 0;
       CyberAudio.play("blip");
       const interval = setInterval(() => {
-        idx += 3;
+        idx += 4;
         bubble.innerHTML = reply.slice(0, idx);
         msgContainer.scrollTop = msgContainer.scrollHeight;
         if (idx >= reply.length) {
           clearInterval(interval);
           bubble.innerHTML = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         }
-      }, 15);
-    }, 250);
+      }, 12);
+    }, 200);
   }
 
   if (form) {
