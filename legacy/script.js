@@ -328,32 +328,6 @@ renderWriteups();
 //  CASE STUDY DETAIL PAGES (deep-linkable modal views)
 // ============================================================
 const CASE_STUDIES = {
-  : {
-    category: "01 / Kubernetes Security", status: "In Progress / Active Dev",
-    title: " — Dynamic K8s Admission Controller & Policy Enforcer",
-    tags: ["Go", "Kubernetes API", "OPA Rego", "CIS Benchmark", "Docker", "DevSecOps"],
-    link: "https://github.com/NejamulHaque",
-    sections: [
-      { label: "Overview", icon: "fa-circle-info", html: "A custom Kubernetes Validating & Mutating Admission Webhook that intercepts pod creation requests, validates specs against the CIS Kubernetes Benchmark, and automatically injects security contexts (non-root UID 10001, read-only root filesystems) before pods reach the kube-scheduler." },
-      { label: "The Problem", icon: "fa-triangle-exclamation", html: "Developers deploying container workloads frequently run pods as <code>root</code> (UID 0), omit CPU/RAM memory limits, or use mutable image tags like <code>:latest</code>. This exposes enterprise clusters to container escape vulnerabilities (CVE-2024-*), noisy-neighbor starvation, and privilege escalation." },
-      { label: "The Approach", icon: "fa-diagram-project", html: "Built a Go-based webhook service registered with the Kubernetes API server via <code>ValidatingWebhookConfiguration</code> and <code>MutatingWebhookConfiguration</code>. It executes Rego policies to reject privileged manifests and generates JSON Patch mutations that inject <code>securityContext.runAsNonRoot: true</code>, <code>readOnlyRootFilesystem: true</code>, and drop all ambient Linux capabilities." },
-      { label: "Production Testbed (Haque And Sons)", icon: "fa-rocket", html: "Tested across microservices at <strong>Haque And Sons</strong> (CollabSheets, ProResume, Nestfy), ensuring zero false-positive rejections for legitimate background workers while maintaining sub-15ms admission webhook evaluation latency." },
-      { label: "Measured Impact", icon: "fa-chart-line", html: "Eliminated <strong>100% of privileged pod deployments</strong> across test clusters, reduced container attack surface to read-only memory spaces, and verified 100% adherence to Kubernetes Pod Security Standards (Restricted profile)." }
-    ]
-  },
-  : {
-    category: "02 / Supply Chain Security", status: "In Progress / Active Dev",
-    title: " — SLSA Level 3 Supply Chain Security & SBOM Pipeline",
-    tags: ["Cosign", "Sigstore", "Syft", "SLSA L3", "GitHub Actions", "OIDC", "Trivy"],
-    link: "https://github.com/NejamulHaque",
-    sections: [
-      { label: "Overview", icon: "fa-circle-info", html: "An enterprise-grade Software Supply Chain security pipeline that generates machine-readable SPDX Software Bill of Materials (SBOMs), signs container images keylessly with Cosign and Sigstore OIDC, and enforces cryptographic admission verification." },
-      { label: "The Problem", icon: "fa-triangle-exclamation", html: "Supply chain attacks (like SolarWinds and Codecov) inject malicious code into upstream dependencies or tamper with build artifacts. Without cryptographic provenance and SBOMs, organizations cannot verify if production binaries match approved source code." },
-      { label: "The Approach", icon: "fa-diagram-project", html: "Architected a GitHub Actions workflow using <strong>Syft</strong> to generate SPDX SBOMs, <strong>Trivy</strong> for CVE threshold gating, and <strong>Cosign</strong> with Sigstore/Fulcio for keyless OIDC container signing. Deployed admission verification policies that reject any image lacking a valid cryptographic attestation." },
-      { label: "Production Testbed (Haque And Sons)", icon: "fa-rocket", html: "Implemented across production build pipelines at <strong>Haque And Sons</strong>, achieving <strong>SLSA Level 3 compliance</strong> while maintaining sub-30 second average build and attestation overhead." },
-      { label: "Measured Impact", icon: "fa-chart-line", html: "<strong>100% of container images cryptographically signed</strong>, zero unverified images permitted in runtime clusters, and complete dependency provenance tracking for rapid zero-day vulnerability triage." }
-    ]
-  },
   irusai: {
     category: "01 / Full-Stack AI Platform", status: "Live",
     title: "Irus AI — Personal AI Command Center",
@@ -2292,9 +2266,7 @@ const CyberAudio = (function() {
       
       const paneMap = {
         gitshield: "paneGitshield",
-        threatparser: "paneThreatparser",
-        : "pane",
-        : "pane"
+        threatparser: "paneThreatparser"
       };
       const targetPane = document.getElementById(paneMap[tab.dataset.tab]);
       if (targetPane) targetPane.classList.add("active");
@@ -4218,9 +4190,9 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
   let activeNodeId = 1;
 
   const NODES = [
-    { id: 1, label: "Linux Kernel Hardening", x: 90, y: 170, color: "#00e5ff", tag: "DOMAIN 01 · FOUNDATIONAL HARDENING", status: "Production Verified",
+    { id: 1, label: "Linux Kernel Hardening", x: 90, y: 170, color: "#00e5ff", tag: "DOMAIN 01 · FOUNDATIONAL HARDENING", status: "Simulation / Lab demo",
       desc: "Linux systems administration (Ubuntu/Debian), POSIX permissions, restricted mounts (/tmp noexec), SSH Ed25519 key enforcement, and systemd isolation services deployed in UP Police APCSIP-2026." },
-    { id: 2, label: "Container Isolation", x: 210, y: 100, color: "#00ff9d", tag: "DOMAIN 02 · RUNTIME PACKAGING", status: "Production Verified",
+    { id: 2, label: "Container Isolation", x: 210, y: 100, color: "#00ff9d", tag: "DOMAIN 02 · RUNTIME PACKAGING", status: "Simulation / Lab demo",
       desc: "Docker multi-stage builds, non-root user enforcement (UID 10001), readOnlyRootFilesystem, and distroless minimal base images tested across Haque And Sons microservices." },
     { id: 3, label: "Kubernetes PSS & Admission", x: 370, y: 70, color: "#00e5ff", tag: "DOMAIN 03 · ORCHESTRATION DEFENSE", status: "In Progress / Active Dev",
       desc: " Go/Rego Validating & Mutating Admission Webhook enforcing Restricted Pod Security Standards (PSS), dropping ALL capabilities, and rejecting mutable :latest tags." },
@@ -4228,9 +4200,9 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
       desc: " automated GitHub Actions pipeline generating tamper-evident SPDX SBOMs via Syft and signing container digests using Sigstore / Fulcio keyless OIDC certificates." },
     { id: 5, label: "eBPF Runtime Defense", x: 670, y: 170, color: "#ff6b6b", tag: "DOMAIN 05 · KERNEL OBSERVABILITY", status: "Benchmarked",
       desc: "Linux kernel tracepoint hooks (sys_enter_execve, sys_enter_connect) intercepting container escapes and unauthorized child process execution with <0.5ms SIGKILL response." },
-    { id: 6, label: "Cloud Security (AWS/WAF)", x: 370, y: 270, color: "#ff9f0a", tag: "DOMAIN 06 · PERIMETER & EDGE", status: "Production Verified",
+    { id: 6, label: "Cloud Security (AWS/WAF)", x: 370, y: 270, color: "#ff9f0a", tag: "DOMAIN 06 · PERIMETER & EDGE", status: "Simulation / Lab demo",
       desc: "Cloudflare Edge WAF OWASP CRS integration, AWS IAM least-privilege role boundaries, EKS private endpoint networking, and Terraform IaC security auditing." },
-    { id: 7, label: "Forensics & SIEM Parser", x: 770, y: 170, color: "#00ff9d", tag: "DOMAIN 07 · INCIDENT RESPONSE", status: "Production Verified",
+    { id: 7, label: "Forensics & SIEM Parser", x: 770, y: 170, color: "#00ff9d", tag: "DOMAIN 07 · INCIDENT RESPONSE", status: "Simulation / Lab demo",
       desc: "Threat Intelligence Log Parser correlating real-time ingress access logs, enriching IP reputations against abuse feeds, and formatting SIEM-ready JSON output." }
   ];
 
