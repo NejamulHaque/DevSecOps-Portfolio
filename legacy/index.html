@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Nejamul Haque — DevSecOps & Cloud Security Engineer. Shifting security left with automated tooling, CI/CD hardening, and cloud-native defense." />
+  <meta name="theme-color" content="#050810" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nejamul Haque | DevSecOps & Cloud Security Engineer" />
+  <meta property="og:description" content="Shifting security left — automated security controls, CI/CD hardening, and cloud-native defense. APCSIP-2026 Cyber Security Intern @ UP Police." />
+  <meta property="og:url" content="https://nejamulhaque.github.io/devsecops-portfolio/" />
+  <meta property="og:image" content="https://nejamulhaque.github.io/devsecops-portfolio/assets/favicon/android-chrome-512x512.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nejamul Haque | DevSecOps & Cloud Security Engineer" />
+  <meta name="twitter:description" content="Shifting security left — automated security controls, CI/CD hardening, and cloud-native defense. APCSIP-2026 Cyber Security Intern @ UP Police." />
+  <meta name="twitter:image" content="https://nejamulhaque.github.io/devsecops-portfolio/assets/favicon/android-chrome-512x512.png" />
+
+  <!-- Favicons (generated set — see assets/favicon/) -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon-48x48.png" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#050810" />
+  <meta name="msapplication-TileImage" content="assets/favicon/android-chrome-192x192.png" />
+
+  <title>Nejamul Haque | DevSecOps & Cloud Security Engineer</title>
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https://avatars.githubusercontent.com https://raw.githubusercontent.com https://streak-stats.demolab.com https://github-readme-activity-graph.vercel.app https://api.qrserver.com https://img.shields.io;
+    connect-src 'self' https://api.github.com https://formspree.io https://github-readme-activity-graph.vercel.app;
+    form-action 'self' https://formspree.io;
+    base-uri 'self';
+    object-src 'none';
+    frame-src 'none';
+    upgrade-insecure-requests;
+  " />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">NH_DEVSECOPS</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <canvas id="particles"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="logo-orb"><img src="assets/favicon/android-chrome-192x192.png" alt="Nejamul Haque" /></span>
+      <span class="brand-text">Nejamul<span>Haque</span></span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Primary">
+      <span class="nav-glider" id="navGlider" aria-hidden="true"></span>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#timeline">Journey</a>
+      <a href="#articles">Write-ups</a>
+      <a href="#achievements">Practice</a>
+      <a href="#projects">Projects</a>
+      <a href="#threatmodel">Threat Model</a>
+      <a href="#github">GitHub</a>
+      <a href="#certificates">Training</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+      </button>
+      <!-- Dynamic Theme Palette Dropdown -->
+      <div class="palette-wrap">
+        <button class="palette-toggle" id="paletteToggle" aria-label="Change color theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="palette-dropdown" id="paletteDropdown">
+          <div class="palette-option active" data-palette="cyber">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #00e5ff, #7b5cfa)"></div>
+            Cyber (Default)
+          </div>
+          <div class="palette-option" data-palette="hacker">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #00ff41, #39ff14)"></div>
+            Hacker
+          </div>
+          <div class="palette-option" data-palette="royal">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #bf5af2, #ff375f)"></div>
+            Royal
+          </div>
+          <div class="palette-option" data-palette="ember">
+            <div class="palette-swatch" style="background: linear-gradient(135deg, #ff6b35, #ff2d55)"></div>
+            Ember
+          </div>
+        </div>
+      </div>
+      <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound effects" title="Toggle audio feedback">
+        <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-controls="mobileDrawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+    <!-- Mobile slide-in drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-logo">NH_DEVSECOPS</span>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="drawer-nav" id="drawerNav" aria-label="Mobile"></nav>
+    <div class="drawer-foot">
+      <span class="drawer-avail">Open to Internship &amp; Placement Roles — 2026–2027</span>
+      <div class="drawer-socials">
+        <a href="https://github.com/NejamulHaque" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/NejamulHaque" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://nejamulhaque.medium.com/" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="section hero" id="home">
+      <div class="hero-content reveal">
+        <div class="hero-badge">APCSIP‑2026 Cyber Security Intern @ UP Police &nbsp;·&nbsp; B.Tech CSE — Final Year</div>
+        <h1>Hardening <span class="gradient-text">infrastructure</span><br /><span class="glitch" data-text="before it ships.">before it ships.</span></h1>
+        <p class="hero-subtext">I'm <strong>Nejamul Haque</strong> — a DevSecOps &amp; Cloud Security Engineer embedding automated security controls, container checks, and static analysis directly into CI/CD pipelines. Security is an infrastructure boundary, not a late-stage patch.</p>
+        <div class="typewriter-wrap">
+          <span class="typewriter-prefix">$ role —</span>
+          <span class="typewriter" id="typewriter"></span>
+        </div>
+        <div class="hero-cta">
+          <button class="btn btn-recruiter" id="recruiterModeBtn" type="button"><i class="fa-solid fa-user-tie"></i> Recruiter Briefing (30s TL;DR)</button>
+          <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-shield-halved"></i> View Security Tools</a>
+          <a class="btn btn-secondary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+          <button class="btn btn-secondary" id="printResumeBtn" type="button" title="Print or save as PDF"><i class="fa-solid fa-file-pdf"></i> Download Resume</button>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="photo-card-3d glass terminal-mock" id="photoCard3d">
+          <div class="term-bar">
+            <span class="term-dot red"></span><span class="term-dot yellow"></span><span class="term-dot green"></span>
+            <span class="term-title">root@sentinel: ~</span>
+          </div>
+          <div class="term-body" id="termBody">
+            <div class="term-output" id="termOutput">
+              <div class="term-line"><span class="term-prompt">root@sentinel:~$</span> whoami</div>
+              <div class="term-out">nejamul-haque · devsecops-engineer</div>
+              <div class="term-line"><span class="term-prompt">root@sentinel:~$</span> type 'help' for available commands</div>
+            </div>
+            <div class="term-input-line">
+              <span class="term-prompt">root@sentinel:~$</span>
+              <input type="text" id="termInput" class="term-input" autocomplete="off" spellcheck="false" aria-label="Terminal input" />
+            </div>
+          </div>
+          <div class="photo-scan"></div>
+          <span class="photo-hud-corner tl"></span><span class="photo-hud-corner tr"></span>
+          <span class="photo-hud-corner bl"></span><span class="photo-hud-corner br"></span>
+        </div>
+
+        <div class="stats-mini">
+          <div class="stat-mini glass"><div class="stat-number" data-target="3">0</div><p>Security Tools Built</p></div>
+          <div class="stat-mini glass"><div class="stat-number" data-target="3">0</div><p>Production SaaS Apps Shipped</p></div>
+          <div class="stat-mini glass"><div class="stat-number" data-target="6">0</div><p>STRIDE Controls Modeled</p></div>
+          <div class="stat-mini glass"><div class="stat-number" data-target="1">0</div><p>Law Enforcement Cyber Program</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (image restored, like previous) -->
+    <section class="section" id="about">
+      <div class="section-head reveal"><p class="eyebrow">About Me</p><h2>Shifting security left, with a full-stack developer's eye</h2></div>
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo-border"></div>
+          <img id="aboutPhoto" src="assets/profile.png" alt="Nejamul Haque" loading="lazy" />
+          <div class="photo-hud">
+            <div class="photo-hud-name">Nejamul Haque</div>
+            <div class="photo-hud-title">DEVSECOPS · CLOUD SECURITY</div>
+          </div>
+          <span class="photo-hud-corner tl"></span><span class="photo-hud-corner tr"></span>
+          <span class="photo-hud-corner bl"></span><span class="photo-hud-corner br"></span>
+        </div>
+        <div class="about-card glass reveal">
+          <p>I'm <strong>Nejamul Haque</strong> — a final-year B.Tech Computer Science student (2023–2027) focused on DevSecOps, Cloud Security, and Infrastructure Engineering, with an industry placement / internship-ready target for 2026–2027.</p>
+          <p>My working philosophy is <strong>"Shifting Security Left"</strong> — embedding automated security controls, container checks, and static analysis directly into CI/CD pipelines so code is hardened before it's ever deployed. Security is an infrastructure boundary, not a late-stage patch.</p>
+          <p>Through the <strong>Amroha Police Cyber Security Program (APCSIP‑2026)</strong>, I analyzed real-world cybercrime mechanisms, incident log traces, and digital forensics workflows under law enforcement frameworks — auditing server logs for brute-force attempts and reconnaissance footprints, then turning those findings into automated Linux/Bash/Python tools for server hardening.</p>
+          <p>I also run <a href="https://haqueandsons.vercel.app" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;"><strong>Haque And Sons</strong></a>, shipping production SaaS apps (CollabSheets, ProResume-Builder, Nestfy) with React, Next.js, WebSockets and PostgreSQL. I used this startup environment as my <strong>production testbed</strong> to benchmark automated security controls (KubeShield, GitSLSA, and GitShield) against real-world developer workflows — proving that zero-trust Kubernetes admission, SLSA Level 3 supply chain attestation, and sub-30s CI build velocity work seamlessly together.</p>
+        </div>
+      </div>
+
+      <!-- 30-60-90 DAY ONBOARDING ROADMAP FOR HIRING MANAGERS -->
+      <div class="onboarding-wrap glass reveal" id="onboardingPlan">
+        <div class="onboarding-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Hiring Manager Action Plan</div>
+            <h3 class="onboarding-title">30-60-90 Day DevSecOps Engineering Impact Roadmap</h3>
+          </div>
+          <span class="onboarding-badge"><i class="fa-solid fa-calendar-check"></i> Day-1 Contribution Ready</span>
+        </div>
+        <p class="onboarding-desc">A structured blueprint outlining how I will integrate with your engineering team, audit existing security postures, and deliver measurable shift-left automated gates within the first quarter.</p>
+
+        <div class="onboarding-grid">
+          <div class="onboard-card glass active" data-phase="30">
+            <div class="onboard-phase-tag">Days 1–30</div>
+            <h4>Audit, Visibility &amp; Pipeline Discovery</h4>
+            <p>Map out all CI/CD pipelines, run non-blocking security audits, and inventory cloud IAM perimeters.</p>
+            <span class="onboard-status">Objective: Baseline Risk Map</span>
+          </div>
+
+          <div class="onboard-card glass" data-phase="60">
+            <div class="onboard-phase-tag">Days 31–60</div>
+            <h4>Shift-Left Automated Gates</h4>
+            <p>Deploy GitShield pre-commit hooks, enforce Cosign SLSA container image signing, and add KubeShield non-root admission.</p>
+            <span class="onboard-status">Objective: Zero-Leak CI/CD</span>
+          </div>
+
+          <div class="onboard-card glass" data-phase="90">
+            <div class="onboard-phase-tag">Days 61–90</div>
+            <h4>Zero-Trust &amp; Autonomous Scale</h4>
+            <p>Implement automated Terraform drift detection, Calico network policies, and host a dev workshop on secure architecture.</p>
+            <span class="onboard-status">Objective: Continuous Governance</span>
+          </div>
+        </div>
+
+        <div class="onboard-detail-box glass" id="onboardDetailBox">
+          <div class="onboard-detail-head">
+            <h4 id="onboardPhaseTitle">Phase 1: Days 1–30 — Visibility, Tooling Audit &amp; Pipeline Discovery</h4>
+            <span class="onboard-kpi" id="onboardPhaseKpi">KPI: 100% CI/CD Repos Mapped · 0 Production Downtime</span>
+          </div>
+          <div class="onboard-deliverables" id="onboardDeliverables">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section-head reveal"><p class="eyebrow">Experience</p><h2>Real-world security work, under law enforcement frameworks</h2></div>
+
+      <article class="exp-card glass reveal">
+        <div class="exp-header">
+          <div class="exp-logo">UP</div>
+          <div class="exp-meta">
+            <h3 class="exp-company">Amroha Police Cyber Security Program — UP Police</h3>
+            <p class="exp-role">Cyber Security Intern — APCSIP‑2026</p>
+            <div class="exp-badges">
+              <span class="exp-badge badge-aicte">Law Enforcement Program</span>
+              <span class="exp-badge badge-icac">Digital Forensics Track</span>
+              <span class="exp-badge badge-google">Incident Response</span>
+            </div>
+          </div>
+          <div class="exp-date"><div class="exp-duration">2026</div><div class="exp-period">APCSIP</div></div>
+        </div>
+        <div class="exp-body">
+          <p class="exp-description">Worked within the Amroha Police Cyber Security Internship Program, analyzing real-world cybercrime mechanisms, incident log traces, and digital forensics workflows under active law enforcement frameworks — then converting those findings into automated tooling for server hardening and access isolation.</p>
+          <div class="exp-highlights">
+            <div class="exp-highlight-item"><i class="fa-solid fa-check"></i>Audited server logs for brute-force access attempts and network reconnaissance footprints</div>
+            <div class="exp-highlight-item"><i class="fa-solid fa-check"></i>Assisted in digital forensics workflows and incident log trace analysis</div>
+            <div class="exp-highlight-item"><i class="fa-solid fa-check"></i>Built automated Linux/Bash/Python tools for server hardening from live threat findings</div>
+            <div class="exp-highlight-item"><i class="fa-solid fa-check"></i>Designed dynamic access isolation rules to contain compromised or suspicious hosts</div>
+          </div>
+          <div class="exp-tech"><span>Linux</span><span>Bash</span><span>Python</span><span>Log Forensics</span><span>iptables</span><span>Regex</span><span>Incident Response</span><span>Fail2ban</span></div>
+        </div>
+      </article>
+
+      <article class="exp-card glass reveal">
+        <div class="exp-header">
+          <div class="exp-logo">HS</div>
+          <div class="exp-meta">
+            <h3 class="exp-company">Haque And Sons</h3>
+            <p class="exp-role">Self-Employed Full-Stack Developer</p>
+            <div class="exp-badges"><span class="exp-badge badge-nip">3 Production SaaS Apps</span><span class="exp-badge badge-aicte">Full Stack</span></div>
+          </div>
+          <div class="exp-date"><div class="exp-duration">2024</div><div class="exp-period">Present</div></div>
+        </div>
+        <div class="exp-body">
+          <p class="exp-description">Built and shipped production SaaS applications — CollabSheets, ProResume-Builder, and Nestfy — using React, Next.js, Node.js, WebSockets, and PostgreSQL. This full-stack background is why my security tooling understands developer workflows, API architecture, and database security from the inside, not just from an audit checklist.</p>
+          <div class="exp-tech"><span>React</span><span>Next.js</span><span>Node.js</span><span>WebSockets</span><span>PostgreSQL</span></div>
+          <div style="margin-top: 0.9rem;">
+            <a class="btn btn-sm btn-secondary" href="https://haqueandsons.vercel.app" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit haqueandsons.vercel.app
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTION INCIDENT POST-MORTEM (WAR ROOM) -->
+      <div class="postmortem-wrap glass reveal" id="postMortem">
+        <div class="postmortem-head">
+          <div class="postmortem-title-area">
+            <span class="incident-badge"><i class="fa-solid fa-triangle-exclamation"></i> INCIDENT POST-MORTEM</span>
+            <h3>INC-2026-08: Distributed SSH Credential Stuffing Attack Containment</h3>
+          </div>
+          <div class="incident-meta-pills">
+            <span class="p-pill severity-sev1">SEV-1 SECURITY</span>
+            <span class="p-pill status-resolved">RESOLVED &amp; HARDENED</span>
+            <span class="p-pill mttd">MTTD: 2.1s</span>
+            <span class="p-pill mttr">MTTR: 3.8s</span>
+          </div>
+        </div>
+
+        <p class="postmortem-desc">Enterprise-style Root Cause Analysis (RCA) and war room timeline breakdown from live threat findings audited under law enforcement cyber defense frameworks.</p>
+
+        <div class="timeline-stepper">
+          <div class="step-card active" data-step="1">
+            <span class="step-time">T+00:00</span>
+            <strong>01. Initial Ingress</strong>
+            <p>41 distributed botnet IPs begin high-frequency credential burst on port 22.</p>
+          </div>
+          <div class="step-card" data-step="2">
+            <span class="step-time">T+00:02</span>
+            <strong>02. Detection</strong>
+            <p>Sentinel Daemon regex state machine detects threshold burst (15 fails/5s).</p>
+          </div>
+          <div class="step-card" data-step="3">
+            <span class="step-time">T+00:04</span>
+            <strong>03. Kernel Drop</strong>
+            <p>Direct <code>iptables -I INPUT -j DROP</code> applied; zero CPU spikes or log pollution.</p>
+          </div>
+          <div class="step-card" data-step="4">
+            <span class="step-time">T+00:15</span>
+            <strong>04. Forensics</strong>
+            <p>Threat Log Parser correlates origin ASNs &amp; exports SIEM-ready JSON telemetry.</p>
+          </div>
+          <div class="step-card" data-step="5">
+            <span class="step-time">T+00:30</span>
+            <strong>05. Permanent Fix</strong>
+            <p>CI/CD pipeline locks down sshd via Ansible with WireGuard bastion requirement.</p>
+          </div>
+        </div>
+
+        <div class="rca-grid">
+          <div class="rca-box glass">
+            <h4><i class="fa-solid fa-magnifying-glass-chart"></i> 5-Whys Root Cause Analysis (RCA)</h4>
+            <ol class="whys-list">
+              <li><strong>Why did the burst occur?</strong> Public SSH port was reachable by external scanners.</li>
+              <li><strong>Why was password auth probed?</strong> Attackers attempted automated password spraying.</li>
+              <li><strong>Why were no accounts compromised?</strong> PasswordAuthentication was already disabled; Ed25519 keys enforced.</li>
+              <li><strong>Why was auto-firewalling triggered?</strong> Sentinel Daemon intercepted the auth flood before log saturation.</li>
+              <li><strong>Root Cause:</strong> Default internet-facing port exposed to automated reconnaissance; mitigated by zero-trust bastion isolation.</li>
+            </ol>
+          </div>
+
+          <div class="rca-box glass">
+            <h4><i class="fa-solid fa-shield-check"></i> Corrective &amp; Preventive Actions (CAPA)</h4>
+            <ul class="capa-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Automated Kernel Drops:</strong> Deployed Sentinel Daemon with 1-hour rolling TTL blocklist.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>CI/CD SSH Hardening Hook:</strong> Pre-commit validation preventing <code>PasswordAuthentication yes</code> in git.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Threat Intel Sync:</strong> Automated daily sync against AlienVault OTX and AbuseIPDB feeds.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Zero-Trust Bastion:</strong> Moved all management interfaces behind private WireGuard mesh.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIVE DEVSECOPS INCIDENT & INTERVIEW DEFENSE SIMULATOR -->
+      <div class="interview-sim-wrap glass reveal" id="interviewSim">
+        <div class="interview-sim-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Technical Interview &amp; Crisis Defense</div>
+            <h3 class="interview-sim-title">Live DevSecOps Incident Response Playbook Simulator</h3>
+          </div>
+          <span class="interview-badge"><i class="fa-solid fa-crosshairs"></i> Scenario Defense Engine</span>
+        </div>
+        <p class="interview-sim-desc">Select common Big Tech &amp; Enterprise security crisis scenarios below to inspect my exact step-by-step incident response playbook, CLI commands, and permanent CI/CD prevention rules.</p>
+
+        <div class="scenario-selector-row">
+          <button class="scenario-btn active" data-scenario="aws_leak" type="button">
+            <i class="fa-brands fa-aws"></i> 01. Leaked AWS Root Key in Git
+          </button>
+          <button class="scenario-btn" data-scenario="k8s_c2" type="button">
+            <i class="fa-solid fa-dharmachakra"></i> 02. EKS Pod Outbound C2 Beacon
+          </button>
+          <button class="scenario-btn" data-scenario="rce_zero_day" type="button">
+            <i class="fa-solid fa-bug"></i> 03. Base Image Zero-Day RCE
+          </button>
+          <button class="scenario-btn" data-scenario="l7_flood" type="button">
+            <i class="fa-solid fa-wave-square"></i> 04. Layer 7 Ingress Flood
+          </button>
+        </div>
+
+        <div class="scenario-playbook-panel glass" id="scenarioPlaybook">
+          <div class="playbook-head">
+            <div>
+              <span class="playbook-tag" id="scenarioSev">SEV-1 CRITICAL INCIDENT</span>
+              <h4 id="scenarioTitle">Scenario 01: Leaked AWS Root Credentials in Public Git Commit</h4>
+            </div>
+            <span class="playbook-time-target">Target MTTR: &lt; 5 mins</span>
+          </div>
+          <div class="playbook-steps-grid" id="scenarioSteps">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-head reveal"><p class="eyebrow">Technical Skills</p><h2>Security-minded stack across systems, defense, and cloud</h2></div>
+      <div class="radar-wrap glass reveal">
+        <canvas id="skillsRadar" width="400" height="400" aria-label="Skill radar chart showing proficiency across 6 domains"></canvas>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-box glass reveal"><h3>Systems Administration &amp; Core OS</h3>
+          <div class="chip-wrap"><span>Linux (Ubuntu/Debian)</span><span>Shell Scripting (Bash)</span><span>Python System Automation</span><span>systemd Unit Files</span></div>
+        </div>
+        <div class="skill-box glass reveal"><h3>Threat Defense &amp; Hardening</h3>
+          <div class="chip-wrap"><span>iptables / UFW / Fail2ban</span><span>Regex-Driven Log Parsing</span><span>SSH Hardening / Key Auth</span><span>GPG Commit Signing</span></div>
+        </div>
+        <div class="skill-box glass reveal"><h3>Cloud, Containers &amp; Orchestration</h3>
+          <div class="chip-wrap"><span>Docker / Multi-Stage Builds</span><span>Kubernetes (Deployments, RBAC, Network Policies)</span><span>Helm &amp; Kustomize</span><span>AWS Core (EC2, S3, IAM, VPC)</span><span>Terraform (IaC)</span></div>
+        </div>
+        <div class="skill-box glass reveal"><h3>Core Tooling &amp; Practices</h3>
+          <div class="chip-wrap"><span>Git &amp; GitHub</span><span>Digital Forensics</span><span>Principle of Least Privilege</span><span>JSON / SIEM Reporting</span><span>Threat Intel Feeds</span><span>REST APIs</span><span>PostgreSQL</span><span>Input Validation</span><span>Prometheus / Grafana</span></div>
+        </div>
+        <div class="skill-box glass reveal wide"><h3>CI/CD Pipelines &amp; DevSecOps Toolchain</h3>
+          <div class="chip-wrap">
+            <span>GitHub Actions / Jenkins / GitLab CI</span><span>Pipeline-as-Code &amp; Self-Hosted Runners</span>
+            <span>SAST — Semgrep / SonarQube</span><span>SCA — Snyk / Trivy</span>
+            <span>Container &amp; K8s Scanning — Trivy / kube-bench</span><span>DAST — OWASP ZAP</span>
+            <span>Secrets Scanning — GitShield (built in-house)</span><span>Pre-Commit Security Hooks</span>
+            <span>SBOM &amp; Supply-Chain (SLSA-aware)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEVSECOPS PIPELINE SIMULATOR -->
+      <div class="pipeline-sim glass reveal" id="pipelineSimulator">
+        <div class="pipeline-sim-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Interactive Sandbox</div>
+            <h3 class="pipeline-sim-title">Live DevSecOps CI/CD Hardener &amp; Gate Runner</h3>
+          </div>
+          <div class="pipeline-sim-actions">
+            <button class="btn btn-sm btn-primary" id="runPipelineBtn" type="button">
+              <i class="fa-solid fa-play"></i> Trigger Pipeline Run
+            </button>
+            <button class="btn btn-sm btn-secondary" id="resetPipelineBtn" type="button">
+              <i class="fa-solid fa-rotate-right"></i> Reset
+            </button>
+          </div>
+        </div>
+        <p class="pipeline-sim-desc">Toggle security gates below to simulate how shifting security left intercepts CVEs, hardcoded secrets, and container exploits before production deployment.</p>
+        
+        <div class="pipeline-gates">
+          <label class="gate-chip active" data-gate="secrets">
+            <input type="checkbox" checked />
+            <span class="gate-icon"><i class="fa-solid fa-key"></i></span>
+            <span class="gate-info">
+              <strong>1. Secret Scan</strong>
+              <small>GitShield / Gitleaks</small>
+            </span>
+          </label>
+          <label class="gate-chip active" data-gate="sast">
+            <input type="checkbox" checked />
+            <span class="gate-icon"><i class="fa-solid fa-code"></i></span>
+            <span class="gate-info">
+              <strong>2. SAST Analysis</strong>
+              <small>Semgrep Rules</small>
+            </span>
+          </label>
+          <label class="gate-chip active" data-gate="sca">
+            <input type="checkbox" checked />
+            <span class="gate-icon"><i class="fa-solid fa-cubes-stacked"></i></span>
+            <span class="gate-info">
+              <strong>3. SCA Dependencies</strong>
+              <small>Trivy / Snyk</small>
+            </span>
+          </label>
+          <label class="gate-chip active" data-gate="container">
+            <input type="checkbox" checked />
+            <span class="gate-icon"><i class="fa-brands fa-docker"></i></span>
+            <span class="gate-info">
+              <strong>4. Container Image</strong>
+              <small>Trivy CVE Audit</small>
+            </span>
+          </label>
+          <label class="gate-chip active" data-gate="dast">
+            <input type="checkbox" checked />
+            <span class="gate-icon"><i class="fa-solid fa-shield-virus"></i></span>
+            <span class="gate-info">
+              <strong>5. DAST Dynamic</strong>
+              <small>OWASP ZAP</small>
+            </span>
+          </label>
+          <label class="gate-chip active" data-gate="sbom">
+            <input type="checkbox" checked />
+            <span class="gate-icon"><i class="fa-solid fa-certificate"></i></span>
+            <span class="gate-info">
+              <strong>6. Supply Chain</strong>
+              <small>Cosign / SLSA Sign</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="pipeline-track">
+          <div class="track-step" id="step-secrets"><span class="step-num">01</span><span class="step-label">Secrets</span><i class="step-status fa-solid fa-circle-dot"></i></div>
+          <div class="track-connector"></div>
+          <div class="track-step" id="step-sast"><span class="step-num">02</span><span class="step-label">SAST</span><i class="step-status fa-solid fa-circle-dot"></i></div>
+          <div class="track-connector"></div>
+          <div class="track-step" id="step-sca"><span class="step-num">03</span><span class="step-label">SCA</span><i class="step-status fa-solid fa-circle-dot"></i></div>
+          <div class="track-connector"></div>
+          <div class="track-step" id="step-container"><span class="step-num">04</span><span class="step-label">Image</span><i class="step-status fa-solid fa-circle-dot"></i></div>
+          <div class="track-connector"></div>
+          <div class="track-step" id="step-dast"><span class="step-num">05</span><span class="step-label">DAST</span><i class="step-status fa-solid fa-circle-dot"></i></div>
+          <div class="track-connector"></div>
+          <div class="track-step" id="step-sbom"><span class="step-num">06</span><span class="step-label">Sign &amp; Ship</span><i class="step-status fa-solid fa-circle-dot"></i></div>
+        </div>
+
+        <div class="pipeline-terminal">
+          <div class="pipeterm-bar">
+            <span class="term-dot red"></span><span class="term-dot yellow"></span><span class="term-dot green"></span>
+            <span class="pipeterm-title">runner@github-actions-hardened: ~/build-pipeline #2026</span>
+          </div>
+          <div class="pipeterm-body" id="pipelineTerminalBody">
+            <div class="pipeterm-line muted">// Ready. Click 'Trigger Pipeline Run' to start DevSecOps security verification...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-grid reveal">
+        <div class="stack-head">Technology — Tools I Secure &amp; Build With</div>
+        <div class="stack-icons">
+          <div class="stack-item"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+          <div class="stack-item"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+          <div class="stack-item"><i class="fa-solid fa-dharmachakra"></i><span>Kubernetes</span></div>
+          <div class="stack-item"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+          <div class="stack-item"><i class="fa-solid fa-layer-group"></i><span>Terraform</span></div>
+          <div class="stack-item"><i class="fa-solid fa-gears"></i><span>Jenkins</span></div>
+          <div class="stack-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="stack-item"><i class="fa-solid fa-terminal"></i><span>Bash</span></div>
+          <div class="stack-item"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+          <div class="stack-item"><i class="fa-brands fa-github"></i><span>GH Actions</span></div>
+          <div class="stack-item"><i class="fa-solid fa-fire"></i><span>iptables</span></div>
+          <div class="stack-item"><i class="fa-solid fa-shield-halved"></i><span>Fail2ban</span></div>
+          <div class="stack-item"><i class="fa-solid fa-network-wired"></i><span>Networking</span></div>
+        </div>
+      </div>
+
+      <!-- DEVSECOPS MATURITY & ROI CALCULATOR -->
+      <div class="maturity-calc-wrap glass reveal" id="maturityCalculator">
+        <div class="maturity-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Engineering Assessment</div>
+            <h3 class="maturity-title">Interactive DevSecOps Pipeline Maturity &amp; ROI Calculator</h3>
+          </div>
+          <span class="maturity-badge"><i class="fa-solid fa-calculator"></i> Posture Audit</span>
+        </div>
+        <p class="maturity-desc">Select your organization's tech stack and current security controls to compute your real-time DevSecOps Posture Grade and estimated vulnerability reduction.</p>
+
+        <div class="maturity-grid">
+          <div class="maturity-controls-col">
+            <div class="calc-group">
+              <label class="calc-label">1. Primary Compute &amp; Cloud Target:</label>
+              <div class="calc-chips" id="calcCloudChips">
+                <button class="calc-chip active" data-cloud="k8s" type="button"><i class="fa-solid fa-dharmachakra"></i> AWS EKS / K8s</button>
+                <button class="calc-chip" data-cloud="docker" type="button"><i class="fa-brands fa-docker"></i> Docker Compose</button>
+                <button class="calc-chip" data-cloud="linux" type="button"><i class="fa-brands fa-linux"></i> Linux Bare-Metal/VM</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label">2. Active CI/CD Security Controls:</label>
+              <div class="calc-checkbox-grid">
+                <label class="calc-check"><input type="checkbox" id="chkPreCommit" checked /><span>Pre-Commit Secret Scanning (GitShield)</span></label>
+                <label class="calc-check"><input type="checkbox" id="chkSast" checked /><span>Automated SAST Rules (Semgrep)</span></label>
+                <label class="calc-check"><input type="checkbox" id="chkSca" checked /><span>Dependency Vulnerability Audits (Trivy)</span></label>
+                <label class="calc-check"><input type="checkbox" id="chkContainer" /><span>Non-Root Container Scanning</span></label>
+                <label class="calc-check"><input type="checkbox" id="chkDast" /><span>Dynamic App Scanning (OWASP ZAP)</span></label>
+                <label class="calc-check"><input type="checkbox" id="chkKernel" /><span>Kernel-level Auto-Firewall (Sentinel Daemon)</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="maturity-results-col glass">
+            <div class="grade-card">
+              <div class="grade-circle" id="gradeCircle">
+                <span class="grade-letter" id="gradeLetter">B+</span>
+                <span class="grade-score" id="gradeScore">78 / 100</span>
+              </div>
+              <div class="grade-meta">
+                <h4 id="gradeLabel">Strong Defense Posture</h4>
+                <p id="gradeSummary">Pre-commit secrets and static analysis actively protect the codebase, but container and host defense boundaries require reinforcement.</p>
+              </div>
+            </div>
+
+            <div class="roi-metrics-grid">
+              <div class="roi-item">
+                <strong id="roiVulnReduction">-82%</strong>
+                <span>Estimated CVE Exposure</span>
+              </div>
+              <div class="roi-item">
+                <strong id="roiSecretBreach">0 Leaks</strong>
+                <span>Hardcoded Token Risk</span>
+              </div>
+              <div class="roi-item">
+                <strong id="roiHoursSaved">~14 hrs/wk</strong>
+                <span>Dev Triage Time Saved</span>
+              </div>
+            </div>
+
+            <div class="hardening-blueprint">
+              <h5><i class="fa-solid fa-wrench"></i> Recommended Remediation Blueprint:</h5>
+              <p id="hardeningBlueprintText">Deploy <strong>Trivy container scanning</strong> to enforce non-root UID 10001 and enable <strong>Sentinel Daemon</strong> for automated iptables kernel defense.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DEVSECOPS KNOWLEDGE GRAPH & ARCHITECTURE MESH -->
+      <div class="knowledge-mesh-wrap glass reveal" id="knowledgeMesh">
+        <div class="knowledge-mesh-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Core Systems Architecture</div>
+            <h3 class="knowledge-mesh-title">DevSecOps Domain Dependency &amp; Knowledge Mesh</h3>
+          </div>
+          <span class="mesh-badge"><i class="fa-solid fa-circle-nodes"></i> Interactive Domain Graph</span>
+        </div>
+        <p class="knowledge-mesh-desc">Click any technical node in the architecture graph below to inspect its prerequisite systems knowledge, verified toolchains, and real-world production implementations across Haque And Sons and UP Police APCSIP-2026.</p>
+
+        <div class="mesh-canvas-container glass">
+          <canvas id="meshCanvas" width="840" height="340" aria-label="Interactive DevSecOps domain knowledge dependency graph"></canvas>
+          <div class="mesh-hint-pill"><i class="fa-solid fa-hand-pointer"></i> Click nodes to inspect domain mastery &amp; production artifacts</div>
+        </div>
+
+        <div class="mesh-inspector glass" id="meshInspector">
+          <div class="mesh-insp-head">
+            <div>
+              <span class="mesh-domain-tag" id="meshDomainTag">DOMAIN 01 · FOUNDATIONAL HARDENING</span>
+              <h4 id="meshDomainTitle">Linux Kernel &amp; OS Hardening</h4>
+            </div>
+            <span class="mesh-status-tag" id="meshStatusTag">Production Verified</span>
+          </div>
+          <div class="mesh-insp-content" id="meshInspContent">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTERPRISE DEVSECOPS ROI & COST-OF-BREACH FINANCIAL CALCULATOR -->
+      <div class="financial-roi-wrap glass reveal" id="financialRoi">
+        <div class="financial-roi-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Business &amp; Engineering Economics</div>
+            <h3 class="financial-roi-title">DevSecOps Shift-Left Financial ROI &amp; Breach Cost Avoidance</h3>
+          </div>
+          <div class="roi-head-actions">
+            <div class="roi-currency-selector" id="roiCurrencySelector">
+              <button class="currency-chip active" data-curr="INR" type="button">₹ INR</button>
+              <button class="currency-chip" data-curr="USD" type="button">$ USD</button>
+              <button class="currency-chip" data-curr="EUR" type="button">€ EUR</button>
+              <button class="currency-chip" data-curr="GBP" type="button">£ GBP</button>
+            </div>
+            <span class="roi-metric-pill"><i class="fa-solid fa-sack-dollar"></i> Executive Business Case</span>
+          </div>
+        </div>
+        <p class="financial-roi-desc">Adjust your organization's engineering headcount and deployment velocity to quantify the financial impact of shifting security left versus fixing vulnerabilities post-deployment or remediating security breaches.</p>
+
+        <div class="financial-roi-grid">
+          <div class="roi-sliders-col">
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="devTeamSlider">Software Engineering Team Size:</label>
+                <span class="slider-val" id="devTeamVal">25 Engineers</span>
+              </div>
+              <input type="range" id="devTeamSlider" min="5" max="150" value="25" class="roi-range" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="commitsSlider">Monthly Production Deployments &amp; Commits:</label>
+                <span class="slider-val" id="commitsVal">450 Commits / mo</span>
+              </div>
+              <input type="range" id="commitsSlider" min="50" max="2500" step="50" value="450" class="roi-range" />
+            </div>
+
+            <div class="cost-comparison-bars">
+              <div class="cost-bar-item">
+                <div class="c-bar-label"><span>Shift-Left Automated Gate (Pre-Commit / CI)</span><strong id="costShiftLeft">₹4,000 / flaw</strong></div>
+                <div class="c-bar-track"><span style="width: 5%; background: var(--accent-3);"></span></div>
+              </div>
+              <div class="cost-bar-item">
+                <div class="c-bar-label"><span>Production Bug Fix &amp; Patch Cycle</span><strong id="costProdFix">₹1,50,000 / flaw</strong></div>
+                <div class="c-bar-track"><span style="width: 25%; background: #ff9f0a;"></span></div>
+              </div>
+              <div class="cost-bar-item">
+                <div class="c-bar-label"><span>Security Breach Remediation &amp; Forensics (NIST / IBM Avg)</span><strong id="costBreach">₹8,50,000+ / incident</strong></div>
+                <div class="c-bar-track"><span style="width: 100%; background: var(--accent-warm);"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roi-financial-summary glass">
+            <div class="annual-savings-card">
+              <span class="savings-label">ESTIMATED NET ANNUAL SAVINGS</span>
+              <h2 class="savings-number" id="annualSavings">$148,500</h2>
+              <span class="savings-sub" id="roiMultiplierText">Generating an estimated <strong>12.4x ROI</strong> over traditional security audits</span>
+            </div>
+
+            <div class="roi-kpi-grid">
+              <div class="roi-kpi-box">
+                <strong id="flawsPrevented">165</strong>
+                <span>Defects Intercepted / yr</span>
+              </div>
+              <div class="roi-kpi-box">
+                <strong id="breachRiskAvoided">94.2%</strong>
+                <span>Breach Risk Avoided</span>
+              </div>
+              <div class="roi-kpi-box">
+                <strong id="developerHoursBack">720 hrs</strong>
+                <span>Engineering Triage Saved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE JOB DESCRIPTION (JD) KEYWORD MATCHER & ATS FIT SCORE -->
+      <div class="jd-matcher-wrap glass reveal" id="jdMatcher">
+        <div class="jd-matcher-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Recruiter Tool</div>
+            <h3 class="jd-matcher-title">Interactive DevSecOps Job Description (JD) &amp; ATS Matcher</h3>
+          </div>
+          <span class="jd-badge"><i class="fa-solid fa-file-circle-check"></i> ATS Keyword Engine</span>
+        </div>
+        <p class="jd-matcher-desc">Paste your open DevSecOps, Cloud Security, or SRE job description below (or click a Big-Tech role preset) to calculate my real-time ATS match percentage and verified competency alignment.</p>
+
+        <div class="jd-presets-row">
+          <span class="jd-preset-label">Test with Preset Roles:</span>
+          <button class="jd-preset-btn active" data-role="aws" type="button"><i class="fa-brands fa-aws"></i> AWS Cloud Security Engineer</button>
+          <button class="jd-preset-btn" data-role="gcp" type="button"><i class="fa-brands fa-google"></i> Google Cloud DevSecOps</button>
+          <button class="jd-preset-btn" data-role="crowdstrike" type="button"><i class="fa-solid fa-shield-virus"></i> CrowdStrike Security Automator</button>
+          <button class="jd-preset-btn" data-role="razorpay" type="button"><i class="fa-solid fa-bolt"></i> Razorpay AppSec Engineer</button>
+        </div>
+
+        <div class="jd-matcher-grid">
+          <div class="jd-input-col">
+            <label class="sandbox-label" for="jdInput">Paste Job Description / Requirements:</label>
+            <textarea id="jdInput" rows="7" placeholder="Paste full JD text here to analyze keyword alignment against Nejamul's profile..." spellcheck="false"></textarea>
+            <button class="btn btn-sm btn-primary" id="runJdMatchBtn" style="margin-top:0.75rem" type="button">
+              <i class="fa-solid fa-magnifying-glass-chart"></i> Analyze Candidate Fit &amp; Match %
+            </button>
+          </div>
+
+          <div class="jd-results-col glass">
+            <div class="jd-score-card">
+              <div class="jd-score-gauge-wrap">
+                <svg class="jd-gauge-svg" viewBox="0 0 120 120">
+                  <circle class="jd-gauge-bg" cx="60" cy="60" r="48" stroke="rgba(255,255,255,0.08)" stroke-width="6" fill="none"/>
+                  <circle class="jd-gauge-progress" id="jdGaugeProgress" cx="60" cy="60" r="48" stroke="var(--accent-3)" stroke-width="6" stroke-dasharray="301.59" stroke-dashoffset="15" stroke-linecap="round" fill="none" transform="rotate(-90 60 60)"/>
+                </svg>
+                <div class="jd-gauge-center">
+                  <span class="jd-score-pct" id="jdMatchPct">96.4%</span>
+                  <span class="jd-score-label">ATS MATCH</span>
+                </div>
+              </div>
+              <div class="jd-score-info">
+                <h4 id="jdScoreHeading">Exceptional Candidate Fit</h4>
+                <p id="jdScoreDesc">Direct alignment across Kubernetes security, CI/CD shift-left tooling, Linux kernel defense, and Python automation.</p>
+              </div>
+            </div>
+
+            <div class="jd-matches-box">
+              <span class="sandbox-label">Verified Matching Competencies:</span>
+              <div class="jd-matched-chips" id="jdMatchedChips">
+                <span class="chip-match"><i class="fa-solid fa-check"></i> Kubernetes (PSS)</span>
+                <span class="chip-match"><i class="fa-solid fa-check"></i> Docker / Non-Root</span>
+                <span class="chip-match"><i class="fa-solid fa-check"></i> CI/CD GitHub Actions</span>
+                <span class="chip-match"><i class="fa-solid fa-check"></i> Python &amp; Bash</span>
+                <span class="chip-match"><i class="fa-solid fa-check"></i> Terraform IaC</span>
+                <span class="chip-match"><i class="fa-solid fa-check"></i> Cosign / SLSA L3</span>
+                <span class="chip-match"><i class="fa-solid fa-check"></i> iptables / eBPF</span>
+                <span class="chip-match"><i class="fa-solid fa-check"></i> STRIDE Threat Modeling</span>
+              </div>
+            </div>
+
+            <button class="btn btn-sm btn-secondary" id="copyJdPitchBtn" type="button">
+              <i class="fa-solid fa-copy"></i> Copy Tailored Screening Pitch for Hiring Manager
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section" id="timeline">
+      <div class="section-head reveal"><p class="eyebrow">My Journey</p><h2>Education, growth &amp; milestones</h2></div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="timeline-content"><div class="timeline-year">2023 — 2027</div><h3 class="timeline-title">B.Tech in Computer Science &amp; Engineering</h3><p class="timeline-org">Teerthanker Mahaveer University, Moradabad</p><p class="timeline-desc">Pursuing core CS fundamentals alongside hands-on systems and security work — targeting industry placement for 2026–2027.</p></div>
+        </div>
+        <div class="timeline-item reveal"><div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+          <div class="timeline-content"><div class="timeline-year">2024</div><h3 class="timeline-title">Started Full-Stack Development</h3><p class="timeline-org">Haque And Sons · Self-Employed</p><p class="timeline-desc">Shipped production SaaS apps — CollabSheets, ProResume-Builder, Nestfy — using React, Next.js, Node.js, WebSockets &amp; PostgreSQL.</p></div>
+        </div>
+        <div class="timeline-item reveal"><div class="timeline-dot"><i class="fa-brands fa-linux"></i></div>
+          <div class="timeline-content"><div class="timeline-year">2025</div><h3 class="timeline-title">Moved Into Linux &amp; Security Tooling</h3><p class="timeline-org">Self-Directed · Systems Hardening</p><p class="timeline-desc">Deepened Linux administration, shell scripting, and firewall/log-parsing tooling — the foundation for shifting security left in CI/CD.</p></div>
+        </div>
+        <div class="timeline-item reveal"><div class="timeline-dot"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="timeline-content"><div class="timeline-year">2026</div><h3 class="timeline-title">Cyber Security Intern — APCSIP‑2026</h3><p class="timeline-org">Amroha Police Cyber Security Program · UP Police</p><p class="timeline-desc">Analyzed real-world cybercrime mechanisms, incident logs and digital forensics workflows under law enforcement frameworks; built hardening tools from live threat findings.</p></div>
+        </div>
+        <div class="timeline-item reveal"><div class="timeline-dot"><i class="fa-solid fa-rocket"></i></div>
+          <div class="timeline-content"><div class="timeline-year">2026</div><h3 class="timeline-title">Built GitShield, Sentinel Daemon &amp; Threat Intel Parser</h3><p class="timeline-org">DevSecOps Tooling</p><p class="timeline-desc">Shipped three security tools spanning secret scanning, auto-firewalling, and SIEM-ready threat log parsing — the core of this portfolio's project work.</p></div>
+        </div>
+        <div class="timeline-item reveal"><div class="timeline-dot"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="timeline-content"><div class="timeline-year">2026 — 2027</div><h3 class="timeline-title">Open to Next Role</h3><p class="timeline-org">DevSecOps · Cloud Security · Infrastructure Engineering</p><p class="timeline-desc">Industry-placement / internship ready, with a law-enforcement-backed cyber security program and three shipped security tools behind me.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WRITE-UPS -->
+    <section class="section" id="articles">
+      <div class="section-head reveal"><p class="eyebrow">Write-ups</p><h2>Notes from building &amp; hardening</h2></div>
+      <div class="articles-grid" id="articles-container"><div class="loading-articles">Loading write-ups...</div></div>
+      <div class="view-more"><a class="btn btn-secondary" href="https://nejamulhaque.medium.com/" target="_blank" rel="noopener"><i class="fa-brands fa-medium"></i> View More on Medium</a></div>
+    </section>
+
+    <!-- PRACTICE & RECOGNITION -->
+    <section class="section" id="achievements">
+      <div class="section-head reveal"><p class="eyebrow">Practice &amp; Recognition</p><h2>Hands-on labs, open source &amp; program milestones</h2></div>
+      <div class="achievements-grid">
+        <div class="achieve-card glass reveal">
+          <div class="achieve-icon" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))"><i class="fa-solid fa-server"></i></div>
+          <div class="achieve-body">
+            <div class="achieve-platform">Home Lab</div>
+            <div class="achieve-headline">Self-Directed Hardening Practice</div>
+            <div class="achieve-stats"><span class="chip-mini">3 Tools Built</span><span class="chip-mini">Linux VMs</span><span class="chip-mini">iptables Rules Live</span></div>
+            <p class="achieve-note">Running local Linux VMs and an AWS free-tier sandbox to test SSH hardening, firewall automation, and CI/CD secret scanning end-to-end.</p>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View Repos</a>
+          </div>
+        </div>
+        <div class="achieve-card glass reveal">
+          <div class="achieve-icon" style="background:linear-gradient(135deg,var(--accent-2),var(--accent-3))"><i class="fa-brands fa-github"></i></div>
+          <div class="achieve-body">
+            <div class="achieve-platform">GitHub</div>
+            <div class="achieve-headline">Open Source Security Tooling</div>
+            <div class="achieve-stats"><span class="chip-mini">3 Security Tools</span><span class="chip-mini">Python / Bash</span><span class="chip-mini">Active Commits</span></div>
+            <p class="achieve-note">GitShield, Sentinel Daemon and the Threat Intelligence Log Parser — all built, documented and maintained in the open.</p>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+          </div>
+        </div>
+        <div class="achieve-card glass reveal">
+          <div class="achieve-icon" style="background:linear-gradient(135deg,var(--accent-3),var(--accent))"><i class="fa-solid fa-user-shield"></i></div>
+          <div class="achieve-body">
+            <div class="achieve-platform">UP Police — Amroha Cyber Cell</div>
+            <div class="achieve-headline">APCSIP‑2026 Cyber Security Program</div>
+            <div class="achieve-stats"><span class="chip-mini">Law Enforcement</span><span class="chip-mini">Digital Forensics</span><span class="chip-mini">Real Case Data</span></div>
+            <p class="achieve-note">Hands-on cybercrime analysis, log auditing and forensics workflow experience under an active police cyber security framework.</p>
+            <a class="btn btn-sm btn-secondary" href="#experience"><i class="fa-solid fa-arrow-down"></i> See Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SENTINEL INCIDENT RESPONSE SIMULATOR -->
+      <div class="defense-sim glass reveal" id="defenseSim">
+        <div class="defense-sim-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Interactive Defense Lab</div>
+            <h3 class="defense-sim-title">Sentinel Incident Response &amp; Threat Neutralizer</h3>
+          </div>
+          <div class="defense-score-pill">
+            <span>Threats Neutralized: <strong id="defenseScore">0</strong></span>
+            <span class="defense-status-dot" id="defenseStateDot"></span>
+          </div>
+        </div>
+        <p class="defense-sim-desc">Live simulated rogue brute-force and reconnaissance connection attempts hitting the kernel. Neutralize threat packets manually or toggle Auto-Sentinel daemon mitigation!</p>
+        
+        <div class="defense-console">
+          <div class="defense-live-stream" id="defenseLiveStream">
+            <div class="defense-empty-state">Click 'Start Live Threat Stream' to simulate real-time cyber attacks against your host.</div>
+          </div>
+          <div class="defense-controls">
+            <button class="btn btn-sm btn-primary" id="defenseStartBtn" type="button">
+              <i class="fa-solid fa-play"></i> Start Live Threat Stream
+            </button>
+            <button class="btn btn-sm btn-secondary" id="defenseAutoBtn" type="button">
+              <i class="fa-solid fa-robot"></i> Auto-Sentinel: OFF
+            </button>
+            <button class="btn btn-sm btn-secondary" id="defenseClearBtn" type="button">
+              <i class="fa-solid fa-trash-can"></i> Clear Logs
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="section" id="projects">
+      <div class="section-head reveal"><p class="eyebrow">Case Studies &amp; Labs</p><h2>Security tooling — the decisions, not just the demo</h2></div>
+
+      <!-- LIVE SECURITY TOOL SANDBOXES -->
+      <div class="sandbox-container glass reveal" id="securitySandboxes">
+        <div class="sandbox-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Interactive Tooling Labs</div>
+            <h3 class="sandbox-title">Live Security Sandboxes</h3>
+          </div>
+          <div class="sandbox-tabs">
+            <button class="sandbox-tab active" data-tab="gitshield" type="button">
+              <i class="fa-solid fa-key"></i> GitShield Scanner
+            </button>
+            <button class="sandbox-tab" data-tab="threatparser" type="button">
+              <i class="fa-solid fa-file-code"></i> Threat SIEM Parser
+            </button>
+            <button class="sandbox-tab" data-tab="kubeshield" type="button">
+              <i class="fa-solid fa-dharmachakra"></i> KubeShield K8s Validator
+            </button>
+            <button class="sandbox-tab" data-tab="gitslsa" type="button">
+              <i class="fa-solid fa-certificate"></i> GitSLSA Cosign &amp; SBOM
+            </button>
+            <button class="sandbox-tab" data-tab="ebpf" type="button">
+              <i class="fa-solid fa-microchip"></i> eBPF Kernel Probe
+            </button>
+            <button class="sandbox-tab" data-tab="terraform" type="button">
+              <i class="fa-solid fa-cubes"></i> Terraform IaC Linter
+            </button>
+          </div>
+        </div>
+
+        <!-- GitShield Sandbox Pane -->
+        <div class="sandbox-pane active" id="paneGitshield">
+          <p class="sandbox-desc">Test <strong>GitShield</strong>'s regex engine &amp; Shannon entropy calculator. Paste strings below or select sample test payloads to see real-time pre-commit hook interception.</p>
+          <div class="payload-chips">
+            <span class="payload-label">Test Payloads:</span>
+            <button class="payload-chip" data-payload="aws" type="button">AWS Access Key</button>
+            <button class="payload-chip" data-payload="rsa" type="button">RSA Private Key</button>
+            <button class="payload-chip" data-payload="jwt" type="button">High-Entropy JWT</button>
+            <button class="payload-chip" data-payload="slack" type="button">Slack Webhook</button>
+            <button class="payload-chip" data-payload="clean" type="button">Clean Code</button>
+          </div>
+          <div class="sandbox-grid">
+            <div class="sandbox-input-col">
+              <label class="sandbox-label" for="gitshieldInput">Git Staging Input / Code Diff:</label>
+              <textarea id="gitshieldInput" rows="5" placeholder="Type or paste code/secrets to test GitShield interception..." spellcheck="false"></textarea>
+            </div>
+            <div class="sandbox-results-col">
+              <div class="entropy-meter-wrap">
+                <div class="entropy-meter-header">
+                  <span>Shannon Entropy: <strong id="entropyValue">0.00</strong> bits</span>
+                  <span class="entropy-badge" id="entropyBadge">Safe</span>
+                </div>
+                <div class="entropy-bar"><span class="entropy-fill" id="entropyFill" style="width: 0%"></span></div>
+              </div>
+              <div class="intercept-status" id="interceptStatus">
+                <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="status-info">
+                  <h4 id="statusTitle">Hook Status: Clean</h4>
+                  <p id="statusDesc">No credentials or dangerous permissions detected in commit buffer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Threat Log Parser Sandbox Pane -->
+        <div class="sandbox-pane" id="paneThreatparser">
+          <p class="sandbox-desc">Simulate how the <strong>Threat Intelligence Log Parser</strong> identifies attack footprints, enriches IPs, and formats SIEM-ready JSON output.</p>
+          <div class="payload-chips">
+            <span class="payload-label">Sample Ingress Logs:</span>
+            <button class="log-chip active" data-log="sqli" type="button">SQL Injection (UNION)</button>
+            <button class="log-chip" data-log="traversal" type="button">Directory Traversal</button>
+            <button class="log-chip" data-log="xss" type="button">XSS Injection</button>
+            <button class="log-chip" data-log="spring" type="button">Spring4Shell RCE</button>
+            <button class="log-chip" data-log="clean" type="button">Clean HTTP/2 Request</button>
+          </div>
+          <div class="sandbox-grid">
+            <div class="sandbox-input-col">
+              <label class="sandbox-label" for="threatlogInput">Raw Access Log Entry:</label>
+              <textarea id="threatlogInput" rows="3" spellcheck="false" readonly></textarea>
+              <button class="btn btn-sm btn-primary" id="runThreatParserBtn" style="margin-top:0.75rem" type="button">
+                <i class="fa-solid fa-bolt"></i> Parse &amp; Correlate SIEM Event
+              </button>
+            </div>
+            <div class="sandbox-results-col">
+              <label class="sandbox-label">Generated SIEM JSON Output:</label>
+              <pre class="siem-output" id="siemOutput"><code>// Click 'Parse &amp; Correlate' to generate structured SIEM report...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- KubeShield Sandbox Pane -->
+        <div class="sandbox-pane" id="paneKubeshield">
+          <p class="sandbox-desc">Test <strong>KubeShield</strong>'s dynamic admission webhook. Validate Kubernetes YAML manifests against CIS benchmarks and see automated security context mutation in real-time.</p>
+          <div class="payload-chips">
+            <span class="payload-label">Sample Pod Specs:</span>
+            <button class="k8s-chip active" data-k8s="privileged" type="button">Privileged Root Pod (Dangerous)</button>
+            <button class="k8s-chip" data-k8s="mutable" type="button">Mutable :latest Tag</button>
+            <button class="k8s-chip" data-k8s="nolimits" type="button">Missing Resource Limits</button>
+            <button class="k8s-chip" data-k8s="hardened" type="button">Compliant Hardened Pod</button>
+          </div>
+          <div class="sandbox-grid">
+            <div class="sandbox-input-col">
+              <label class="sandbox-label" for="k8sInput">Candidate Kubernetes Pod Spec (YAML):</label>
+              <textarea id="k8sInput" rows="7" spellcheck="false"></textarea>
+              <button class="btn btn-sm btn-primary" id="runKubeShieldBtn" style="margin-top:0.75rem" type="button">
+                <i class="fa-solid fa-shield-virus"></i> Validate &amp; Auto-Mutate Spec
+              </button>
+            </div>
+            <div class="sandbox-results-col">
+              <div class="intercept-status" id="k8sStatusBox">
+                <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="status-info">
+                  <h4 id="k8sStatusTitle">Admission Status: Ready</h4>
+                  <p id="k8sStatusDesc">Click 'Validate &amp; Auto-Mutate' to test admission webhook policies.</p>
+                </div>
+              </div>
+              <label class="sandbox-label">Mutated Hardened Spec / Webhook Response:</label>
+              <pre class="siem-output" id="k8sOutput"><code>// Webhook admission review decision will appear here...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitSLSA Sandbox Pane -->
+        <div class="sandbox-pane" id="paneGitslsa">
+          <p class="sandbox-desc">Inspect <strong>GitSLSA</strong>'s cryptographic Cosign signatures, Sigstore keyless OIDC certificates, and SPDX Software Bill of Materials (SBOM) provenance.</p>
+          <div class="payload-chips">
+            <span class="payload-label">Target Build Artifacts:</span>
+            <button class="slsa-chip active" data-artifact="haqueapi" type="button">haqueandsons/api:v2.4.0 (Signed)</button>
+            <button class="slsa-chip" data-artifact="haqueauth" type="button">haqueandsons/auth:v1.2.0 (Signed)</button>
+            <button class="slsa-chip" data-artifact="untrusted" type="button">untrusted/app:latest (Unsigned)</button>
+          </div>
+          <div class="sandbox-grid">
+            <div class="sandbox-input-col">
+              <div class="entropy-meter-wrap">
+                <div class="entropy-meter-header">
+                  <span>Artifact Digest:</span>
+                  <strong id="slsaDigest" style="font-size:0.7rem; color:var(--accent);">sha256:7f83b1657ff1...</strong>
+                </div>
+                <div class="entropy-meter-header" style="margin-top:0.4rem; margin-bottom:0;">
+                  <span>SLSA Level:</span>
+                  <span class="entropy-badge" id="slsaBadge">SLSA Level 3 Verified</span>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-primary" id="runSlsaBtn" style="margin-top:0.75rem" type="button">
+                <i class="fa-solid fa-file-shield"></i> Verify Cosign Signature &amp; Inspect SBOM
+              </button>
+            </div>
+            <div class="sandbox-results-col">
+              <label class="sandbox-label">Cryptographic Attestation &amp; SBOM Tree:</label>
+              <pre class="siem-output" id="slsaOutput"><code>// Click 'Verify Cosign Signature' to inspect attestation...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- eBPF Kernel Probe Sandbox Pane -->
+        <div class="sandbox-pane" id="paneEbpf">
+          <p class="sandbox-desc">Simulate <strong>eBPF Kernel-Level Runtime Observability</strong>. Hooking directly into Linux kernel tracepoints (<code>sys_enter_execve</code>, <code>sys_enter_connect</code>) to intercept unauthorized container process spawning and dispatch sub-millisecond <code>SIGKILL</code> terminations.</p>
+          <div class="payload-chips">
+            <span class="payload-label">Container Attack Vectors:</span>
+            <button class="ebpf-chip active" data-attack="shadow" type="button">/etc/shadow Extraction</button>
+            <button class="ebpf-chip" data-attack="revshell" type="button">Reverse Shell (nc -e /bin/sh)</button>
+            <button class="ebpf-chip" data-attack="metadata" type="button">AWS Metadata SSRF</button>
+            <button class="ebpf-chip" data-attack="suid" type="button">SUID Binary Escalation</button>
+            <button class="ebpf-chip" data-attack="clean" type="button">Legitimate Nginx Exec</button>
+          </div>
+          <div class="sandbox-grid">
+            <div class="sandbox-input-col">
+              <label class="sandbox-label" for="ebpfCommandInput">Exploit Command Executed Inside Pod:</label>
+              <textarea id="ebpfCommandInput" rows="3" spellcheck="false" readonly></textarea>
+              <button class="btn btn-sm btn-primary" id="runEbpfBtn" style="margin-top:0.75rem" type="button">
+                <i class="fa-solid fa-bolt-lightning"></i> Execute in Container &amp; Probe eBPF Kernel
+              </button>
+            </div>
+            <div class="sandbox-results-col">
+              <div class="intercept-status" id="ebpfStatusBox">
+                <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="status-info">
+                  <h4 id="ebpfStatusTitle">Kernel Ring-Buffer: Listening</h4>
+                  <p id="ebpfStatusDesc">Ready. Click 'Execute in Container' to test eBPF syscall interception.</p>
+                </div>
+              </div>
+              <label class="sandbox-label">eBPF Kernel Trace &amp; Mitigation Event:</label>
+              <pre class="siem-output" id="ebpfOutput"><code>// Kernel syscall trace will appear here...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terraform IaC Security Linter Sandbox Pane -->
+        <div class="sandbox-pane" id="paneTerraform">
+          <p class="sandbox-desc">Test <strong>Terraform &amp; OpenTofu IaC Security Linting</strong>. Scan cloud infrastructure definitions for CIS benchmark violations, unencrypted storage, and permissive security groups with automated compliant remediation.</p>
+          <div class="payload-chips">
+            <span class="payload-label">Sample Terraform Scenarios:</span>
+            <button class="tf-chip active" data-tf="s3_public" type="button">S3 Public &amp; Unencrypted (Dangerous)</button>
+            <button class="tf-chip" data-tf="sg_open" type="button">Security Group SSH 0.0.0.0/0</button>
+            <button class="tf-chip" data-tf="eks_public" type="button">EKS Cluster Unencrypted Secrets</button>
+            <button class="tf-chip" data-tf="clean" type="button">CIS Compliant Hardened HCL</button>
+          </div>
+          <div class="sandbox-grid">
+            <div class="sandbox-input-col">
+              <label class="sandbox-label" for="tfCodeInput">Terraform / OpenTofu HCL Manifest:</label>
+              <textarea id="tfCodeInput" rows="7" spellcheck="false"></textarea>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.75rem;">
+                <button class="btn btn-sm btn-primary" id="runTfScanBtn" type="button">
+                  <i class="fa-solid fa-shield-virus"></i> Run tfsec / Checkov Scan
+                </button>
+                <button class="btn btn-sm btn-secondary" id="autoRemediateTfBtn" type="button">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Remediate to Compliant HCL
+                </button>
+              </div>
+            </div>
+            <div class="sandbox-results-col">
+              <div class="intercept-status" id="tfStatusBox">
+                <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="status-info">
+                  <h4 id="tfStatusTitle">IaC Policy Engine: Ready</h4>
+                  <p id="tfStatusDesc">Click 'Run tfsec / Checkov Scan' to evaluate policy violations.</p>
+                </div>
+              </div>
+              <label class="sandbox-label">AST Policy Evaluation &amp; Violation Report:</label>
+              <pre class="siem-output" id="tfOutput"><code>// IaC policy evaluation report will appear here...</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="automation">Automation</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card glass tilt reveal" data-tags="security automation">
+          <div class="project-card-header">
+            <div class="project-number">01 / KUBERNETES</div>
+            <span class="project-status-badge in-progress"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</span>
+          </div>
+          <h3>KubeShield — Dynamic K8s Admission Controller</h3>
+          <p>A Kubernetes validating &amp; mutating admission webhook that intercepts pod manifests, validates against CIS benchmarks, and enforces non-root UID 10001 policies in real time.</p>
+          <div class="tags"><span>Go</span><span>Kubernetes API</span><span>OPA Rego</span><span>Docker</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="kubeshield"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <article class="project-card glass tilt reveal" data-tags="security automation">
+          <div class="project-card-header">
+            <div class="project-number">02 / SUPPLY CHAIN</div>
+            <span class="project-status-badge in-progress"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</span>
+          </div>
+          <h3>GitSLSA — SLSA Level 3 Provenance &amp; SBOM</h3>
+          <p>Automated supply-chain pipeline generating SPDX SBOMs and keyless Cosign cryptographic signatures tested across Haque And Sons microservice builds.</p>
+          <div class="tags"><span>Cosign</span><span>Sigstore</span><span>Syft</span><span>SLSA L3</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="gitslsa"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <article class="project-card glass tilt reveal" data-tags="security automation">
+          <div class="project-number">03 / AI PLATFORM</div>
+          <h3>Irus AI — A Personal &amp; AI Assistant</h3>
+          <p>Your Personal AI Command Center Chat • Live Web Search • Document Intelligence • Image Generation • Long-Term Memory • Voice Mode A full-stack, production-grade AI assistant platform — free for everyone, forever.</p>
+          <div class="tags"><span>Python</span><span>Regex Engine</span><span>Native Git Hooks</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="irusai"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque/Irus-AI" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <article class="project-card glass tilt reveal" data-tags="security automation">
+          <div class="project-number">02 / HOST DEFENSE</div>
+          <h3>Sentinel Daemon — Auto-Firewall &amp; Log Parser</h3>
+          <p>A systemd-managed daemon that watches auth.log and autonomously firewalls SSH brute-force attackers at the kernel level.</p>
+          <div class="project-badges">
+            <img src="https://img.shields.io/github/license/NejamulHaque/sentinel-daemon?style=flat-square&amp;color=00e5ff&amp;label=license" alt="License" loading="lazy" />
+            <img src="https://img.shields.io/badge/python-3.9%2B-00e5ff?style=flat-square" alt="Python 3.9+" loading="lazy" />
+            <img src="https://img.shields.io/github/actions/workflow/status/NejamulHaque/sentinel-daemon/tests.yml?style=flat-square&amp;label=tests&amp;branch=main" alt="Test status" loading="lazy" />
+          </div>
+          <div class="tags"><span>Python</span><span>Linux</span><span>systemd</span><span>iptables</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="sentinel"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <article class="project-card glass tilt reveal" data-tags="security automation">
+          <div class="project-number">03 / THREAT INTEL</div>
+          <h3>Threat Intelligence Log Parser</h3>
+          <p>Parses raw access logs for attack signatures, enriches IPs against live threat feeds, and exports SIEM-ready JSON.</p>
+          <div class="tags"><span>Python</span><span>urllib</span><span>Regex</span><span>JSON</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="threatintel"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque/threat-log-parser" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <article class="project-card glass tilt reveal" data-tags="fullstack">
+          <div class="project-number">04 / COLLABORATION</div>
+          <h3>CollabSheets — Real-Time Workspace</h3>
+          <p>Real-time collaborative editor built with WebSockets — a full-stack shipping credential grounding security work in real dev workflows.</p>
+          <div class="tags"><span>React</span><span>Node.js</span><span>WebSockets</span><span>PostgreSQL</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="collabsheets"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque/CollabSheets" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <article class="project-card glass tilt reveal" data-tags="fullstack">
+          <div class="project-number">05 / SAAS</div>
+          <h3>ProResume-Builder</h3>
+          <p>Production SaaS resume builder with auth and database-backed user data — part of the Haque And Sons portfolio.</p>
+          <div class="tags"><span>Next.js</span><span>Node.js</span><span>PostgreSQL</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="proresume"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque/ProResume-Builder" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <article class="project-card glass tilt reveal" data-tags="fullstack">
+          <div class="project-number">06 / FINTECH</div>
+          <h3>Nestfy — Smart Finance Tracker</h3>
+          <p>Smart finance tracker with automated categorization and real-time sync — another shipped SaaS product.</p>
+          <div class="tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+          <div class="actions">
+            <button class="btn btn-sm btn-primary case-open" data-case="nestfy"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque/Nestfy" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- THREAT MODEL -->
+    <section class="section" id="threatmodel">
+      <div class="section-head reveal"><p class="eyebrow">Threat Model</p><h2>Thinking like an attacker before building the defense</h2>
+        <p class="section-note">STRIDE walkthrough for Sentinel Daemon — the pattern I use before writing any control, not just for this project.</p>
+      </div>
+
+      <!-- 3D CYBER THREAT GLOBE & TELEMETRY -->
+      <div class="threat-globe-wrap glass reveal">
+        <div class="threat-globe-main">
+          <div class="globe-hud-top">
+            <span class="globe-live-pill"><i class="fa-solid fa-satellite-dish"></i> GLOBAL ATTACK SURFACE &amp; SENTINEL TELEMETRY</span>
+            <span class="globe-hint"><i class="fa-solid fa-arrows-up-down-left-right"></i> Drag to rotate 3D sphere</span>
+          </div>
+          <div class="globe-canvas-holder">
+            <canvas id="threatGlobe" width="540" height="380" aria-label="3D Interactive Earth Globe showing cyber threat arcs"></canvas>
+            <div class="globe-center-badge">
+              <span class="pulse-ring"></span>
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+          </div>
+        </div>
+        <div class="threat-feed-panel">
+          <div class="feed-header">
+            <h4><i class="fa-solid fa-tower-broadcast"></i> Ingress Attack Telemetry</h4>
+            <span class="feed-badge">Sentinel Daemon v2.4</span>
+          </div>
+          <div class="feed-stream" id="threatFeedStream">
+            <!-- Dynamically populated with simulated real-time attacks -->
+          </div>
+          <div class="feed-stats-mini">
+            <div class="f-stat"><strong id="globAttacksCount">1,482</strong><span>Attacks Blocked</span></div>
+            <div class="f-stat"><strong id="globLatency">1.8ms</strong><span>Avg Filter Time</span></div>
+            <div class="f-stat"><strong id="globDropRate">100%</strong><span>Threat Drop Rate</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topology-wrap glass reveal">
+        <canvas id="threatTopology" width="800" height="260" aria-label="Animated network topology showing traffic flowing from attacker to audit log"></canvas>
+        <div class="topology-legend">
+          <span class="leg-item"><i style="background:var(--accent-warm)"></i> Attack Attempt</span>
+          <span class="leg-item"><i style="background:var(--accent)"></i> Filtered / Secure Traffic</span>
+          <span class="leg-item"><i style="background:var(--accent-2)"></i> Internal DB / Log Sync</span>
+        </div>
+      </div>
+      <div class="table-scroll glass reveal">
+        <table class="threat-table">
+          <thead><tr><th>STRIDE</th><th>Threat</th><th>Mitigation in Sentinel Daemon</th><th>Residual Risk</th></tr></thead>
+          <tbody>
+            <tr><td><span class="stride-tag">Spoofing</span></td><td>Attacker spoofs a source IP in log entries to frame a legitimate host and get it blocked.</td><td>Daemon reads IPs from the kernel-level auth log, not user-controllable input.</td><td>An attacker with log-write access could still forge entries.</td></tr>
+            <tr><td><span class="stride-tag">Tampering</span></td><td>Local attacker modifies the block-list or auth.log to erase evidence or unblock their IP.</td><td>Dedicated low-privilege systemd service with restricted state-file permissions.</td><td>Block-list writes aren't cryptographically signed yet.</td></tr>
+            <tr><td><span class="stride-tag">Repudiation</span></td><td>No audit trail proving which IP was blocked, when, and why.</td><td>Every block logged with timestamp, matched pattern, and rule applied.</td><td>Logs are local-only — no central tamper-evident store yet.</td></tr>
+            <tr><td><span class="stride-tag">Info Disclosure</span></td><td>Daemon logs could leak defensive posture to an attacker with read access.</td><td>State file restricted to service user; no secrets ever written to logs.</td><td>Verbosity not reviewed under an assume-breach scenario.</td></tr>
+            <tr><td><span class="stride-tag">Denial of Service</span></td><td>Flooding auth.log or triggering mass false blocks against shared IPs.</td><td>Rolling-window correlation; bounded regex matching to avoid backtracking; every block carries a TTL and auto-expires.</td><td>No allowlist for known shared-IP ranges yet — top fix for v2.</td></tr>
+            <tr><td><span class="stride-tag">Elevation</span></td><td>A bug in iptables invocation could run arbitrary commands with privilege.</td><td>Narrowly scoped helper with fixed command template; no shell concatenation.</td><td>Privilege boundary not independently audited yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- INTERACTIVE STRIDE DATA FLOW DIAGRAM (DFD) -->
+      <div class="stride-dfd-wrap glass reveal" id="strideDfd">
+        <div class="stride-dfd-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Threat Modeling Methodology</div>
+            <h3 class="stride-dfd-title">Haque And Sons Production STRIDE &amp; DFD Explorer</h3>
+          </div>
+          <span class="stride-badge"><i class="fa-solid fa-diagram-project"></i> Interactive DFD</span>
+        </div>
+        <p class="stride-dfd-desc">Click any data flow node or trust boundary below to inspect the STRIDE threat model analysis, trust boundaries, and automated controls implemented in production.</p>
+
+        <div class="dfd-nodes-row">
+          <div class="dfd-node active" data-node="client">
+            <span class="dfd-type">External Entity</span>
+            <strong>01. Web / Client</strong>
+            <small>Untrusted Boundary</small>
+          </div>
+          <div class="dfd-arrow"><i class="fa-solid fa-arrow-right"></i><span>TLS 1.3</span></div>
+          <div class="dfd-node" data-node="edge">
+            <span class="dfd-type">Process</span>
+            <strong>02. Cloudflare Edge</strong>
+            <small>WAF &amp; Rate Limit</small>
+          </div>
+          <div class="dfd-arrow"><i class="fa-solid fa-arrow-right"></i><span>mTLS</span></div>
+          <div class="dfd-node" data-node="ingress">
+            <span class="dfd-type">Gateway</span>
+            <strong>03. Ingress NGINX</strong>
+            <small>K8s API Boundary</small>
+          </div>
+          <div class="dfd-arrow"><i class="fa-solid fa-arrow-right"></i><span>gRPC</span></div>
+          <div class="dfd-node" data-node="app">
+            <span class="dfd-type">Process</span>
+            <strong>04. App Pods</strong>
+            <small>KubeShield Enforced</small>
+          </div>
+          <div class="dfd-arrow"><i class="fa-solid fa-arrow-right"></i><span>Vault Auth</span></div>
+          <div class="dfd-node" data-node="data">
+            <span class="dfd-type">Data Store</span>
+            <strong>05. DB &amp; Vault</strong>
+            <small>Encrypted at Rest</small>
+          </div>
+        </div>
+
+        <div class="dfd-detail-panel glass" id="dfdDetailPanel">
+          <div class="dfd-detail-head">
+            <h4 id="dfdNodeTitle">01. Web / Mobile Client (Untrusted External Entity)</h4>
+            <span class="dfd-boundary-tag" id="dfdBoundaryTag">Trust Boundary: Public Internet ➔ Cloudflare Edge</span>
+          </div>
+          <div class="dfd-stride-grid" id="dfdStrideGrid">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE ZERO-TRUST CLOUD ARCHITECTURE -->
+      <div class="cloud-arch-wrap glass reveal" id="cloudArchitecture">
+        <div class="cloud-arch-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Defense-in-Depth</div>
+            <h3 class="cloud-arch-title">Zero-Trust Cloud &amp; Kubernetes Architecture</h3>
+          </div>
+          <div class="cloud-arch-actions">
+            <button class="btn btn-sm btn-primary" id="simulateBreachBtn" type="button">
+              <i class="fa-solid fa-shield-virus"></i> Simulate Ingress Attack
+            </button>
+          </div>
+        </div>
+        <p class="cloud-arch-desc">Click any architecture tier below to inspect its isolated security perimeter, least-privilege IAM boundaries, and cryptographic controls.</p>
+
+        <div class="arch-zones-grid">
+          <div class="arch-zone-card active" data-zone="edge">
+            <div class="zone-badge">Zone 01 · Edge &amp; Ingress</div>
+            <h4 class="zone-title"><i class="fa-solid fa-globe"></i> Cloudflare &amp; AWS WAF</h4>
+            <ul class="zone-features">
+              <li><i class="fa-solid fa-check"></i> Layer 7 Rate Limiting &amp; Managed Rules</li>
+              <li><i class="fa-solid fa-check"></i> TLS 1.3 Strict Termination</li>
+              <li><i class="fa-solid fa-check"></i> Anti-DDoS Anycast Routing</li>
+            </ul>
+          </div>
+
+          <div class="arch-zone-card" data-zone="dmz">
+            <div class="zone-badge">Zone 02 · Ingress Gateway</div>
+            <h4 class="zone-title"><i class="fa-solid fa-server"></i> ALB &amp; Sentinel Daemon</h4>
+            <ul class="zone-features">
+              <li><i class="fa-solid fa-check"></i> Kernel-level iptables automated drops</li>
+              <li><i class="fa-solid fa-check"></i> Strict Public/Private Subnet Split</li>
+              <li><i class="fa-solid fa-check"></i> SSH Key-only bastion auth</li>
+            </ul>
+          </div>
+
+          <div class="arch-zone-card" data-zone="k8s">
+            <div class="zone-badge">Zone 03 · Private Compute</div>
+            <h4 class="zone-title"><i class="fa-solid fa-dharmachakra"></i> Hardened EKS Cluster</h4>
+            <ul class="zone-features">
+              <li><i class="fa-solid fa-check"></i> mTLS Service Mesh (Mutual Auth)</li>
+              <li><i class="fa-solid fa-check"></i> Calico Pod-to-Pod NetworkPolicies</li>
+              <li><i class="fa-solid fa-check"></i> Non-root securityContext (UID 10001)</li>
+            </ul>
+          </div>
+
+          <div class="arch-zone-card" data-zone="persistence">
+            <div class="zone-badge">Zone 04 · Data &amp; Secrets</div>
+            <h4 class="zone-title"><i class="fa-solid fa-vault"></i> HashiCorp Vault &amp; RDS</h4>
+            <ul class="zone-features">
+              <li><i class="fa-solid fa-check"></i> Dynamic short-lived DB credentials</li>
+              <li><i class="fa-solid fa-check"></i> AWS KMS Envelope Encryption at Rest</li>
+              <li><i class="fa-solid fa-check"></i> Isolated DB Subnet (0 Internet Route)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="arch-inspector glass" id="archInspector">
+          <div class="inspector-header">
+            <span class="inspector-title" id="inspTitle">Zone 01 · Edge &amp; Ingress Defense</span>
+            <span class="inspector-status"><i class="fa-solid fa-lock"></i> Strict Zero-Trust Enforced</span>
+          </div>
+          <div class="inspector-content" id="inspContent">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE MITRE ATT&CK MATRIX -->
+      <div class="mitre-matrix-wrap glass reveal" id="mitreMatrix">
+        <div class="mitre-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Enterprise Threat Mapping</div>
+            <h3 class="mitre-title">MITRE ATT&CK® Defense Matrix Navigator</h3>
+          </div>
+          <span class="mitre-badge">Framework v14</span>
+        </div>
+        <p class="mitre-desc">Click any enterprise attack technique below to inspect how my automated security tools (Sentinel Daemon, GitShield, Threat Log Parser) actively detect, mitigate, and log the threat.</p>
+
+        <div class="mitre-grid">
+          <div class="mitre-col">
+            <div class="mitre-col-head">TA0001 · Initial Access</div>
+            <div class="mitre-card active" data-tech="t1110">
+              <span class="tech-id">T1110</span>
+              <strong class="tech-name">Brute Force</strong>
+              <small class="tech-tool">Sentinel Daemon</small>
+            </div>
+            <div class="mitre-card" data-tech="t1190">
+              <span class="tech-id">T1190</span>
+              <strong class="tech-name">Exploit Public App</strong>
+              <small class="tech-tool">WAF &amp; Threat Parser</small>
+            </div>
+          </div>
+
+          <div class="mitre-col">
+            <div class="mitre-col-head">TA0002 · Execution</div>
+            <div class="mitre-card" data-tech="t1059">
+              <span class="tech-id">T1059</span>
+              <strong class="tech-name">Command &amp; Scripting</strong>
+              <small class="tech-tool">Semgrep &amp; AppArmor</small>
+            </div>
+          </div>
+
+          <div class="mitre-col">
+            <div class="mitre-col-head">TA0005 · Defense Evasion</div>
+            <div class="mitre-card" data-tech="t1070">
+              <span class="tech-id">T1070</span>
+              <strong class="tech-name">Indicator Removal</strong>
+              <small class="tech-tool">Forensics Log Auditing</small>
+            </div>
+          </div>
+
+          <div class="mitre-col">
+            <div class="mitre-col-head">TA0006 · Credential Access</div>
+            <div class="mitre-card" data-tech="t1552">
+              <span class="tech-id">T1552</span>
+              <strong class="tech-name">Unsecured Credentials</strong>
+              <small class="tech-tool">GitShield Pre-Commit</small>
+            </div>
+          </div>
+
+          <div class="mitre-col">
+            <div class="mitre-col-head">TA0007 · Discovery</div>
+            <div class="mitre-card" data-tech="t1046">
+              <span class="tech-id">T1046</span>
+              <strong class="tech-name">Network Discovery</strong>
+              <small class="tech-tool">Sentinel Port-Scan Probe</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="mitre-inspector glass" id="mitreInspector">
+          <div class="mitre-insp-head">
+            <div>
+              <span class="insp-tech-id" id="mitreInspId">T1110 · Initial Access</span>
+              <h4 id="mitreInspTitle">Brute Force (SSH &amp; Authentication Guessing)</h4>
+            </div>
+            <span class="insp-tool-tag" id="mitreInspTool">Sentinel Daemon</span>
+          </div>
+          <div class="mitre-insp-body" id="mitreInspBody">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE SSH & API HONEYPOT DECEPTION GRID -->
+      <div class="honeypot-wrap glass reveal" id="honeypotDeception">
+        <div class="honeypot-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Active Deception Technology</div>
+            <h3 class="honeypot-title">Decoy Honeypot Forensics &amp; Threat Ingress Stream</h3>
+          </div>
+          <div class="honeypot-status-pill">
+            <span class="pulse-dot"></span> 4 Decoy Nodes Active
+          </div>
+        </div>
+        <p class="honeypot-desc">Real-time simulated telemetry from exposed decoy traps (decoy SSH bastions, fake <code>/.env</code> endpoints, and fake Spring Actuators) feeding threat intelligence directly into Sentinel Daemon.</p>
+
+        <div class="honeypot-grid">
+          <div class="honeypot-stream-col glass">
+            <div class="hp-stream-header">
+              <span>Live Decoy Ingress Stream</span>
+              <small id="hpEventCount">Streaming...</small>
+            </div>
+            <div class="hp-stream-list" id="hpStreamList">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <div class="honeypot-detail-col glass" id="hpDetailCol">
+            <div class="hp-detail-head">
+              <span class="hp-probe-badge" id="hpProbeBadge">DECOY PROBE INTERCEPTED</span>
+              <h4 id="hpProbeTitle">Select a probe from the live stream to inspect forensics</h4>
+            </div>
+            <div class="hp-detail-body" id="hpDetailBody">
+              <p class="muted">Click any incoming attacker probe on the left to inspect raw packet headers, GeoIP ASN attribution, and automated kernel iptables drop rules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE KUBERNETES NETWORKPOLICY FLOW VISUALIZER -->
+      <div class="netpol-sim-wrap glass reveal" id="netpolVisualizer">
+        <div class="netpol-sim-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Container Network Isolation</div>
+            <h3 class="netpol-sim-title">Kubernetes Calico Zero-Trust NetworkPolicy Visualizer</h3>
+          </div>
+          <span class="netpol-badge"><i class="fa-solid fa-network-wired"></i> Calico eBPF / CNI</span>
+        </div>
+        <p class="netpol-sim-desc">Simulate Kubernetes container namespace isolation and zero-trust east-west traffic flow. Toggle Calico ingress/egress rules and inject test packet probes across pods in real time.</p>
+
+        <div class="netpol-layout-grid">
+          <div class="netpol-mesh-col glass">
+            <div class="mesh-pods-row">
+              <div class="k8s-pod-box" id="podFrontend">
+                <span class="pod-ns">ns: web</span>
+                <strong><i class="fa-solid fa-cube"></i> frontend-ui</strong>
+                <small>10.244.1.14 · Public</small>
+              </div>
+
+              <div class="mesh-conn-arrow" id="connWebToApi">
+                <span class="conn-tag">mTLS 8080</span>
+                <i class="fa-solid fa-arrows-left-right"></i>
+              </div>
+
+              <div class="k8s-pod-box" id="podApi">
+                <span class="pod-ns">ns: backend</span>
+                <strong><i class="fa-solid fa-cube"></i> api-service</strong>
+                <small>10.244.2.22 · App</small>
+              </div>
+
+              <div class="mesh-conn-arrow" id="connApiToDb">
+                <span class="conn-tag">TCP 5432</span>
+                <i class="fa-solid fa-arrows-left-right"></i>
+              </div>
+
+              <div class="k8s-pod-box" id="podDb">
+                <span class="pod-ns">ns: data</span>
+                <strong><i class="fa-solid fa-database"></i> postgres-vault</strong>
+                <small>10.244.3.08 · Encrypted</small>
+              </div>
+            </div>
+
+            <div class="packet-flight-status" id="packetStatus">
+              <span class="packet-badge ready" id="packetBadge"><i class="fa-solid fa-circle-check"></i> Network Mesh Stable</span>
+              <span class="packet-desc" id="packetDesc">Select a packet probe scenario on the right to test Calico policy enforcement.</span>
+            </div>
+          </div>
+
+          <div class="netpol-controls-col glass">
+            <div class="policy-toggle-group">
+              <span class="sandbox-label">Active Calico NetworkPolicies:</span>
+              <label class="policy-switch-row">
+                <input type="checkbox" id="toggleDefaultDeny" checked>
+                <span>Default-Deny Ingress/Egress across all namespaces</span>
+              </label>
+              <label class="policy-switch-row">
+                <input type="checkbox" id="toggleWebToApi" checked>
+                <span>Allow <code>web</code> ➔ <code>backend</code> on TCP 8080</span>
+              </label>
+              <label class="policy-switch-row">
+                <input type="checkbox" id="toggleApiToDb" checked>
+                <span>Allow <code>backend</code> ➔ <code>data</code> on TCP 5432</span>
+              </label>
+            </div>
+
+            <div class="probe-actions-group">
+              <span class="sandbox-label">Inject Test Network Probe:</span>
+              <div class="probe-btns-grid">
+                <button class="btn btn-sm btn-secondary probe-btn" data-probe="legit" type="button">
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i> Legitimate API Call (Frontend ➔ API ➔ DB)
+                </button>
+                <button class="btn btn-sm btn-secondary probe-btn" data-probe="direct_db" type="button">
+                  <i class="fa-solid fa-triangle-exclamation"></i> Lateral Pivot: Frontend ➔ Direct Database (5432)
+                </button>
+                <button class="btn btn-sm btn-secondary probe-btn" data-probe="egress_leak" type="button">
+                  <i class="fa-solid fa-satellite-dish"></i> Exfiltration: Backend ➔ Internet C2 (4444)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTERPRISE CIS & NIST COMPLIANCE SCORECARD -->
+      <div class="compliance-wrap glass reveal" id="complianceScorecard">
+        <div class="compliance-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Audit &amp; Governance</div>
+            <h3 class="compliance-title">Enterprise Security Compliance &amp; Hardening Baseline</h3>
+          </div>
+          <span class="compliance-score-pill"><i class="fa-solid fa-certificate"></i> Audit Status: 98.4% Compliant</span>
+        </div>
+        <p class="compliance-desc">Verified compliance mappings matching target infrastructure baselines against CIS Benchmarks, NIST SP 800-53, and SLSA Level 3 Supply Chain Security.</p>
+
+        <div class="compliance-grid">
+          <div class="comp-card glass active" data-comp="cis">
+            <div class="comp-score-ring">98.4%</div>
+            <div class="comp-info">
+              <h4>CIS Linux Benchmark (Level 2)</h4>
+              <p>SSH hardening, AppArmor mandatory access control, immutable logs, and non-executable <code>/tmp</code> mounts.</p>
+            </div>
+          </div>
+
+          <div class="comp-card glass" data-comp="pss">
+            <div class="comp-score-ring">100%</div>
+            <div class="comp-info">
+              <h4>Kubernetes Pod Security (PSS)</h4>
+              <p>Restricted profile: readOnlyRootFilesystem, non-root execution (UID 10001), drop ALL capabilities.</p>
+            </div>
+          </div>
+
+          <div class="comp-card glass" data-comp="slsa">
+            <div class="comp-score-ring">Level 3</div>
+            <div class="comp-info">
+              <h4>SLSA Supply Chain Security</h4>
+              <p>Cryptographic Cosign image signing, keyless OIDC authentication, and automated SPDX SBOM generation.</p>
+            </div>
+          </div>
+
+          <div class="comp-card glass" data-comp="nist">
+            <div class="comp-score-ring">Mapped</div>
+            <div class="comp-info">
+              <h4>NIST SP 800-53 Rev. 5</h4>
+              <p>Direct mapping across Access Enforcement (AC-3), Boundary Protection (SC-7), and Monitoring (SI-4).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-detail-box glass" id="compDetailBox">
+          <div class="comp-detail-head">
+            <span class="comp-detail-title" id="compDetailTitle">CIS Linux Level 2 Benchmark Audit Controls</span>
+            <span class="comp-detail-tag" id="compDetailTag">Automated Enforcement Active</span>
+          </div>
+          <div class="comp-detail-content" id="compDetailContent">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 1-CLICK EXECUTIVE SECURITY ASSESSMENT & AUDIT REPORT -->
+      <div class="audit-report-wrap glass reveal" id="executiveAuditReport">
+        <div class="audit-report-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.2rem">Governance &amp; Deliverables</div>
+            <h3 class="audit-report-title">Executive Cloud Infrastructure Security Assessment Report</h3>
+          </div>
+          <button class="btn btn-sm btn-primary" id="printAuditReportBtn" type="button">
+            <i class="fa-solid fa-file-pdf"></i> Download Official Audit Report (PDF)
+          </button>
+        </div>
+        <p class="audit-report-desc">A formal enterprise security evaluation report synthesized from Haque And Sons production benchmarks and UP Police threat findings — structured for CISOs, VPs of Engineering, and compliance auditors.</p>
+
+        <div class="audit-doc-preview glass">
+          <div class="audit-doc-header">
+            <div class="audit-doc-brand">
+              <span class="audit-doc-logo"><i class="fa-solid fa-shield-halved"></i></span>
+              <div>
+                <h4>SEC-AUDIT-2026-Q3 · CLOUD INFRASTRUCTURE POSTURE</h4>
+                <small>Author: Nejamul Haque (DevSecOps Lead) · Classification: CONFIDENTIAL / RESTRICTED</small>
+              </div>
+            </div>
+            <span class="audit-score-stamp">GRADE A+ · 98.4%</span>
+          </div>
+
+          <div class="audit-doc-body">
+            <div class="audit-summary-block">
+              <h5>1. Executive Summary &amp; Scope</h5>
+              <p>Comprehensive security posture assessment conducted across AWS EKS Kubernetes clusters, edge Cloudflare WAF gateways, and GitHub Actions CI/CD pipelines. Evaluated against CIS Linux Benchmark v2.0, NIST SP 800-53 Rev. 5, and SLSA Level 3 supply chain security baselines.</p>
+            </div>
+
+            <div class="audit-findings-table-wrap">
+              <h5>2. Security Assessment Matrix</h5>
+              <table class="audit-table">
+                <thead>
+                  <tr><th>Security Domain</th><th>Baseline Standard</th><th>Enforcement Tool</th><th>Residual Risk</th><th>Posture</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Secret Management</strong></td><td>0 Hardcoded Tokens</td><td>GitShield Pre-Commit Hook</td><td>0 Secrets in Staging</td><td><span class="pass-pill">PASSED</span></td></tr>
+                  <tr><td><strong>Container Runtime</strong></td><td>CIS K8s PSS Restricted</td><td>KubeShield Admission Webhook</td><td>Non-root UID 10001 enforced</td><td><span class="pass-pill">PASSED</span></td></tr>
+                  <tr><td><strong>Supply Chain</strong></td><td>SLSA Level 3 Attestation</td><td>GitSLSA Cosign + Syft SPDX</td><td>Cryptographically verified</td><td><span class="pass-pill">PASSED</span></td></tr>
+                  <tr><td><strong>Host Firewall</strong></td><td>Automated Brute-Force Drop</td><td>Sentinel Daemon (iptables)</td><td>1-hour rolling TTL isolation</td><td><span class="pass-pill">PASSED</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="audit-recommendation-block">
+              <h5>3. Strategic Remediation Roadmap</h5>
+              <p>100% of critical and high severity attack vectors are mitigated via pre-commit and admission-time shift-left enforcement. Recommended next phase: Deploy automated eBPF runtime observability and expand HashiCorp Vault dynamic database secret lease rotation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB (images first, live fallbacks) -->
+    <section class="section" id="github">
+      <div class="section-head reveal"><p class="eyebrow">Open Source</p><h2>GitHub Activity</h2></div>
+      <div class="github-grid reveal">
+        <div class="gh-tile">
+          <img id="ghStatsImg" class="gh-img" alt="GitHub stats" loading="lazy" src="https://raw.githubusercontent.com/NejamulHaque/NejamulHaque/output/stats.svg" />
+          <div class="gh-card glass gh-hidden" id="ghStatsCard">
+            <div class="gh-card-head"><i class="fa-brands fa-github"></i><span>github.com/NejamulHaque</span></div>
+            <div class="gh-card-stats">
+              <div class="gh-stat"><strong id="ghRepos">—</strong><span>Public Repos</span></div>
+              <div class="gh-stat"><strong id="ghStars">—</strong><span>Stars Earned</span></div>
+              <div class="gh-stat"><strong id="ghFollowers">—</strong><span>Followers</span></div>
+              <div class="gh-stat"><strong id="ghYears">—</strong><span>Years on GitHub</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="gh-tile">
+          <img id="ghLangsImg" class="gh-img" alt="Top languages" loading="lazy" src="https://raw.githubusercontent.com/NejamulHaque/NejamulHaque/output/top-langs.svg" />
+          <div class="gh-card glass gh-hidden" id="ghLangCard">
+            <div class="gh-card-head"><i class="fa-solid fa-code"></i><span>Top Languages (live)</span></div>
+            <div class="gh-langs" id="ghLangs"><div class="gh-loading">Fetching live data…</div></div>
+          </div>
+        </div>
+        <div class="gh-tile">
+          <img id="ghStreakImg" class="gh-img" alt="GitHub streak" loading="lazy" 
+  src="https://streak-stats.demolab.com/?user=NejamulHaque&theme=dark&hide_border=true&background=0D1117&stroke=1a2238&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=e8eeff&dates=8291b8&sideNums=00D9FF&currStreakNum=00D9FF" />
+          <img id="ghStreakAlt" class="gh-img gh-hidden" alt="GitHub streak" loading="lazy"
+            data-src="https://streak-stats.demolab.com/?user=NejamulHaque&hide_border=true&background=0D1117&stroke=1a2238&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=e8eeff&dates=8291b8&sideNums=00D9FF&currStreakNum=00D9FF" />
+          <div class="gh-card glass gh-hidden" id="ghStreakCard">
+            <div class="gh-card-head"><i class="fa-solid fa-fire"></i><span>Consistency</span></div>
+            <p class="gh-fb-note">Daily commit streak in progress — the contribution map tells the full story.</p>
+          </div>
+        </div>
+        <div class="gh-tile">
+          <img id="ghGraph" class="gh-img" alt="Contribution graph" loading="lazy"
+            src="https://github-readme-activity-graph.vercel.app/graph?username=NejamulHaque&theme=github-compact&bg_color=0D1117&color=00D9FF&line=00D9FF&point=FFFFFF&hide_border=true&area=true&area_color=00D9FF" />
+          <div class="gh-card glass gh-hidden" id="ghHeatCard">
+            <div class="gh-card-head"><i class="fa-solid fa-calendar-days"></i><span>Contribution Activity</span><span class="gh-heat-total" id="ghHeatTotal"></span></div>
+            <div class="gh-heat" id="ghHeat"><div class="gh-loading">Rendering contribution map…</div></div>
+            <div class="gh-heat-legend"><span>Less</span><i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>More</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="github-snake reveal">
+        <img id="ghSnake" src="https://raw.githubusercontent.com/NejamulHaque/NejamulHaque/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section class="section" id="certificates">
+      <div class="section-head reveal"><p class="eyebrow">Training</p><h2>Programs completed &amp; a staged certification roadmap</h2></div>
+      <div class="cert-grid">
+        <div class="cert-card glass reveal"><div class="cert-issuer">UP Police — Amroha Cyber Cell</div><h3>APCSIP‑2026 Cyber Security Program</h3><p>Cybercrime mechanisms, incident log analysis &amp; digital forensics workflows under law enforcement frameworks.</p><span class="cert-date"><i class="fa-regular fa-calendar"></i> 2026</span></div>
+        <div class="cert-card glass reveal"><div class="cert-issuer">Infosys Springboard</div><h3>Artificial Intelligence For All</h3><p>Foundational AI concepts, applications and responsible-use principles across the AI lifecycle.</p><span class="cert-date"><i class="fa-solid fa-check"></i> Completed</span></div>
+        <div class="cert-card glass reveal"><div class="cert-issuer">Google Cloud</div><h3>Introduction to Generative AI</h3><p>Core generative AI concepts, LLM fundamentals, and Google Cloud's approach to responsible AI.</p><span class="cert-date"><i class="fa-solid fa-check"></i> Completed</span></div>
+        <div class="cert-card glass reveal"><div class="cert-issuer">Tech Mahindra</div><h3>Cybersecurity</h3><p>Core cybersecurity principles — threats, defenses, and industry practice.</p><span class="cert-date"><i class="fa-solid fa-check"></i> Completed</span></div>
+        <div class="cert-card glass reveal"><div class="cert-issuer">Anthropic Academy</div><h3>AI Fluency: Framework &amp; Foundations</h3><p>Structured framework for working effectively and critically with AI systems.</p><span class="cert-date"><i class="fa-solid fa-check"></i> Completed</span></div>
+      </div>
+
+      <h3 class="roadmap-heading reveal">Certification Roadmap</h3>
+      <div class="cert-roadmap">
+        <div class="roadmap-tier glass reveal">
+          <div class="roadmap-tier-head"><span class="roadmap-stage">Tier 1 · Foundation</span><span class="roadmap-when">In progress now</span></div>
+          <ul class="roadmap-list"><li><i class="fa-solid fa-circle-check"></i> AWS Certified Cloud Practitioner</li><li><i class="fa-solid fa-circle-check"></i> CompTIA Security+</li></ul>
+          <p class="roadmap-note">Cloud fundamentals and core security vocabulary — the baseline most DevSecOps specs expect.</p>
+        </div>
+        <div class="roadmap-tier glass reveal">
+          <div class="roadmap-tier-head"><span class="roadmap-stage">Tier 2 · Target</span><span class="roadmap-when">Next 6–12 months</span></div>
+          <ul class="roadmap-list"><li><i class="fa-solid fa-bullseye"></i> AWS Certified Security – Specialty</li><li><i class="fa-solid fa-bullseye"></i> Certified Kubernetes Security Specialist</li></ul>
+          <p class="roadmap-note">The two credentials named in mid-level DevSecOps &amp; cloud security job descriptions.</p>
+        </div>
+        <div class="roadmap-tier glass reveal">
+          <div class="roadmap-tier-head"><span class="roadmap-stage">Tier 3 · Later</span><span class="roadmap-when">Optional / offensive</span></div>
+          <ul class="roadmap-list"><li><i class="fa-regular fa-circle"></i> OSCP</li><li><i class="fa-regular fa-circle"></i> Linux Foundation Certified SysAdmin</li></ul>
+          <p class="roadmap-note">Offensive thinking that makes defensive design decisions more defensible in interviews.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-head reveal"><p class="eyebrow">Contact</p><h2>Let's harden something together</h2></div>
+      <div class="contact-grid">
+        <div class="contact-info glass reveal">
+          <div class="availability-badge">Open to Internship &amp; Placement Roles — 2026–2027</div>
+          <h3>Open to Opportunities</h3>
+          <p>Looking for DevSecOps, Cloud Security, or Infrastructure Engineering internships and placements. Let's connect and build something secure by default.</p>
+          <div class="contact-detail"><i class="fa-solid fa-location-dot"></i> Bettiah, Bihar, India</div>
+          <div class="contact-detail"><i class="fa-brands fa-github"></i> github.com/NejamulHaque</div>
+          <div class="contact-detail"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/NejamulHaque</div>
+          <div class="socials">
+            <a href="https://github.com/NejamulHaque" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/NejamulHaque" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://nejamulhaque.medium.com/" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+          </div>
+        </div>
+        <form class="contact-form glass reveal" id="contactForm" action="https://formspree.io/f/mvzwoypk" method="POST">
+          <label>Name <input type="text" name="name" placeholder="Your name" required /></label>
+          <label>Email <input type="email" name="email" placeholder="you@example.com" required /></label>
+          <label>Message <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea></label>
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          <p class="status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left">© <span id="year"></span> Nejamul Haque — Built with security, performance &amp; intent.</div>
+    <div class="footer-right"><span class="footer-dot"></span> All systems operational</div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- CASE STUDY MODAL -->
+  <div class="case-modal" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="caseModalTitle">
+    <div class="case-modal-backdrop" data-close-case></div>
+    <div class="case-modal-panel glass">
+      <button class="case-modal-close" data-close-case aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
+      <div class="case-modal-scroll">
+        <div class="case-modal-eyebrow" id="caseModalCategory"></div>
+        <h2 class="case-modal-title" id="caseModalTitle"></h2>
+        <div class="case-modal-tags" id="caseModalTags"></div>
+        <div class="case-modal-body" id="caseModalBody"></div>
+        <div class="case-modal-cta" id="caseModalCta"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRINT-ONLY RÉSUMÉ -->
+  <div class="resume-print" id="resumePrint" aria-hidden="true">
+    <header class="rp-header">
+      <h1>Nejamul Haque</h1>
+      <p class="rp-title">DevSecOps &amp; Cloud Security Engineer</p>
+      <p class="rp-contact">Bettiah, Bihar, India &nbsp;·&nbsp; github.com/NejamulHaque &nbsp;·&nbsp; linkedin.com/in/NejamulHaque &nbsp;·&nbsp; nejamulhaque.medium.com</p>
+    </header>
+    <section class="rp-section">
+      <h2>Summary</h2>
+      <p>Final-year B.Tech Computer Science student (2023–2027) focused on DevSecOps, Cloud Security, and Infrastructure Engineering, with a law-enforcement-backed cyber security internship (APCSIP-2026, UP Police). Working philosophy: <strong>"Shifting Security Left"</strong> — embedding automated security controls, container checks, and static analysis directly into CI/CD pipelines. Builder of 3 security tools and 3 production SaaS applications. Open to internship &amp; placement roles, 2026–2027.</p>
+    </section>
+    <section class="rp-section">
+      <h2>Experience</h2>
+      <div class="rp-item">
+        <div class="rp-item-head"><h3>Cyber Security Intern — APCSIP-2026</h3><span class="rp-date">2026</span></div>
+        <p class="rp-org">Amroha Police Cyber Security Program · UP Police</p>
+        <ul>
+          <li>Analyzed real-world cybercrime mechanisms, incident log traces, and digital forensics workflows under active law enforcement frameworks.</li>
+          <li>Audited server logs for brute-force access attempts and network reconnaissance footprints.</li>
+          <li>Built automated Linux/Bash/Python tooling for server hardening from live threat findings.</li>
+          <li>Designed dynamic access isolation rules to contain compromised or suspicious hosts.</li>
+        </ul>
+      </div>
+      <div class="rp-item">
+        <div class="rp-item-head"><h3>Self-Employed Full-Stack Developer</h3><span class="rp-date">2024 — Present</span></div>
+        <p class="rp-org">Haque And Sons</p>
+        <ul>
+          <li>Shipped 3 production SaaS apps — CollabSheets, ProResume-Builder, and Nestfy — using React, Next.js, Node.js, WebSockets, and PostgreSQL.</li>
+          <li>Full-stack ownership across API architecture, database design, real-time sync, and deployment.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="rp-section">
+      <h2>Security Projects</h2>
+      <div class="rp-item">
+        <div class="rp-item-head"><h3>KubeShield — Dynamic K8s Admission Webhook</h3><span class="rp-date">Go · Rego · Kubernetes · Webhooks</span></div>
+        <p>Validating &amp; Mutating Admission Controller blocking privileged root containers, mutable <code>:latest</code> tags, and enforcing non-root UID 10001 with automated JSONPatch mutations.</p>
+      </div>
+      <div class="rp-item">
+        <div class="rp-item-head"><h3>GitSLSA — Supply Chain Security &amp; Cosign Attestation</h3><span class="rp-date">Cosign · Sigstore · Syft SPDX · GitHub Actions</span></div>
+        <p>Automated SLSA Level 3 CI/CD security pipeline signing container digests via keyless OIDC authentication and generating tamper-evident SPDX SBOMs.</p>
+      </div>
+      <div class="rp-item">
+        <div class="rp-item-head"><h3>GitShield — CLI Secret &amp; Security Auditor</h3><span class="rp-date">Python · Native Git Hooks</span></div>
+        <p>Native pre-commit hook with a regex-pattern engine that intercepts AWS keys, PEM-encoded private keys, high-entropy tokens, and risky permissions (<code>chmod 777</code>) before they enter Git history. Zero external dependencies.</p>
+      </div>
+      <div class="rp-item">
+        <div class="rp-item-head"><h3>Sentinel Daemon — Auto-Firewall &amp; Log Parser</h3><span class="rp-date">Python · systemd · iptables</span></div>
+        <p>systemd-managed daemon tails auth.log in real time, correlates repeated failed logins in a rolling window, and inserts kernel-level iptables DROP rules. Blocked 14 IPs over 3 days of live traffic with 1.8ms average detection-to-block latency and 0 confirmed false positives.</p>
+      </div>
+      <div class="rp-item">
+        <div class="rp-item-head"><h3>Threat Intelligence Log Parser</h3><span class="rp-date">Python · urllib · JSON</span></div>
+        <p>Regex-matches SQLi, XSS, and path-traversal footprints in access logs, enriches flagged IPs against live HTTPS threat feeds, and exports SIEM-ready JSON reports.</p>
+      </div>
+    </section>
+    <section class="rp-section rp-two-col">
+      <div>
+        <h2>Skills</h2>
+        <p><strong>Systems:</strong> Linux (Ubuntu/Debian), Bash scripting, Python automation, systemd</p>
+        <p><strong>Defense:</strong> iptables / UFW / Fail2ban, regex-driven log parsing, SSH hardening, GPG signing</p>
+        <p><strong>Cloud &amp; CI/CD:</strong> Docker, Kubernetes, AWS (EC2, S3, IAM, VPC), Terraform, GitHub Actions / Jenkins / GitLab CI, SAST/SCA (Semgrep, SonarQube, Trivy, Snyk), DAST (OWASP ZAP), pre-commit security hooks</p>
+        <p><strong>Core:</strong> Git, digital forensics, least privilege, SIEM/JSON reporting, threat intel feeds, REST APIs, PostgreSQL</p>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <div class="rp-item">
+          <h3>B.Tech — Computer Science &amp; Engineering</h3>
+          <p class="rp-org">Teerthanker Mahaveer University, Moradabad · 2023 — 2027</p>
+          <p>Core CS fundamentals alongside hands-on systems and security work; targeting industry placement 2026–2027.</p>
+        </div>
+      </div>
+    </section>
+    <section class="rp-section">
+      <h2>Training &amp; Certification Path</h2>
+      <p><strong>Completed:</strong> APCSIP-2026 Cyber Security Program (UP Police — Amroha Cyber Cell) · Artificial Intelligence For All (Infosys Springboard) · Introduction to Generative AI (Google Cloud) · Cybersecurity (Tech Mahindra) · AI Fluency: Framework &amp; Foundations (Anthropic Academy)</p>
+      <p><strong>In progress:</strong> AWS Certified Cloud Practitioner · CompTIA Security+</p>
+      <p><strong>Target (6–12 months):</strong> AWS Certified Security – Specialty · Certified Kubernetes Security Specialist (CKS)</p>
+    </section>
+  </div>
+
+  <!-- SUPPORT / DONATE FLOATING BUTTON -->
+<button class="support-fab" id="supportFab" aria-label="Support my work" title="Support this project">
+  <i class="fa-solid fa-mug-hot"></i>
+  <span class="support-fab-label">Support</span>
+</button>
+
+<!-- SUPPORT MODAL -->
+<div class="support-modal" id="supportModal" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
+  <div class="support-backdrop" data-close-support></div>
+  <div class="support-panel glass">
+    <button class="support-close" data-close-support aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="support-scroll">
+
+      <div class="support-header">
+        <div class="support-badge">☕ Buy me a coffee</div>
+        <h2 id="supportModalTitle">Loving the work? Say thanks.</h2>
+        <p>Every coffee keeps the terminal glowing. If this portfolio or any of my open-source tools helped you, a small tip means a lot.</p>
+      </div>
+
+      <!-- UPI Section -->
+      <div class="support-section">
+        <div class="support-section-head">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <h3>Pay via UPI (India)</h3>
+        </div>
+
+        <div class="upi-layout">
+          <div class="upi-qr">
+            <img id="upiQrImg"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=2&bgcolor=ffffff&color=050810&qzone=2&data=upi%3A%2F%2Fpay%3Fpa%3Dnejamulhaque%40upi%26pn%3DNejamul%2520Haque%26cu%3DINR%26am%3D100%26tn%3DThanks%2520for%2520the%2520coffee"
+              alt="UPI QR code for nejamulhaque@upi" />
+            <span class="upi-amount-hint">Default: ₹100</span>
+          </div>
+
+          <div class="upi-details">
+            <div class="upi-row">
+              <span class="upi-row-label">UPI ID</span>
+              <div class="upi-id-box">
+                <code id="upiIdText">nejamulhaque@upi</code>
+                <button class="copy-btn" id="copyUpiBtn" aria-label="Copy UPI ID">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="upi-row">
+              <span class="upi-row-label">Amount</span>
+              <div class="amount-chips">
+                <button class="amount-chip" data-amt="50">₹50</button>
+                <button class="amount-chip active" data-amt="100">₹100</button>
+                <button class="amount-chip" data-amt="250">₹250</button>
+                <button class="amount-chip" data-amt="500">₹500</button>
+              </div>
+            </div>
+
+            <a class="btn btn-primary upi-pay-btn" id="upiPayLink"
+              href="upi://pay?pa=nejamulhaque@upi&pn=Nejamul%20Haque&cu=INR&am=100&tn=Thanks%20for%20the%20coffee">
+              <i class="fa-solid fa-mobile-screen-button"></i> Open UPI App
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buy Me a Coffee Section -->
+      <div class="support-section">
+        <div class="support-section-head">
+          <i class="fa-solid fa-mug-saucer"></i>
+          <h3>Or via Buy Me a Coffee (International)</h3>
+        </div>
+        <a class="bmc-btn" href="https://www.buymeacoffee.com/nejamulhaque" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 22h10v-2H7v2zm9-16.5v-2c0-.83-.67-1.5-1.5-1.5h-5C8.67 2 8 2.67 8 3.5v2H3v13c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-13h-5zm-6-2h4v2h-4v-2zm8 16H6v-11h12v11z" fill="#FFDD00"/>
+          </svg>
+          Buy me a coffee
+          <span class="bmc-arrow">→</span>
+        </a>
+        <p class="bmc-note">Works with cards, PayPal, and 140+ currencies. No account required.</p>
+      </div>
+
+      <div class="support-footer">
+        <i class="fa-solid fa-heart"></i>
+        Thank you for supporting independent builders.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Copy confirmation toast -->
+<div class="copy-toast" id="copyToast" role="status" aria-live="polite">
+  <i class="fa-solid fa-check-circle"></i>
+  <span>UPI ID copied to clipboard</span>
+</div>
+
+  <!-- Shortcuts Overlay -->
+  <div class="shortcuts-backdrop" id="shortcutsOverlay" aria-hidden="true">
+    <div class="shortcuts-modal glass">
+      <div class="shortcuts-header">
+        <span><i class="fa-solid fa-keyboard"></i> Keyboard Shortcuts</span>
+        <button class="shortcuts-close" id="shortcutsClose" aria-label="Close shortcuts"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="shortcuts-grid">
+        <div class="shortcut-item"><kbd class="shortcut-key">1-9,0</kbd> Jump to sections</div>
+        <div class="shortcut-item"><kbd class="shortcut-key">t</kbd> Toggle theme</div>
+        <div class="shortcut-item"><kbd class="shortcut-key">p</kbd> Print resume</div>
+        <div class="shortcut-item"><kbd class="shortcut-key">/</kbd> Focus terminal</div>
+        <div class="shortcut-item"><kbd class="shortcut-key">j/k</kbd> Scroll down/up</div>
+        <div class="shortcut-item"><kbd class="shortcut-key">?</kbd> Toggle this menu</div>
+        <div class="shortcut-item"><kbd class="shortcut-key">Esc</kbd> Close overlays</div>
+        <div class="shortcut-item"><kbd class="shortcut-key">⌘K</kbd> Command palette</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 5: Security Audit Mode -->
+  <div class="audit-banner">⚠ SECURITY AUDIT MODE ACTIVE — Inspecting page resources</div>
+  <div class="audit-panel glass" id="auditPanel">
+    <div class="audit-panel-head">
+      <span>Security Audit Log</span>
+      <button class="audit-close" id="auditClose" aria-label="Close audit mode"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="audit-stat"><span class="audit-stat-label">CSP Status</span><span class="audit-stat-value" id="auditCsp">Scanning...</span></div>
+    <div class="audit-stat"><span class="audit-stat-label">HTTPS Status</span><span class="audit-stat-value" id="auditHttps">Scanning...</span></div>
+    <div class="audit-stat"><span class="audit-stat-label">Referrer Policy</span><span class="audit-stat-value" id="auditRef">Scanning...</span></div>
+    <div class="audit-stat"><span class="audit-stat-label">Ext. Resources</span><span class="audit-stat-value" id="auditExtRes">Scanning...</span></div>
+    <div class="audit-stat"><span class="audit-stat-label">Inline Scripts</span><span class="audit-stat-value" id="auditInline">Scanning...</span></div>
+    <div class="audit-stat"><span class="audit-stat-label">DOM Elements</span><span class="audit-stat-value" id="auditDom">Scanning...</span></div>
+  </div>
+
+  <!-- Feature 7: Visitor Analytics Dashboard -->
+  <div class="analytics-dashboard-wrap">
+    <div class="analytics-panel glass" id="analyticsPanel">
+      <div class="analytics-card"><span class="analytics-label">Load Time</span><span class="analytics-value" id="statLoadTime">Calculating...</span></div>
+      <div class="analytics-card"><span class="analytics-label">Browser &amp; OS</span><span class="analytics-value" id="statBrowser">Detecting...</span></div>
+      <div class="analytics-card"><span class="analytics-label">Viewport</span><span class="analytics-value" id="statViewport">Measuring...</span></div>
+      <div class="analytics-card"><span class="analytics-label">DOM Size</span><span class="analytics-value" id="statDomSize">Counting...</span></div>
+      <div class="analytics-card"><span class="analytics-label">Page Weight</span><span class="analytics-value" id="statWeight">Calculating...</span></div>
+      <div class="analytics-card"><span class="analytics-label">Security Profile</span><span class="analytics-value" id="statSecurity">Analyzing...</span></div>
+    </div>
+    <button class="analytics-toggle" id="analyticsToggle" aria-expanded="false">
+      <span class="analytics-status-dot"></span> System Status
+    </button>
+  </div>
+
+  <!-- COMMAND PALETTE (Ctrl+K / Cmd+K) -->
+  <div id="cmdPalette" class="cmd-palette" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-backdrop" id="cmdBackdrop"></div>
+    <div class="cmd-modal glass">
+      <div class="cmd-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmdInput" placeholder="Type a command or search..." autocomplete="off" spellcheck="false" />
+        <span class="cmd-hint">ESC to close</span>
+      </div>
+      <div class="cmd-results" id="cmdResults" role="listbox"></div>
+    </div>
+  </div>
+
+  <!-- ASK NEJAMUL AI COPILOT FAB -->
+  <button class="copilot-fab" id="copilotFab" aria-label="Ask Nejamul AI Copilot" title="Ask my AI Copilot anything about my work">
+    <div class="copilot-fab-orb">
+      <i class="fa-solid fa-brain"></i>
+    </div>
+    <span class="copilot-fab-badge">Ask AI</span>
+  </button>
+
+  <!-- COPILOT CHAT MODAL -->
+  <div class="copilot-modal glass" id="copilotModal" role="dialog" aria-modal="true" aria-labelledby="copilotTitle">
+    <div class="copilot-head">
+      <div class="copilot-brand">
+        <div class="copilot-avatar"><i class="fa-solid fa-user-shield"></i></div>
+        <div>
+          <h4 id="copilotTitle">Nejamul AI <span class="copilot-tag">DevSecOps Copilot</span></h4>
+          <span class="copilot-status-text"><i class="copilot-online-dot"></i> Online · Instant Answers</span>
+        </div>
+      </div>
+      <button class="copilot-close" id="copilotClose" aria-label="Close AI Assistant"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="copilot-messages" id="copilotMessages">
+      <div class="copilot-msg bot">
+        <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+        <div class="msg-bubble">
+          👋 Hi! I'm <strong>Nejamul's DevSecOps AI Copilot</strong>. Ask me anything about his projects, UP Police cyber internship, CI/CD security architecture, or placement readiness!
+        </div>
+      </div>
+    </div>
+    <div class="copilot-prompts" id="copilotPrompts">
+      <button class="prompt-chip" data-query="Explain your UP Police cyber security internship work" type="button">👮 UP Police Experience</button>
+      <button class="prompt-chip" data-query="Why should we hire you for DevSecOps?" type="button">💼 Why Hire Nejamul?</button>
+      <button class="prompt-chip" data-query="Tell me about Sentinel Daemon and how it blocks brute force" type="button">🛡️ Sentinel Daemon</button>
+      <button class="prompt-chip" data-query="What is your CI/CD security philosophy?" type="button">⚡ CI/CD Security</button>
+    </div>
+    <form class="copilot-input-bar" id="copilotForm">
+      <input type="text" id="copilotInput" placeholder="Ask about tools, projects, philosophy..." autocomplete="off" spellcheck="false" />
+      <button type="submit" class="copilot-send-btn" aria-label="Send query"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <!-- RECRUITER & HIRING MANAGER EXECUTIVE DOSSIER MODAL -->
+  <div class="recruiter-modal-backdrop" id="recruiterBackdrop" aria-hidden="true">
+    <div class="recruiter-modal glass" id="recruiterModal" role="dialog" aria-modal="true" aria-labelledby="recruiterModalTitle">
+      <div class="recruiter-modal-head">
+        <div>
+          <span class="dossier-pill"><i class="fa-solid fa-briefcase"></i> 30-SECOND EXECUTIVE BRIEFING</span>
+          <h3 id="recruiterModalTitle">Nejamul Haque · DevSecOps Candidate Dossier</h3>
+          <p class="recruiter-sub">B.Tech Computer Science (2023–2027) · Target Window: <strong>2026–2027 Internship / Full-Time Placement</strong></p>
+        </div>
+        <button class="recruiter-close" id="recruiterClose" aria-label="Close dossier"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="recruiter-modal-body">
+        <!-- The Dual Advantage -->
+        <div class="dossier-section">
+          <h4><i class="fa-solid fa-star"></i> The Candidate Advantage (Why Nejamul Stands Out)</h4>
+          <div class="advantage-grid">
+            <div class="adv-card glass">
+              <span class="adv-badge">01 · Law Enforcement Experience</span>
+              <strong>APCSIP-2026 @ UP Police Cyber Cell</strong>
+              <p>Audited live cybercrime mechanisms, brute-force traces, and digital forensics workflows under police frameworks.</p>
+            </div>
+            <div class="adv-card glass">
+              <span class="adv-badge">02 · Full-Stack Builder</span>
+              <strong>Shipped 3 Production SaaS Apps</strong>
+              <p>React, Next.js, Node.js, WebSockets, PostgreSQL. Understands developer velocity and doesn't treat security as a blocker.</p>
+            </div>
+            <div class="adv-card glass">
+              <span class="adv-badge">03 · Custom Tooling Engineer</span>
+              <strong>Built Sentinel Daemon &amp; GitShield</strong>
+              <p>Engineered automated kernel-level defense (<2ms drops) and Shannon entropy pre-commit secret scanners from scratch.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Competencies -->
+        <div class="dossier-section">
+          <h4><i class="fa-solid fa-chart-pie"></i> Verified Competency Matrix</h4>
+          <div class="comp-matrix-grid">
+            <div class="c-mat-item">
+              <div class="c-mat-head"><span>CI/CD &amp; Shift-Left Security</span><strong>95%</strong></div>
+              <div class="c-mat-bar"><span style="width:95%"></span></div>
+              <small>Semgrep SAST, Trivy SCA, Gitleaks, SLSA Level 3, Cosign</small>
+            </div>
+            <div class="c-mat-item">
+              <div class="c-mat-head"><span>Linux Kernel &amp; System Hardening</span><strong>90%</strong></div>
+              <div class="c-mat-bar"><span style="width:90%"></span></div>
+              <small>systemd daemons, iptables automated drops, CIS Level 2, AppArmor</small>
+            </div>
+            <div class="c-mat-item">
+              <div class="c-mat-head"><span>Cloud &amp; Container Security</span><strong>85%</strong></div>
+              <div class="c-mat-bar"><span style="width:85%"></span></div>
+              <small>Docker non-root hardening, Kubernetes PSS, Calico NetworkPolicies</small>
+            </div>
+            <div class="c-mat-item">
+              <div class="c-mat-head"><span>Threat Modeling &amp; Forensics</span><strong>90%</strong></div>
+              <div class="c-mat-bar"><span style="width:90%"></span></div>
+              <small>STRIDE, MITRE ATT&amp;CK, SIEM JSON Log Correlation, auth.log</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screening Interview Talking Points -->
+        <div class="dossier-section">
+          <h4><i class="fa-solid fa-comments"></i> Screening Interview Cheat Sheet (Key Talking Points)</h4>
+          <ul class="talking-points-list">
+            <li><strong>Q: How do you prevent secret leaks?</strong> Built <em>GitShield</em> to compute Shannon entropy ($H > 4.4$) and block high-entropy tokens before git staging.</li>
+            <li><strong>Q: How do you handle automated host brute-force?</strong> Built <em>Sentinel Daemon</em> in Python/systemd to tail <code>auth.log</code> and auto-drop attacker IPs directly via kernel <code>iptables</code> in &lt;2ms.</li>
+            <li><strong>Q: What is your DevSecOps philosophy?</strong> Security is an infrastructure boundary, not a late-stage patch. Enforce automated quality gates in CI/CD without slowing developers down.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="recruiter-modal-foot">
+        <div class="recruiter-actions">
+          <button class="btn btn-primary" id="dossierResumeBtn" type="button"><i class="fa-solid fa-file-pdf"></i> Download PDF Resume</button>
+          <button class="btn btn-secondary" id="dossierCopySummaryBtn" type="button"><i class="fa-solid fa-copy"></i> Copy Recruiter Summary</button>
+          <a class="btn btn-secondary" href="#contact" id="dossierContactLink"><i class="fa-solid fa-envelope"></i> Message Nejamul</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
