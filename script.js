@@ -23,7 +23,7 @@ nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () =
   menuToggle?.setAttribute("aria-expanded", "false");
 }));
 
-const sectionLinks = [...document.querySelectorAll("nav a")];
+const sectionLinks = [...document.querySelectorAll("nav a[href^='#']")];
 const sections = sectionLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
 const updateScrollState = () => {
   const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -66,14 +66,24 @@ const scanSecrets = () => {
     { name: "Generic secret assignment", regex: /\b(?:password|secret|token|api[_-]?key)\s*=\s*\S+/i }
   ];
   patterns.forEach((pattern) => { if (pattern.regex.test(source)) findings.push(pattern.name); });
-  const highEntropy = source.split(/\s+/).filter((token) => token.length >= 20 && shannonEntropy(token) >= 3.5);
+  const entropyCandidates = source.split(/\s+/)
+    .map((token) => token.split("=").pop().replace(/[^A-Za-z0-9+/=_-]/g, ""))
+    .filter((token) => token.length >= 8);
+  const highEntropy = entropyCandidates.filter((token) => token.length >= 20 && shannonEntropy(token) >= 4.2);
   if (highEntropy.length) findings.push(`High-entropy token (${shannonEntropy(highEntropy[0]).toFixed(2)} bits/char)`);
-  scannerOutput.textContent = findings.length ? `Findings:\n• ${findings.join("\n• ")}` : "No sample secrets detected.";
+  const entropyValue = entropyCandidates.length ? Math.max(...entropyCandidates.map(shannonEntropy)).toFixed(2) : "0.00";
+  scannerOutput.innerHTML = "";
+  const badge = document.createElement("span");
+  badge.className = `result-badge ${findings.length ? "suspicious" : "clean"}`;
+  badge.textContent = findings.length ? "Suspicious" : "Clean";
+  const detail = document.createElement("span");
+  detail.textContent = findings.length ? `${findings.join(" · ")} · Shannon entropy: ${entropyValue} bits/char` : `No matched pattern · Shannon entropy: ${entropyValue} bits/char`;
+  scannerOutput.append(badge, detail);
 };
 $("#scanSecrets")?.addEventListener("click", scanSecrets);
 $("#loadSafeSample")?.addEventListener("click", () => {
   scannerInput.value = "SERVICE_NAME=example\nLOG_LEVEL=info\nCOMMIT_MESSAGE=update-documentation";
-  scannerOutput.textContent = "Safe sample loaded. Ready to scan locally.";
+  scannerOutput.innerHTML = '<span class="result-badge clean">Clean</span><span>Safe sample loaded. Ready to scan locally.</span>';
 });
 
 form?.addEventListener("submit", async (event) => {

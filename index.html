@@ -21,7 +21,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Nejamul Haque","url":"https://nejamulhaque.vercel.app/","jobTitle":"Aspiring DevSecOps Engineer","sameAs":["https://github.com/NejamulHaque","https://linkedin.com/in/NejamulHaque"]}
+  {"@context":"https://schema.org","@type":"Person","name":"Nejamul Haque","url":"https://nejamulhaque.vercel.app/","jobTitle":"Aspiring DevSecOps Engineer","sameAs":["https://github.com/NejamulHaque","https://linkedin.com/in/NejamulHaque","https://nejamulhaque.medium.com/"]}
   </script>
   <title>Nejamul Haque | Aspiring DevSecOps Engineer</title>
 </head>
@@ -71,34 +71,39 @@
           <div class="project-media code-card"><span>FLAGSHIP</span><code>flask app → postgres → CI → render</code></div>
           <div class="status-row"><span class="badge">Flagship</span><span class="status">Deployed on Render</span></div>
           <h3>Irus AI</h3><p><strong>Problem:</strong> bring chat, search, documents, image generation, memory, and voice into one assistant.</p><p><strong>Approach:</strong> full-stack Flask application with a PostgreSQL data layer and containerized delivery.</p><p><strong>Tech:</strong> Flask, PostgreSQL, Docker.</p><p><strong>Result:</strong> DevSecOps CI pipeline runs Gitleaks → Bandit → Trivy → Pytest before deployment.</p>
-          <a class="text-link" href="https://github.com/NejamulHaque/Irus-AI" target="_blank" rel="noopener noreferrer">View code →</a>
+          <div class="project-actions"><a class="text-link" href="https://github.com/NejamulHaque/Irus-AI" target="_blank" rel="noopener noreferrer">View code →</a><a class="text-link" href="https://irus-ai.onrender.com" target="_blank" rel="noopener noreferrer">Live demo →</a></div>
         </article>
         <article class="card project-card">
           <div class="project-media code-card"><span>HOST DEFENSE</span><code>auth.log → correlate → iptables</code></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>Sentinel Daemon</h3><p><strong>Problem:</strong> repeated SSH authentication failures need fast, repeatable response.</p><p><strong>Approach:</strong> monitor logs, correlate source IPs in a rolling window, and apply expiring firewall blocks.</p><p><strong>Tech:</strong> Python, systemd, iptables.</p><p><strong>Result:</strong> 14 IPs blocked over 3 days, 1.8ms latency, 0 false positives.</p>
-          <a class="text-link" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener noreferrer">View code →</a>
+          <div class="project-actions"><a class="text-link" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener noreferrer">View code →</a></div>
         </article>
         <article class="card project-card">
           <div class="project-media code-card"><span>PRE-COMMIT DEFENSE</span><code>git diff → regex → block</code></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>GitShield</h3><p><strong>Problem:</strong> secrets and unsafe file permissions can enter a commit unnoticed.</p><p><strong>Approach:</strong> inspect staged changes with regex-powered Git hooks before commit.</p><p><strong>Tech:</strong> Python, regex, Git hooks.</p><p><strong>Result:</strong> blocks AWS keys, PEM keys, and <code>chmod 777</code> before commit.</p>
-          <a class="text-link" href="https://github.com/NejamulHaque/GitShield" target="_blank" rel="noopener noreferrer">View code →</a>
+          <div class="project-actions"><a class="text-link" href="https://github.com/NejamulHaque/GitShield" target="_blank" rel="noopener noreferrer">View code →</a></div>
         </article>
         <article class="card project-card">
           <div class="project-media code-card"><span>LOG INTELLIGENCE</span><code>access.log → JSON → SIEM</code></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>Threat Log Parser</h3><p><strong>Problem:</strong> web access logs hide attack patterns in high-volume request data.</p><p><strong>Approach:</strong> detect SQLi and XSS patterns, enrich findings from threat feeds, and normalize output.</p><p><strong>Tech:</strong> Python, regex, urllib, JSON.</p><p><strong>Result:</strong> SIEM-ready JSON findings for repeatable triage.</p>
-          <a class="text-link" href="https://github.com/NejamulHaque/threat-log-parser" target="_blank" rel="noopener noreferrer">View code →</a>
+          <div class="project-actions"><a class="text-link" href="https://github.com/NejamulHaque/threat-log-parser" target="_blank" rel="noopener noreferrer">View code →</a></div>
         </article>
       </div>
+      <div class="also-built"><h3>Also built</h3><div class="compact-projects">
+        <article class="card compact-project"><h4>CollabSheets-2</h4><p>Real-time collaborative code or document editor with AI assistant, code execution, version history, and live chat.</p><div class="tag-row"><span>React</span><span>AI</span><span>WebSockets</span></div><a class="text-link" href="https://github.com/NejamulHaque/CollabSheets-2" target="_blank" rel="noopener noreferrer">View repo →</a></article>
+        <article class="card compact-project"><h4>ProResume-Builder</h4><p>Build ATS-friendly professional resumes in minutes — free forever.</p><div class="tag-row"><span>Resume tooling</span><span>Web app</span></div><a class="text-link" href="https://github.com/NejamulHaque/ProResume-Builder" target="_blank" rel="noopener noreferrer">View repo →</a></article>
+        <article class="card compact-project"><h4>Portfolio-Builder</h4><p>AI-powered portfolio builder that generates a responsive portfolio for preview, export, or hosting.</p><div class="tag-row"><span>AI</span><span>Portfolio tooling</span></div><a class="text-link" href="https://github.com/NejamulHaque/Portfolio-Builder" target="_blank" rel="noopener noreferrer">View repo →</a></article>
+      </div></div>
     </section>
 
     <section class="section" id="experience">
       <div class="section-heading"><p class="kicker">Experience &amp; education</p><h2>Security work and academic foundation</h2></div>
       <div class="timeline-grid">
         <article class="card content-card"><p class="kicker">June 2026 – July 2026</p><h3>UP Police Cyber Security Intern</h3><p class="muted">APCSIP-2026</p><ul><li>Audited server logs for brute-force and reconnaissance patterns.</li><li>Assisted with incident log tracing and digital forensics workflows.</li><li>Built Python/Bash scripts for server hardening from the findings.</li></ul></article>
-        <article class="card content-card"><p class="kicker">Education</p><h3>Teerthanker Mahaveer University</h3><p>B.Tech CSE · 2023–2027</p></article>
+        <article class="card content-card"><p class="kicker">Education</p><h3>Teerthanker Mahaveer University</h3><p>B.Tech CSE</p><p class="graduation-year">Graduation year: 2027</p></article>
       </div>
     </section>
 
@@ -126,7 +131,7 @@
 private_key=-----BEGIN RSA PRIVATE KEY-----
 password=correct-horse-battery-staple</textarea>
         <div class="scanner-actions"><button class="button primary" id="scanSecrets" type="button">Scan payload</button><button class="button secondary" id="loadSafeSample" type="button">Load safe sample</button></div>
-        <output id="scannerOutput" class="scanner-output" aria-live="polite">Ready to scan locally.</output>
+        <output id="scannerOutput" class="scanner-output" aria-live="polite"><span class="result-badge clean">Clean</span><span>Ready to scan locally.</span></output>
       </article>
     </section>
 
@@ -149,7 +154,7 @@ password=correct-horse-battery-staple</textarea>
       </div>
     </section>
   </main>
-  <footer class="footer"><span>© <span id="year"></span> Nejamul Haque</span><span>Built as a fast static site.</span></footer>
+  <footer class="footer"><span>© <span id="year"></span> Nejamul Haque</span><span class="footer-links"><a href="https://github.com/NejamulHaque" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/NejamulHaque" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://nejamulhaque.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a><a href="mailto:nejamulhaque.05@gmail.com">Email</a></span></footer>
   <script src="script.js" defer></script>
 </body>
 </html>
