@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    {"source": "/TODO.md", "destination": "/404.html"}
+  ],
   "headers": [
     {
       "source": "/(.*)",
