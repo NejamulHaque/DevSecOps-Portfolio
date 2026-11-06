@@ -83,17 +83,42 @@ const scanSecrets = () => {
 $("#scanSecrets")?.addEventListener("click", scanSecrets);
 $("#loadSafeSample")?.addEventListener("click", () => {
   scannerInput.value = "SERVICE_NAME=example\nLOG_LEVEL=info\nCOMMIT_MESSAGE=update-documentation";
-  scannerOutput.innerHTML = '<span class="result-badge clean">Clean</span><span>Safe sample loaded. Ready to scan locally.</span>';
+  scannerOutput.innerHTML = '<span class="result-badge neutral">Not scanned yet</span><span>Safe sample loaded. Ready to scan.</span>';
 });
+
+fetch("data/writing.json").then((response) => response.ok ? response.json() : []).then((articles) => {
+  if (!Array.isArray(articles) || !articles.length) return;
+  const list = $("#writingList");
+  list.replaceChildren(...articles.slice(0, 3).map((article) => {
+    const card = document.createElement("article");
+    card.className = "card content-card";
+    const title = document.createElement("h3");
+    const summary = document.createElement("p");
+    const link = document.createElement("a");
+    title.textContent = article.title;
+    summary.textContent = article.summary;
+    link.className = "text-link";
+    link.href = article.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Read article →";
+    card.append(title, summary, link);
+    return card;
+  }));
+}).catch(() => {});
 
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const honeypot = form.elements.namedItem("_gotcha");
-  if (honeypot?.value) return;
+  if (honeypot?.value) {
+    formStatus.textContent = "Message blocked.";
+    return;
+  }
   const button = form.querySelector("button");
   button.disabled = true;
   formStatus.textContent = "Sending…";
   try {
+    if (["localhost", "127.0.0.1"].includes(location.hostname)) throw new Error("Local test environment");
     const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
     if (!response.ok) throw new Error("Form submission failed");
     form.reset();
