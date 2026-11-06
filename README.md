@@ -12,19 +12,11 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000/`.
 
-## Content verification
-
-Unverified personal details are intentionally marked `TODO_CONFIRM` in
-the active page. Replace them only with confirmed information:
-
-- public email address;
-- verified resume PDF at `assets/resume.pdf`;
-- official internship/program wording and dates;
-- GitShield repository URL and proof;
-- confirmed writing/article URLs.
-
 The previous long-form page is preserved under `legacy/` for reference.
 It is not loaded by the active site.
+
+Private follow-up items are tracked in `TODO.md`; `.vercelignore` keeps
+that file out of deployments.
 
 ## Deployment
 

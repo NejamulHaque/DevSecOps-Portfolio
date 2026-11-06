@@ -6,6 +6,8 @@ const nav = $("#primaryNav");
 const progress = $("#scrollProgress");
 const form = $("#contactForm");
 const formStatus = $("#formStatus");
+const scannerInput = $("#secretInput");
+const scannerOutput = $("#scannerOutput");
 
 if (localStorage.getItem("portfolio-theme") === "light") body.classList.add("light");
 themeToggle?.addEventListener("click", () => {
@@ -45,6 +47,34 @@ if ("IntersectionObserver" in window) {
   }), { rootMargin: "160px" });
   document.querySelectorAll("[data-lab]").forEach((card) => labObserver.observe(card));
 } else document.querySelectorAll("[data-lab]").forEach(initializeLab);
+
+const shannonEntropy = (value) => {
+  if (!value) return 0;
+  const counts = [...value].reduce((map, character) => map.set(character, (map.get(character) || 0) + 1), new Map());
+  return [...counts.values()].reduce((entropy, count) => {
+    const probability = count / value.length;
+    return entropy - probability * Math.log2(probability);
+  }, 0);
+};
+const scanSecrets = () => {
+  const source = scannerInput?.value || "";
+  const findings = [];
+  const patterns = [
+    { name: "AWS access key", regex: /\bAKIA[0-9A-Z]{16}\b/ },
+    { name: "PEM private key", regex: /-----BEGIN [A-Z ]+PRIVATE KEY-----/ },
+    { name: "Unsafe permission", regex: /\bchmod\s+777\b/ },
+    { name: "Generic secret assignment", regex: /\b(?:password|secret|token|api[_-]?key)\s*=\s*\S+/i }
+  ];
+  patterns.forEach((pattern) => { if (pattern.regex.test(source)) findings.push(pattern.name); });
+  const highEntropy = source.split(/\s+/).filter((token) => token.length >= 20 && shannonEntropy(token) >= 3.5);
+  if (highEntropy.length) findings.push(`High-entropy token (${shannonEntropy(highEntropy[0]).toFixed(2)} bits/char)`);
+  scannerOutput.textContent = findings.length ? `Findings:\n• ${findings.join("\n• ")}` : "No sample secrets detected.";
+};
+$("#scanSecrets")?.addEventListener("click", scanSecrets);
+$("#loadSafeSample")?.addEventListener("click", () => {
+  scannerInput.value = "SERVICE_NAME=example\nLOG_LEVEL=info\nCOMMIT_MESSAGE=update-documentation";
+  scannerOutput.textContent = "Safe sample loaded. Ready to scan locally.";
+});
 
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();

@@ -328,9 +328,9 @@ renderWriteups();
 //  CASE STUDY DETAIL PAGES (deep-linkable modal views)
 // ============================================================
 const CASE_STUDIES = {
-  kubeshield: {
+  : {
     category: "01 / Kubernetes Security", status: "In Progress / Active Dev",
-    title: "KubeShield — Dynamic K8s Admission Controller & Policy Enforcer",
+    title: " — Dynamic K8s Admission Controller & Policy Enforcer",
     tags: ["Go", "Kubernetes API", "OPA Rego", "CIS Benchmark", "Docker", "DevSecOps"],
     link: "https://github.com/NejamulHaque",
     sections: [
@@ -341,9 +341,9 @@ const CASE_STUDIES = {
       { label: "Measured Impact", icon: "fa-chart-line", html: "Eliminated <strong>100% of privileged pod deployments</strong> across test clusters, reduced container attack surface to read-only memory spaces, and verified 100% adherence to Kubernetes Pod Security Standards (Restricted profile)." }
     ]
   },
-  gitslsa: {
+  : {
     category: "02 / Supply Chain Security", status: "In Progress / Active Dev",
-    title: "GitSLSA — SLSA Level 3 Supply Chain Security & SBOM Pipeline",
+    title: " — SLSA Level 3 Supply Chain Security & SBOM Pipeline",
     tags: ["Cosign", "Sigstore", "Syft", "SLSA L3", "GitHub Actions", "OIDC", "Trivy"],
     link: "https://github.com/NejamulHaque",
     sections: [
@@ -2103,12 +2103,12 @@ const CyberAudio = (function() {
       answer: "During the **APCSIP-2026 Cyber Security Program @ UP Police (Amroha Cyber Cell)**, I analyzed real-world cybercrime mechanisms, incident log traces, and digital forensics workflows under law enforcement frameworks. I audited server logs for brute-force attacks and network reconnaissance, converting findings directly into automated Linux/Bash/Python tools for server hardening."
     },
     {
-      keywords: ["kubeshield", "kubernetes", "k8s", "admission", "controller", "webhook", "pod security", "pss"],
-      answer: "**KubeShield** is my custom Kubernetes Dynamic Admission Webhook written in Go/Rego. It intercepts pod creation manifests before scheduling, validates against the CIS Kubernetes Benchmark, blocks privileged containers running as root (UID 0), and auto-injects read-only root filesystems and non-root UID 10001."
+      keywords: ["", "kubernetes", "k8s", "admission", "controller", "webhook", "pod security", "pss"],
+      answer: "**** is my custom Kubernetes Dynamic Admission Webhook written in Go/Rego. It intercepts pod creation manifests before scheduling, validates against the CIS Kubernetes Benchmark, blocks privileged containers running as root (UID 0), and auto-injects read-only root filesystems and non-root UID 10001."
     },
     {
-      keywords: ["gitslsa", "slsa", "sbom", "supply chain", "cosign", "sigstore", "provenance"],
-      answer: "**GitSLSA** is my SLSA Level 3 Software Supply Chain Security Pipeline. It generates verifiable SPDX Software Bill of Materials (SBOMs) using Syft, keylessly signs container images via Cosign and Sigstore OIDC, and enforces cryptographic admission gates at deployment time."
+      keywords: ["", "slsa", "sbom", "supply chain", "cosign", "sigstore", "provenance"],
+      answer: "**** is my SLSA Level 3 Software Supply Chain Security Pipeline. It generates verifiable SPDX Software Bill of Materials (SBOMs) using Syft, keylessly signs container images via Cosign and Sigstore OIDC, and enforces cryptographic admission gates at deployment time."
     },
     {
       keywords: ["gitshield", "secret", "entropy", "shannon", "pre-commit", "gitleaks", "tokens"],
@@ -2132,7 +2132,7 @@ const CyberAudio = (function() {
     },
     {
       keywords: ["haque and sons", "startup", "haque", "sons", "testbed", "collabsheets", "proresume", "nestfy"],
-      answer: "**Haque And Sons** (`haqueandsons.vercel.app`) is my personal software venture where I shipped 3 production SaaS applications (CollabSheets, ProResume-Builder, Nestfy). I used it as the real-world production testbed for rolling out GitShield, GitSLSA, and KubeShield — proving that zero-trust security and sub-30s CI build velocity can thrive together."
+      answer: "**Haque And Sons** (`haqueandsons.vercel.app`) is my personal software venture where I shipped 3 production SaaS applications (CollabSheets, ProResume-Builder, Nestfy). I used it as the real-world production testbed for rolling out GitShield, , and  — proving that zero-trust security and sub-30s CI build velocity can thrive together."
     },
     {
       keywords: ["hire", "why hire", "placement", "skills", "candidate", "role", "looking", "fresher", "intern"],
@@ -2208,7 +2208,7 @@ const CyberAudio = (function() {
     appendMessage(query, true);
     CyberAudio.play("click");
 
-    let reply = "I'm trained on Nejamul's DevSecOps portfolio. You can ask about his **UP Police Cyber Internship**, **KubeShield**, **GitSLSA**, **Sentinel Daemon**, **STRIDE Threat Model**, or **2026-2027 placement readiness**!";
+    let reply = "I'm trained on Nejamul's DevSecOps portfolio. You can ask about his **UP Police Cyber Internship**, ****, ****, **Sentinel Daemon**, **STRIDE Threat Model**, or **2026-2027 placement readiness**!";
     for (const k of KNOWLEDGE) {
       if (k.keywords.some(kw => q.includes(kw))) {
         reply = k.answer;
@@ -2283,7 +2283,7 @@ const CyberAudio = (function() {
   const panes = document.querySelectorAll(".sandbox-pane");
   if (tabs.length === 0) return;
 
-  // Tab switching (Supports gitshield, threatparser, kubeshield, gitslsa)
+  // Tab switching (Supports gitshield, threatparser, , )
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       tabs.forEach(t => t.classList.remove("active"));
@@ -2293,8 +2293,8 @@ const CyberAudio = (function() {
       const paneMap = {
         gitshield: "paneGitshield",
         threatparser: "paneThreatparser",
-        kubeshield: "paneKubeshield",
-        gitslsa: "paneGitslsa"
+        : "pane",
+        : "pane"
       };
       const targetPane = document.getElementById(paneMap[tab.dataset.tab]);
       if (targetPane) targetPane.classList.add("active");
@@ -2470,13 +2470,13 @@ const CyberAudio = (function() {
 
   if (runParserBtn) runParserBtn.addEventListener("click", parseLogEntry);
 
-  // --- KUBESHIELD K8S ADMISSION CONTROLLER SANDBOX ---
+  // ---  K8S ADMISSION CONTROLLER SANDBOX ---
   const k8sInput = document.getElementById("k8sInput");
   const k8sStatusBox = document.getElementById("k8sStatusBox");
   const k8sStatusTitle = document.getElementById("k8sStatusTitle");
   const k8sStatusDesc = document.getElementById("k8sStatusDesc");
   const k8sOutput = document.getElementById("k8sOutput");
-  const runKubeShieldBtn = document.getElementById("runKubeShieldBtn");
+  const runBtn = document.getElementById("runBtn");
   const k8sChips = document.querySelectorAll(".k8s-chip");
 
   const K8S_PRESETS = {
@@ -2500,7 +2500,7 @@ const CyberAudio = (function() {
     });
   });
 
-  function evaluateKubeShield() {
+  function evaluate() {
     if (!k8sInput || !k8sOutput) return;
     const val = k8sInput.value;
 
@@ -2521,7 +2521,7 @@ const CyberAudio = (function() {
           "allowed": false,
           "status": {
             "code": 403,
-            "message": "KubeShield Admission Policy [Deny-Privileged-Root]: Container 'worker' cannot run as root UID 0 or request privileged kernel capabilities."
+            "message": " Admission Policy [Deny-Privileged-Root]: Container 'worker' cannot run as root UID 0 or request privileged kernel capabilities."
           }
         }
       };
@@ -2540,7 +2540,7 @@ const CyberAudio = (function() {
           "allowed": false,
           "status": {
             "code": 403,
-            "message": "KubeShield Policy [Deny-Latest-Tag]: Container 'api' uses mutable ':latest' tag. Pinned SHA-256 digest required."
+            "message": " Policy [Deny-Latest-Tag]: Container 'api' uses mutable ':latest' tag. Pinned SHA-256 digest required."
           }
         }
       };
@@ -2564,7 +2564,7 @@ const CyberAudio = (function() {
           "patch": btoa(JSON.stringify(patch))
         }
       };
-      k8sOutput.innerHTML = `<code>// Decoded JSONPatch Mutation Applied by KubeShield:\n${JSON.stringify(patch, null, 2)}</code>`;
+      k8sOutput.innerHTML = `<code>// Decoded JSONPatch Mutation Applied by :\n${JSON.stringify(patch, null, 2)}</code>`;
       CyberAudio.play("success");
     } else {
       if (k8sStatusBox) k8sStatusBox.className = "intercept-status";
@@ -2584,9 +2584,9 @@ const CyberAudio = (function() {
     }
   }
 
-  if (runKubeShieldBtn) runKubeShieldBtn.addEventListener("click", evaluateKubeShield);
+  if (runBtn) runBtn.addEventListener("click", evaluate);
 
-  // --- GITSLSA COSIGN & SBOM SANDBOX ---
+  // ---  COSIGN & SBOM SANDBOX ---
   const slsaDigest = document.getElementById("slsaDigest");
   const slsaBadge = document.getElementById("slsaBadge");
   const slsaOutput = document.getElementById("slsaOutput");
@@ -3283,8 +3283,8 @@ KEY DIFFERENTIATORS:
 1. Law Enforcement Cyber Security Intern @ UP Police (APCSIP-2026) - Digital Forensics & Host Defense.
 2. Full-Stack Developer & Startup Founder @ Haque And Sons (Shipped 3 production SaaS apps - React/Next.js/PostgreSQL).
 3. Custom Security Tooling Engineer:
-   - KubeShield: Dynamic Kubernetes Admission Controller enforcing CIS benchmarks.
-   - GitSLSA: SLSA Level 3 Supply Chain Security with Cosign keyless image signing & SPDX SBOMs.
+   - : Dynamic Kubernetes Admission Controller enforcing CIS benchmarks.
+   - : SLSA Level 3 Supply Chain Security with Cosign keyless image signing & SPDX SBOMs.
    - Sentinel Daemon: Autonomous kernel iptables firewall daemon (<2ms drop latency).
    - GitShield: Pre-commit Shannon entropy secret interception engine.
 
@@ -3549,8 +3549,8 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
       title: "04. Application Pods (Haque And Sons Microservices)",
       boundary: "Trust Boundary: Container Runtime ➔ Kernel Syscalls",
       items: [
-        { threat: "Elevation / Container Escape", desc: "Vulnerability exploited to escape container into host root namespace.", mit: "Mitigated via KubeShield non-root UID 10001 + eBPF kernel SIGKILL probes." },
-        { threat: "Tampering / Supply Chain Poisoning", desc: "Compromised third-party npm/pip package executed during runtime.", mit: "Mitigated via GitSLSA Cosign keyless image verification + Syft SPDX SBOM gates." },
+        { threat: "Elevation / Container Escape", desc: "Vulnerability exploited to escape container into host root namespace.", mit: "Mitigated via  non-root UID 10001 + eBPF kernel SIGKILL probes." },
+        { threat: "Tampering / Supply Chain Poisoning", desc: "Compromised third-party npm/pip package executed during runtime.", mit: "Mitigated via  Cosign keyless image verification + Syft SPDX SBOM gates." },
         { threat: "Information Disclosure", desc: "Hardcoded API keys or database passwords baked into container layers.", mit: "Mitigated via HashiCorp Vault dynamic ephemeral secrets injected into tmpfs." }
       ]
     },
@@ -3829,7 +3829,7 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
       items: [
         "Deploy GitShield pre-commit hooks to block high-entropy secrets and AWS tokens before commit.",
         "Integrate Cosign keyless image signing and Syft SPDX SBOM generation into the core build pipeline.",
-        "Implement KubeShield validating admission webhook to enforce non-root UID 10001 in staging EKS.",
+        "Implement  validating admission webhook to enforce non-root UID 10001 in staging EKS.",
         "Reduce developer false-positive triage time to <15 mins/week via automated suppression rules."
       ]
     },
@@ -3919,8 +3919,8 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
         },
         {
           title: "T+30: Base Image Hardening & Patch",
-          desc: "Enforce readOnlyRootFilesystem and non-root execution via KubeShield admission webhook to eliminate write access to container binaries.",
-          cmd: "kubeshield enforce --profile restricted-pss --namespace prod"
+          desc: "Enforce readOnlyRootFilesystem and non-root execution via  admission webhook to eliminate write access to container binaries.",
+          cmd: " enforce --profile restricted-pss --namespace prod"
         }
       ]
     },
@@ -4013,7 +4013,7 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
     aws: "Seeking a Cloud Security & DevSecOps Engineer with hands-on experience in AWS IAM, EKS Kubernetes security, Docker container hardening, Terraform infrastructure-as-code, and automated CI/CD pipeline security (GitHub Actions). Experience with secret scanning (GitShield / Gitleaks) and Linux system administration required.",
     gcp: "Google Cloud DevSecOps Engineer responsible for Kubernetes container security, SLSA Level 3 supply chain attestation with Cosign, eBPF runtime observability, Python scripting, and zero-trust network architecture across hybrid cloud environments.",
     crowdstrike: "Security Operations & Automation Engineer to develop automated incident response tools, Linux kernel threat detection (iptables/eBPF), log parsing for SIEM integration, and STRIDE threat modeling against modern microservice architectures.",
-    razorpay: "Application Security & DevSecOps Engineer to lead shift-left security initiatives, container admission control (KubeShield/OPA), API security gateways (WAF/Cloudflare), and automated vulnerability management in production fintech pipelines."
+    razorpay: "Application Security & DevSecOps Engineer to lead shift-left security initiatives, container admission control (/OPA), API security gateways (WAF/Cloudflare), and automated vulnerability management in production fintech pipelines."
   };
 
   const KEYWORDS = [
@@ -4223,9 +4223,9 @@ CORE COMPETENCIES: Kubernetes Security & PSS, CI/CD Pipeline Hardening, Linux Ke
     { id: 2, label: "Container Isolation", x: 210, y: 100, color: "#00ff9d", tag: "DOMAIN 02 · RUNTIME PACKAGING", status: "Production Verified",
       desc: "Docker multi-stage builds, non-root user enforcement (UID 10001), readOnlyRootFilesystem, and distroless minimal base images tested across Haque And Sons microservices." },
     { id: 3, label: "Kubernetes PSS & Admission", x: 370, y: 70, color: "#00e5ff", tag: "DOMAIN 03 · ORCHESTRATION DEFENSE", status: "In Progress / Active Dev",
-      desc: "KubeShield Go/Rego Validating & Mutating Admission Webhook enforcing Restricted Pod Security Standards (PSS), dropping ALL capabilities, and rejecting mutable :latest tags." },
+      desc: " Go/Rego Validating & Mutating Admission Webhook enforcing Restricted Pod Security Standards (PSS), dropping ALL capabilities, and rejecting mutable :latest tags." },
     { id: 4, label: "SLSA Supply Chain & Cosign", x: 530, y: 100, color: "#7928ca", tag: "DOMAIN 04 · PROVENANCE & SBOM", status: "In Progress / Active Dev",
-      desc: "GitSLSA automated GitHub Actions pipeline generating tamper-evident SPDX SBOMs via Syft and signing container digests using Sigstore / Fulcio keyless OIDC certificates." },
+      desc: " automated GitHub Actions pipeline generating tamper-evident SPDX SBOMs via Syft and signing container digests using Sigstore / Fulcio keyless OIDC certificates." },
     { id: 5, label: "eBPF Runtime Defense", x: 670, y: 170, color: "#ff6b6b", tag: "DOMAIN 05 · KERNEL OBSERVABILITY", status: "Benchmarked",
       desc: "Linux kernel tracepoint hooks (sys_enter_execve, sys_enter_connect) intercepting container escapes and unauthorized child process execution with <0.5ms SIGKILL response." },
     { id: 6, label: "Cloud Security (AWS/WAF)", x: 370, y: 270, color: "#ff9f0a", tag: "DOMAIN 06 · PERIMETER & EDGE", status: "Production Verified",

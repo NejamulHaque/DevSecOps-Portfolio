@@ -205,7 +205,7 @@
           <p>I'm <strong>Nejamul Haque</strong> — a final-year B.Tech Computer Science student (2023–2027) focused on DevSecOps, Cloud Security, and Infrastructure Engineering, with an industry placement / internship-ready target for 2026–2027.</p>
           <p>My working philosophy is <strong>"Shifting Security Left"</strong> — embedding automated security controls, container checks, and static analysis directly into CI/CD pipelines so code is hardened before it's ever deployed. Security is an infrastructure boundary, not a late-stage patch.</p>
           <p>Through the <strong>Amroha Police Cyber Security Program (APCSIP‑2026)</strong>, I analyzed real-world cybercrime mechanisms, incident log traces, and digital forensics workflows under law enforcement frameworks — auditing server logs for brute-force attempts and reconnaissance footprints, then turning those findings into automated Linux/Bash/Python tools for server hardening.</p>
-          <p>I also run <a href="https://haqueandsons.vercel.app" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;"><strong>Haque And Sons</strong></a>, shipping production SaaS apps (CollabSheets, ProResume-Builder, Nestfy) with React, Next.js, WebSockets and PostgreSQL. I used this startup environment as my <strong>production testbed</strong> to benchmark automated security controls (KubeShield, GitSLSA, and GitShield) against real-world developer workflows — proving that zero-trust Kubernetes admission, SLSA Level 3 supply chain attestation, and sub-30s CI build velocity work seamlessly together.</p>
+          <p>I also run <a href="https://haqueandsons.vercel.app" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;"><strong>Haque And Sons</strong></a>, shipping production SaaS apps (CollabSheets, ProResume-Builder, Nestfy) with React, Next.js, WebSockets and PostgreSQL. I used this startup environment as my <strong>production testbed</strong> to benchmark automated security controls (, , and GitShield) against real-world developer workflows — proving that zero-trust Kubernetes admission, SLSA Level 3 supply chain attestation, and sub-30s CI build velocity work seamlessly together.</p>
         </div>
       </div>
 
@@ -231,7 +231,7 @@
           <div class="onboard-card glass" data-phase="60">
             <div class="onboard-phase-tag">Days 31–60</div>
             <h4>Shift-Left Automated Gates</h4>
-            <p>Deploy GitShield pre-commit hooks, enforce Cosign SLSA container image signing, and add KubeShield non-root admission.</p>
+            <p>Deploy GitShield pre-commit hooks, enforce Cosign SLSA container image signing, and add  non-root admission.</p>
             <span class="onboard-status">Objective: Zero-Leak CI/CD</span>
           </div>
 
@@ -924,11 +924,11 @@
             <button class="sandbox-tab" data-tab="threatparser" type="button">
               <i class="fa-solid fa-file-code"></i> Threat SIEM Parser
             </button>
-            <button class="sandbox-tab" data-tab="kubeshield" type="button">
-              <i class="fa-solid fa-dharmachakra"></i> KubeShield K8s Validator
+            <button class="sandbox-tab" data-tab="" type="button">
+              <i class="fa-solid fa-dharmachakra"></i>  K8s Validator
             </button>
-            <button class="sandbox-tab" data-tab="gitslsa" type="button">
-              <i class="fa-solid fa-certificate"></i> GitSLSA Cosign &amp; SBOM
+            <button class="sandbox-tab" data-tab="" type="button">
+              <i class="fa-solid fa-certificate"></i>  Cosign &amp; SBOM
             </button>
             <button class="sandbox-tab" data-tab="ebpf" type="button">
               <i class="fa-solid fa-microchip"></i> eBPF Kernel Probe
@@ -1000,9 +1000,9 @@
           </div>
         </div>
 
-        <!-- KubeShield Sandbox Pane -->
-        <div class="sandbox-pane" id="paneKubeshield">
-          <p class="sandbox-desc">Test <strong>KubeShield</strong>'s dynamic admission webhook. Validate Kubernetes YAML manifests against CIS benchmarks and see automated security context mutation in real-time.</p>
+        <!--  Sandbox Pane -->
+        <div class="sandbox-pane" id="pane">
+          <p class="sandbox-desc">Test <strong></strong>'s dynamic admission webhook. Validate Kubernetes YAML manifests against CIS benchmarks and see automated security context mutation in real-time.</p>
           <div class="payload-chips">
             <span class="payload-label">Sample Pod Specs:</span>
             <button class="k8s-chip active" data-k8s="privileged" type="button">Privileged Root Pod (Dangerous)</button>
@@ -1014,7 +1014,7 @@
             <div class="sandbox-input-col">
               <label class="sandbox-label" for="k8sInput">Candidate Kubernetes Pod Spec (YAML):</label>
               <textarea id="k8sInput" rows="7" spellcheck="false"></textarea>
-              <button class="btn btn-sm btn-primary" id="runKubeShieldBtn" style="margin-top:0.75rem" type="button">
+              <button class="btn btn-sm btn-primary" id="runBtn" style="margin-top:0.75rem" type="button">
                 <i class="fa-solid fa-shield-virus"></i> Validate &amp; Auto-Mutate Spec
               </button>
             </div>
@@ -1032,9 +1032,9 @@
           </div>
         </div>
 
-        <!-- GitSLSA Sandbox Pane -->
-        <div class="sandbox-pane" id="paneGitslsa">
-          <p class="sandbox-desc">Inspect <strong>GitSLSA</strong>'s cryptographic Cosign signatures, Sigstore keyless OIDC certificates, and SPDX Software Bill of Materials (SBOM) provenance.</p>
+        <!--  Sandbox Pane -->
+        <div class="sandbox-pane" id="pane">
+          <p class="sandbox-desc">Inspect <strong></strong>'s cryptographic Cosign signatures, Sigstore keyless OIDC certificates, and SPDX Software Bill of Materials (SBOM) provenance.</p>
           <div class="payload-chips">
             <span class="payload-label">Target Build Artifacts:</span>
             <button class="slsa-chip active" data-artifact="haqueapi" type="button">haqueandsons/api:v2.4.0 (Signed)</button>
@@ -1148,11 +1148,11 @@
             <div class="project-number">01 / KUBERNETES</div>
             <span class="project-status-badge in-progress"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</span>
           </div>
-          <h3>KubeShield — Dynamic K8s Admission Controller</h3>
+          <h3> — Dynamic K8s Admission Controller</h3>
           <p>A Kubernetes validating &amp; mutating admission webhook that intercepts pod manifests, validates against CIS benchmarks, and enforces non-root UID 10001 policies in real time.</p>
           <div class="tags"><span>Go</span><span>Kubernetes API</span><span>OPA Rego</span><span>Docker</span></div>
           <div class="actions">
-            <button class="btn btn-sm btn-primary case-open" data-case="kubeshield"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <button class="btn btn-sm btn-primary case-open" data-case=""><i class="fa-solid fa-file-lines"></i> Case Study</button>
             <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
           </div>
         </article>
@@ -1162,11 +1162,11 @@
             <div class="project-number">02 / SUPPLY CHAIN</div>
             <span class="project-status-badge in-progress"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</span>
           </div>
-          <h3>GitSLSA — SLSA Level 3 Provenance &amp; SBOM</h3>
+          <h3> — SLSA Level 3 Provenance &amp; SBOM</h3>
           <p>Automated supply-chain pipeline generating SPDX SBOMs and keyless Cosign cryptographic signatures tested across Haque And Sons microservice builds.</p>
           <div class="tags"><span>Cosign</span><span>Sigstore</span><span>Syft</span><span>SLSA L3</span></div>
           <div class="actions">
-            <button class="btn btn-sm btn-primary case-open" data-case="gitslsa"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+            <button class="btn btn-sm btn-primary case-open" data-case=""><i class="fa-solid fa-file-lines"></i> Case Study</button>
             <a class="btn btn-sm btn-secondary" href="https://github.com/NejamulHaque" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
           </div>
         </article>
@@ -1336,7 +1336,7 @@
           <div class="dfd-node" data-node="app">
             <span class="dfd-type">Process</span>
             <strong>04. App Pods</strong>
-            <small>KubeShield Enforced</small>
+            <small> Enforced</small>
           </div>
           <div class="dfd-arrow"><i class="fa-solid fa-arrow-right"></i><span>Vault Auth</span></div>
           <div class="dfd-node" data-node="data">
@@ -1717,8 +1717,8 @@
                 </thead>
                 <tbody>
                   <tr><td><strong>Secret Management</strong></td><td>0 Hardcoded Tokens</td><td>GitShield Pre-Commit Hook</td><td>0 Secrets in Staging</td><td><span class="pass-pill">PASSED</span></td></tr>
-                  <tr><td><strong>Container Runtime</strong></td><td>CIS K8s PSS Restricted</td><td>KubeShield Admission Webhook</td><td>Non-root UID 10001 enforced</td><td><span class="pass-pill">PASSED</span></td></tr>
-                  <tr><td><strong>Supply Chain</strong></td><td>SLSA Level 3 Attestation</td><td>GitSLSA Cosign + Syft SPDX</td><td>Cryptographically verified</td><td><span class="pass-pill">PASSED</span></td></tr>
+                  <tr><td><strong>Container Runtime</strong></td><td>CIS K8s PSS Restricted</td><td> Admission Webhook</td><td>Non-root UID 10001 enforced</td><td><span class="pass-pill">PASSED</span></td></tr>
+                  <tr><td><strong>Supply Chain</strong></td><td>SLSA Level 3 Attestation</td><td> Cosign + Syft SPDX</td><td>Cryptographically verified</td><td><span class="pass-pill">PASSED</span></td></tr>
                   <tr><td><strong>Host Firewall</strong></td><td>Automated Brute-Force Drop</td><td>Sentinel Daemon (iptables)</td><td>1-hour rolling TTL isolation</td><td><span class="pass-pill">PASSED</span></td></tr>
                 </tbody>
               </table>
@@ -1897,11 +1897,11 @@
     <section class="rp-section">
       <h2>Security Projects</h2>
       <div class="rp-item">
-        <div class="rp-item-head"><h3>KubeShield — Dynamic K8s Admission Webhook</h3><span class="rp-date">Go · Rego · Kubernetes · Webhooks</span></div>
+        <div class="rp-item-head"><h3> — Dynamic K8s Admission Webhook</h3><span class="rp-date">Go · Rego · Kubernetes · Webhooks</span></div>
         <p>Validating &amp; Mutating Admission Controller blocking privileged root containers, mutable <code>:latest</code> tags, and enforcing non-root UID 10001 with automated JSONPatch mutations.</p>
       </div>
       <div class="rp-item">
-        <div class="rp-item-head"><h3>GitSLSA — Supply Chain Security &amp; Cosign Attestation</h3><span class="rp-date">Cosign · Sigstore · Syft SPDX · GitHub Actions</span></div>
+        <div class="rp-item-head"><h3> — Supply Chain Security &amp; Cosign Attestation</h3><span class="rp-date">Cosign · Sigstore · Syft SPDX · GitHub Actions</span></div>
         <p>Automated SLSA Level 3 CI/CD security pipeline signing container digests via keyless OIDC authentication and generating tamper-evident SPDX SBOMs.</p>
       </div>
       <div class="rp-item">
