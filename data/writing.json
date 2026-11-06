@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "title": "Kernel-Level SSH Defense: Blocking Brute-Force IPs in 1.8ms with Python & iptables",
+    "summary": "Linux Security · 5 min read →",
+    "url": "https://nejamulhaque.medium.com/"
+  },
+  {
+    "title": "Enforcing a 4-Stage DevSecOps Gate (Gitleaks, Bandit, Trivy) in GitHub Actions",
+    "summary": "CI/CD Security · 6 min read →",
+    "url": "https://nejamulhaque.medium.com/"
+  },
+  {
+    "title": "Zero-Dependency Pre-Commit Secret Scanning with Regex & Shannon Entropy",
+    "summary": "AppSec · 4 min read →",
+    "url": "https://nejamulhaque.medium.com/"
+  }
+]

@@ -50,13 +50,14 @@
         </div>
         <div class="actions">
           <a class="button primary" href="#projects">View Projects</a>
+          <a class="button secondary resume-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer" hidden>Download Resume (PDF)</a>
         </div>
         <div class="contact-line">
           <a class="icon-badge" aria-label="Email Nejamul Haque" href="mailto:nejamulhaque.05@gmail.com">✉ Email</a>
-          <span>Bettiah</span>
           <a class="icon-badge" aria-label="Nejamul Haque on GitHub" href="https://github.com/NejamulHaque" target="_blank" rel="noopener noreferrer">GH GitHub</a>
           <a class="icon-badge" aria-label="Nejamul Haque on LinkedIn" href="https://linkedin.com/in/NejamulHaque" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
         </div>
+        <p class="location-meta">📍 Bettiah, India · Open to Relocation / Remote</p>
       </div>
       <div class="hero-card card">
         <img src="assets/profile.png" alt="Nejamul Haque" width="600" height="750" fetchpriority="high">
@@ -78,19 +79,19 @@
           <div class="project-media code-card"><span>HOST DEFENSE</span><code>auth.log → correlate → iptables</code></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>Sentinel Daemon</h3><p><strong>Problem:</strong> repeated SSH authentication failures need fast, repeatable response.</p><p><strong>Approach:</strong> monitor logs, correlate source IPs in a rolling window, and apply expiring firewall blocks.</p><p><strong>Tech:</strong> Python, systemd, iptables.</p><p><strong>Result:</strong> 14 IPs blocked over 3 days, 1.8ms latency, 0 false positives.</p>
-          <div class="metric-row"><span>1.8ms Latency</span><span>0 False Positives</span><span>14+ Attacker IPs Blocked</span></div><div class="project-actions"><a class="text-link" aria-label="Sentinel Daemon source code on GitHub" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Sentinel Daemon architecture" href="https://github.com/NejamulHaque/sentinel-daemon#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
+          <div class="metric-row"><span>1.8ms Latency</span><span>0 False Positives</span><span>14+ Attacker IPs Blocked</span></div><div class="project-actions"><a class="text-link" aria-label="Sentinel Daemon source code on GitHub" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener noreferrer">GitHub →</a><a class="text-link" aria-label="Sentinel Daemon architecture" href="https://github.com/NejamulHaque/sentinel-daemon#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
         </article>
         <article class="card project-card">
           <div class="project-media code-card"><span>PRE-COMMIT DEFENSE</span><code>git diff → regex → block</code></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>GitShield</h3><p><strong>Problem:</strong> secrets and unsafe file permissions can enter a commit unnoticed.</p><p><strong>Approach:</strong> inspect staged changes with regex-powered Git hooks before commit.</p><p><strong>Tech:</strong> Python, regex, Git hooks.</p><p><strong>Result:</strong> blocks AWS keys, PEM keys, and <code>chmod 777</code> before commit.</p>
-          <div class="metric-row"><span>Zero Dependencies</span><span>Pre-Commit Secret &amp; chmod 777 Blocker</span></div><div class="project-actions"><a class="text-link" aria-label="GitShield source code on GitHub" href="https://github.com/NejamulHaque/GitShield" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="GitShield architecture" href="https://github.com/NejamulHaque/GitShield#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
+          <div class="metric-row"><span>Zero Dependencies</span><span>Pre-Commit Secret &amp; chmod 777 Blocker</span></div><div class="project-actions"><a class="text-link" aria-label="GitShield source code on GitHub" href="https://github.com/NejamulHaque/GitShield" target="_blank" rel="noopener noreferrer">GitHub →</a><a class="text-link" aria-label="GitShield architecture" href="https://github.com/NejamulHaque/GitShield#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
         </article>
         <article class="card project-card">
           <div class="project-media code-card"><span>LOG INTELLIGENCE</span><code>access.log → JSON → SIEM</code></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>Threat Log Parser</h3><p><strong>Problem:</strong> web access logs hide attack patterns in high-volume request data.</p><p><strong>Approach:</strong> detect SQLi and XSS patterns, enrich findings from threat feeds, and normalize output.</p><p><strong>Tech:</strong> Python, regex, urllib, JSON.</p><p><strong>Result:</strong> SIEM-ready JSON findings for repeatable triage.</p>
-          <div class="metric-row"><span>SIEM-Ready JSON Output</span><span>Automated Brute-Force Detection</span></div><div class="project-actions"><a class="text-link" aria-label="Threat Log Parser source code on GitHub" href="https://github.com/NejamulHaque/threat-log-parser" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Threat Log Parser architecture" href="https://github.com/NejamulHaque/threat-log-parser#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
+          <div class="metric-row"><span>SIEM-Ready JSON Output</span><span>Automated Brute-Force Detection</span></div><div class="project-actions"><a class="text-link" aria-label="Threat Log Parser source code on GitHub" href="https://github.com/NejamulHaque/threat-log-parser" target="_blank" rel="noopener noreferrer">GitHub →</a><a class="text-link" aria-label="Threat Log Parser architecture" href="https://github.com/NejamulHaque/threat-log-parser#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
         </article>
       </div>
       <div class="also-built"><h3>Also built</h3><div class="compact-projects">
@@ -103,7 +104,7 @@
     <section class="section" id="experience">
       <div class="section-heading"><p class="kicker">Experience &amp; education</p><h2>Experience, Certifications &amp; Achievements</h2></div>
       <div class="timeline-grid">
-        <article class="card content-card"><p class="kicker">June 2026 – July 2026</p><h3>UP Police Cyber Security Intern</h3><p class="muted">APCSIP-2026</p><p>Mentored under DSP Anjali Kataria. Focused on network forensics, threat log analysis, and automated Linux defense tooling.</p><ul><li>Audited server logs for brute-force and reconnaissance patterns.</li><li>Assisted with incident log tracing and digital forensics workflows.</li><li>Built Python/Bash scripts for server hardening from the findings.</li></ul></article>
+        <article class="card content-card"><p class="kicker">June 2026 – July 2026</p><h3>UP Police Cyber Security Intern</h3><p class="muted">APCSIP-2026</p><p>Mentored under DSP Anjali Kataria. Focused on network forensics, threat log analysis, and automated Linux defense tooling.</p><ul><li>Audited server logs for brute-force and reconnaissance patterns.</li><li>Assisted with incident log tracing and digital forensics workflows.</li><li>Built Python/Bash scripts for server hardening from the findings.</li></ul><span class="verification-badge">Verified Certificate (APCSIP-2026) ↗</span></article>
         <article class="card content-card"><p class="kicker">Education &amp; credentials</p><h3>Teerthanker Mahaveer University</h3><p>B.Tech in Computer Science &amp; Engineering · 2023–2027</p><ul><li>NPTEL Certified: Python, DBMS, IoT</li><li>Viksit Bharat Young Leaders Dialogue (VBYLD 2027) Essay Round Qualifier</li></ul></article>
       </div>
     </section>
@@ -129,9 +130,9 @@ password=correct-horse-battery-staple</textarea>
       </article>
     </section>
 
-    <section class="section split" id="writing">
+    <section class="section" id="writing">
       <div class="section-heading"><p class="kicker">Writing</p><h2>Notes and write-ups</h2></div>
-      <div id="writingList" class="writing-grid"><article class="card content-card"><p>Security and engineering notes are published on Medium.</p><a class="text-link" aria-label="Visit Nejamul Haque Medium profile" href="https://nejamulhaque.medium.com/" target="_blank" rel="noopener noreferrer">Visit Medium profile →</a></article></div>
+      <div id="writingList" class="writing-grid"><article class="card content-card writing-card"><p>Security and engineering notes are published on Medium.</p><a class="text-link" aria-label="Visit Nejamul Haque Medium profile" href="https://nejamulhaque.medium.com/" target="_blank" rel="noopener noreferrer">Visit Medium profile →</a></article></div>
     </section>
 
     <section class="section" id="contact">
