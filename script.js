@@ -91,7 +91,7 @@ fetch("data/writing.json").then((response) => response.ok ? response.json() : []
   const list = $("#writingList");
   list.replaceChildren(...articles.slice(0, 3).map((article) => {
     const card = document.createElement("article");
-    card.className = "card content-card";
+    card.className = "card content-card writing-card";
     const title = document.createElement("h3");
     const summary = document.createElement("p");
     const link = document.createElement("a");
@@ -101,7 +101,7 @@ fetch("data/writing.json").then((response) => response.ok ? response.json() : []
     link.href = article.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = "Read article →";
+    link.textContent = "Read on Medium →";
     card.append(title, summary, link);
     return card;
   }));
