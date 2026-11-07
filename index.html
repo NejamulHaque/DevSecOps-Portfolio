@@ -73,14 +73,14 @@
       <div class="section-heading"><p class="kicker">Selected work</p><h2>Featured projects</h2><p>Four repositories demonstrating practical security and platform engineering.</p></div>
       <div class="project-grid">
         <article class="card project-card flagship">
-          <div class="project-media code-card"><span>FLAGSHIP</span><code>flask app → postgres → CI → render</code></div>
+          <div class="project-media image-media"><img class="project-screenshot" src="assets/projects/irus-ai.png" width="3360" height="1854" alt="Irus AI screenshot" loading="lazy"></div>
           <div class="pipeline"><span>Git Push</span><b>→</b><span>Gitleaks (Secrets)</span><b>→</b><span>Bandit (SAST)</span><b>→</b><span>Trivy (Container Scan)</span><b>→</b><span>Pytest</span><b>→</b><span>Docker Deploy</span></div>
           <div class="status-row"><span class="badge">Flagship</span><span class="status">Deployed on Render</span></div>
           <h3>Irus AI</h3><p><strong>Problem:</strong> bring chat, search, documents, image generation, memory, and voice into one assistant.</p><p><strong>Approach:</strong> full-stack Flask application with a PostgreSQL data layer and containerized delivery.</p><p><strong>Tech:</strong> Flask, PostgreSQL, Docker.</p><p><strong>Result:</strong> DevSecOps CI pipeline runs Gitleaks → Bandit → Trivy → Pytest before deployment.</p>
           <div class="metric-row"><span>4-Stage Security Pipeline</span><span>Flask + PostgreSQL + Docker</span></div><div class="project-actions"><a class="text-link" aria-label="Irus AI source code on GitHub" href="https://github.com/NejamulHaque/Irus-AI" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Irus AI live demo" href="https://irus-ai.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo → <span class="demo-note">(free tier, may take ~30s to wake)</span></a></div>
         </article>
         <article class="card project-card">
-          <div class="project-media code-card"><span>HOST DEFENSE</span><code>auth.log → correlate → iptables</code></div>
+          <div class="project-media image-media"><img class="project-screenshot" src="assets/projects/sentinel-daemon.png" width="1758" height="1236" alt="Sentinel Daemon screenshot" loading="lazy"></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>Sentinel Daemon</h3><p><strong>Problem:</strong> repeated SSH authentication failures need fast, repeatable response.</p><p><strong>Approach:</strong> monitor logs, correlate source IPs in a rolling window, and apply expiring firewall blocks.</p><p><strong>Tech:</strong> Python, systemd, iptables.</p><p><strong>Result:</strong> 14 IPs blocked over 3 days of live traffic, 1.8ms latency, 0 false positives.</p>
           <div class="metric-row"><span>1.8ms Latency</span><span>0 False Positives</span><span>14 IPs blocked over 3 days of live traffic</span></div><div class="project-actions"><a class="text-link" aria-label="Sentinel Daemon source code on GitHub" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Sentinel Daemon architecture" href="https://github.com/NejamulHaque/sentinel-daemon#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
@@ -92,7 +92,7 @@
           <div class="metric-row"><span>Zero Dependencies</span><span>Pre-Commit Secret &amp; chmod 777 Blocker</span></div>
         </article>
         <article class="card project-card">
-          <div class="project-media code-card"><span>LOG INTELLIGENCE</span><code>access.log → JSON → SIEM</code></div>
+          <div class="project-media image-media"><img class="project-screenshot" src="assets/projects/threat-log-parser.png" width="1910" height="890" alt="Threat Log Parser screenshot" loading="lazy"></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>Threat Log Parser</h3><p><strong>Problem:</strong> web access logs hide attack patterns in high-volume request data.</p><p><strong>Approach:</strong> detect SQLi and XSS patterns, enrich findings from threat feeds, and normalize output.</p><p><strong>Tech:</strong> Python, regex, urllib, JSON.</p><p><strong>Result:</strong> SIEM-ready JSON findings for repeatable triage.</p>
           <div class="metric-row"><span>SIEM-Ready JSON Output</span><span>Automated Brute-Force Detection</span></div><div class="project-actions"><a class="text-link" aria-label="Threat Log Parser source code on GitHub" href="https://github.com/NejamulHaque/threat-log-parser" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Threat Log Parser architecture" href="https://github.com/NejamulHaque/threat-log-parser#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
