@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nejamul Haque — DevSecOps and Cloud Security Engineer focused on CI/CD security gates, Linux hardening, and autonomous threat defense.">
+  <meta name="description" content="Aspiring DevSecOps Engineer">
   <link rel="canonical" href="https://nejamulhaque.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nejamul Haque">
@@ -24,7 +24,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Nejamul Haque","url":"https://nejamulhaque.vercel.app/","jobTitle":"DevSecOps & Cloud Security Engineer","sameAs":["https://github.com/NejamulHaque","https://linkedin.com/in/NejamulHaque","https://nejamulhaque.medium.com/"]}
+  {"@context":"https://schema.org","@type":"Person","name":"Nejamul Haque","url":"https://nejamulhaque.vercel.app/","jobTitle":"Aspiring DevSecOps Engineer","sameAs":["https://github.com/NejamulHaque","https://linkedin.com/in/NejamulHaque","https://nejamulhaque.medium.com/"]}
   </script>
   <title>Nejamul Haque | Aspiring DevSecOps Engineer</title>
 </head>
@@ -37,7 +37,7 @@
     <nav id="primaryNav" aria-label="Primary navigation">
       <a href="#home">Home</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
       <a href="#skills">Skills</a><a href="#labs">Labs</a><a href="#writing">Writing</a><a href="#contact">Contact</a>
-      <a class="resume-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer" hidden>View / Download Resume (PDF)</a>
+      <a class="resume-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer" hidden>Resume</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">◐</button>
   </header>
@@ -77,13 +77,13 @@
           <div class="pipeline"><span>Git Push</span><b>→</b><span>Gitleaks (Secrets)</span><b>→</b><span>Bandit (SAST)</span><b>→</b><span>Trivy (Container Scan)</span><b>→</b><span>Pytest</span><b>→</b><span>Docker Deploy</span></div>
           <div class="status-row"><span class="badge">Flagship</span><span class="status">Deployed on Render</span></div>
           <h3>Irus AI</h3><p><strong>Problem:</strong> bring chat, search, documents, image generation, memory, and voice into one assistant.</p><p><strong>Approach:</strong> full-stack Flask application with a PostgreSQL data layer and containerized delivery.</p><p><strong>Tech:</strong> Flask, PostgreSQL, Docker.</p><p><strong>Result:</strong> DevSecOps CI pipeline runs Gitleaks → Bandit → Trivy → Pytest before deployment.</p>
-          <div class="metric-row"><span>4-Stage Security Pipeline</span><span>Flask + PostgreSQL + Docker</span></div><div class="project-actions"><a class="text-link" aria-label="Irus AI source code on GitHub" href="https://github.com/NejamulHaque/Irus-AI" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Irus AI live demo" href="https://irus-ai.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo →</a></div>
+          <div class="metric-row"><span>4-Stage Security Pipeline</span><span>Flask + PostgreSQL + Docker</span></div><div class="project-actions"><a class="text-link" aria-label="Irus AI source code on GitHub" href="https://github.com/NejamulHaque/Irus-AI" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Irus AI live demo" href="https://irus-ai.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo → <span class="demo-note">(free tier, may take ~30s to wake)</span></a></div>
         </article>
         <article class="card project-card">
           <div class="project-media code-card"><span>HOST DEFENSE</span><code>auth.log → correlate → iptables</code></div>
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
-          <h3>Sentinel Daemon</h3><p><strong>Problem:</strong> repeated SSH authentication failures need fast, repeatable response.</p><p><strong>Approach:</strong> monitor logs, correlate source IPs in a rolling window, and apply expiring firewall blocks.</p><p><strong>Tech:</strong> Python, systemd, iptables.</p><p><strong>Result:</strong> 14 IPs blocked over 3 days, 1.8ms latency, 0 false positives.</p>
-          <div class="metric-row"><span>1.8ms Latency</span><span>0 False Positives</span><span>14 attacker IPs blocked (3 days)</span></div><div class="project-actions"><a class="text-link" aria-label="Sentinel Daemon source code on GitHub" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Sentinel Daemon architecture" href="https://github.com/NejamulHaque/sentinel-daemon#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
+          <h3>Sentinel Daemon</h3><p><strong>Problem:</strong> repeated SSH authentication failures need fast, repeatable response.</p><p><strong>Approach:</strong> monitor logs, correlate source IPs in a rolling window, and apply expiring firewall blocks.</p><p><strong>Tech:</strong> Python, systemd, iptables.</p><p><strong>Result:</strong> 14 IPs blocked over 3 days of live traffic, 1.8ms latency, 0 false positives.</p>
+          <div class="metric-row"><span>1.8ms Latency</span><span>0 False Positives</span><span>14 IPs blocked over 3 days of live traffic</span></div><div class="project-actions"><a class="text-link" aria-label="Sentinel Daemon source code on GitHub" href="https://github.com/NejamulHaque/sentinel-daemon" target="_blank" rel="noopener noreferrer">Source Code (GitHub) →</a><a class="text-link" aria-label="Sentinel Daemon architecture" href="https://github.com/NejamulHaque/sentinel-daemon#readme" target="_blank" rel="noopener noreferrer">Architecture →</a></div>
         </article>
         <article class="card project-card">
           <div class="project-media code-card"><span>PRE-COMMIT DEFENSE</span><code>git diff → regex → block</code></div>
@@ -108,8 +108,8 @@
     <section class="section" id="experience">
       <div class="section-heading"><p class="kicker">Experience &amp; education</p><h2>Experience, Certifications &amp; Achievements</h2></div>
       <div class="timeline-grid">
-        <article class="card content-card"><p class="kicker">June 2026 – July 2026</p><h3>UP Police Cyber Security Intern</h3><p class="muted">APCSIP-2026</p><p>Focused on network forensics, threat log analysis, and automated Linux defense tooling.</p><ul><li>Audited server logs for brute-force and reconnaissance patterns.</li><li>Assisted with incident log tracing and digital forensics workflows.</li><li>Built Python/Bash scripts for server hardening from the findings.</li></ul><span class="verification-badge">Verified Certificate (APCSIP-2026) ↗</span></article>
-        <article class="card content-card"><p class="kicker">Education &amp; credentials</p><h3>Teerthanker Mahaveer University</h3><p>B.Tech in Computer Science &amp; Engineering · 2023–2027</p><ul><li>NPTEL Certified: Python, DBMS, IoT</li><li>Viksit Bharat Young Leaders Dialogue (VBYLD 2027) Essay Round Qualifier</li></ul><h4 class="credential-heading">Certifications</h4><div class="credential-list"><span class="credential-badge completed">AWS Certified Cloud Practitioner · Completed</span><span class="credential-badge progress">CompTIA Security+ · In progress</span></div></article>
+        <article class="card content-card"><p class="kicker">June 2026 – July 2026</p><h3>UP Police Cyber Security Intern</h3><p class="muted">APCSIP-2026</p><p>Focused on network forensics, threat log analysis, and automated Linux defense tooling.</p><ul><li>Audited server logs for brute-force and reconnaissance patterns.</li><li>Assisted with incident log tracing and digital forensics workflows.</li><li>Built Python/Bash scripts for server hardening from the findings.</li></ul><span class="verification-badge">Certificate of completion (APCSIP-2026)</span></article>
+        <article class="card content-card"><p class="kicker">Education &amp; credentials</p><h3>Teerthanker Mahaveer University</h3><p>B.Tech in Computer Science &amp; Engineering · 2023–2027</p><ul><li>Coursework: Data Structures &amp; Algorithms, Operating Systems, DBMS, Computer Networks</li><li>Viksit Bharat Young Leaders Dialogue (VBYLD 2027) Essay Round Qualifier</li></ul><h4 class="credential-heading">Certifications</h4><div class="credential-list"><a class="credential-badge completed" href="https://www.datacamp.com/completed/statement-of-accomplishment/track/d8737c51f606a25dee75208dae2ee97156c7c3a2" target="_blank" rel="noopener noreferrer">AWS Cloud Practitioner track (DataCamp)</a><span class="credential-badge progress">CompTIA Security+ · In progress</span></div></article>
       </div>
     </section>
 
@@ -143,9 +143,9 @@ password=correct-horse-battery-staple</textarea>
       <div class="contact-grid">
         <div class="card content-card contact-details"><h3>Contact details</h3><a class="email" href="mailto:nejamulhaque.05@gmail.com">nejamulhaque.05@gmail.com</a><a href="https://github.com/NejamulHaque" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/NejamulHaque" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://nejamulhaque.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a><p class="muted">Bettiah</p></div>
         <form class="card contact-form" id="contactForm" action="https://formspree.io/f/mvzwoypk" method="post">
-          <label for="name">Name</label><input id="name" name="name" type="text" aria-label="Your name" required autocomplete="name">
-          <label for="email">Email</label><input id="email" name="email" type="email" aria-label="Your email address" required autocomplete="email">
-          <label for="message">Message</label><textarea id="message" name="message" rows="5" aria-label="Your message" required></textarea>
+          <label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name">
+          <label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email">
+          <label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
           <label class="honeypot" aria-hidden="true">Leave this field empty<input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label>
           <button class="button primary" type="submit">Send message</button><p id="formStatus" role="status" aria-live="polite"></p>
         </form>
