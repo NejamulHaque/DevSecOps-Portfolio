@@ -8,3 +8,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
+legacy/
+TODO.md
+workflows/
