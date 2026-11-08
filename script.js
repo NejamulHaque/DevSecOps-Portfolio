@@ -9,10 +9,13 @@ const formStatus = $("#formStatus");
 const scannerInput = $("#secretInput");
 const scannerOutput = $("#scannerOutput");
 
+const setThemeState = () => themeToggle?.setAttribute("aria-pressed", String(body.classList.contains("light")));
 if (localStorage.getItem("portfolio-theme") === "light") body.classList.add("light");
+setThemeState();
 themeToggle?.addEventListener("click", () => {
   body.classList.toggle("light");
   localStorage.setItem("portfolio-theme", body.classList.contains("light") ? "light" : "dark");
+  setThemeState();
 });
 menuToggle?.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
@@ -67,15 +70,15 @@ const scanSecrets = () => {
   ];
   patterns.forEach((pattern) => { if (pattern.regex.test(source)) findings.push(pattern.name); });
   const entropyCandidates = source.split(/\s+/)
-    .map((token) => token.split("=").pop().replace(/[^A-Za-z0-9+/=_-]/g, ""))
+    .map((token) => token.split(/[=:]/).pop().replace(/[^A-Za-z0-9+/=_-]/g, ""))
     .filter((token) => token.length >= 8);
   const highEntropy = entropyCandidates.filter((token) => token.length >= 20 && shannonEntropy(token) >= 4.2);
-  if (highEntropy.length) findings.push(`High-entropy token (${shannonEntropy(highEntropy[0]).toFixed(2)} bits/char)`);
+  if (highEntropy.length) findings.push(`High-entropy password (${shannonEntropy(highEntropy[0]).toFixed(2)} bits/char)`);
   const entropyValue = entropyCandidates.length ? Math.max(...entropyCandidates.map(shannonEntropy)).toFixed(2) : "0.00";
   scannerOutput.innerHTML = "";
   const badge = document.createElement("span");
   badge.className = `result-badge ${findings.length ? "suspicious" : "clean"}`;
-  badge.textContent = findings.length ? "Suspicious" : "Clean";
+  badge.textContent = findings.length ? `${findings.length} findings` : "No secrets found";
   const detail = document.createElement("span");
   detail.textContent = findings.length ? `${findings.join(" · ")} · Shannon entropy: ${entropyValue} bits/char` : `No matched pattern · Shannon entropy: ${entropyValue} bits/char`;
   scannerOutput.append(badge, detail);
@@ -83,7 +86,7 @@ const scanSecrets = () => {
 $("#scanSecrets")?.addEventListener("click", scanSecrets);
 $("#loadSafeSample")?.addEventListener("click", () => {
   scannerInput.value = "SERVICE_NAME=example\nLOG_LEVEL=info\nCOMMIT_MESSAGE=update-documentation";
-  scannerOutput.innerHTML = '<span class="result-badge neutral">Not scanned yet</span><span>Safe sample loaded. Ready to scan.</span>';
+  scannerOutput.innerHTML = '<span class="result-badge clean">No secrets found</span><span>Safe sample loaded. No matched pattern.</span>';
 });
 
 fetch("data/writing.json").then((response) => response.ok ? response.json() : []).then((articles) => {
