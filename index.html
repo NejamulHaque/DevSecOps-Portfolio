@@ -43,31 +43,40 @@
   </header>
 
   <main id="main">
-    <section class="hero section" id="home">
+        <section class="hero section" id="home">
       <div class="hero-copy">
-        <p class="kicker">Open to internships and fresher roles</p>
+        <p class="kicker">B.Tech CSE '27 · Open to DevOps, SRE &amp; Cloud Security Roles (Full-Time / Intern-to-FTE)</p>
         <h1>Nejamul Haque</h1>
-        <p class="hero-role">DevSecOps Engineer in training | B.Tech CSE '27 | Cyber Security Intern @ UP Police (APCSIP-2026)</p>
-        <p class="lede">Automating CI/CD security gates (SAST, SCA, container scanning), hardening Linux infrastructure, and building Python security tooling.</p>
+        <p class="hero-role">DevOps, SRE &amp; DevSecOps Engineer · Ex-Cyber Security Intern @ UP Police (APCSIP-2026)</p>
+        <p class="lede">
+          I build automated CI/CD security gates (Gitleaks, Bandit, Trivy, pip-audit), containerized Kubernetes workloads, Linux firewall daemons, and zero-dependency Python SRE monitoring tools.
+        </p>
         <div class="proof-points">
-          <span>CI/CD security gates</span><span>Linux hardening and log defense</span><span>Secret and threat detection</span>
+          <span>6+ Shipped DevOps &amp; Security Repos</span>
+          <span>Linux, Docker, Kubernetes &amp; AWS</span>
+          <span>Python &amp; Bash Automation</span>
+          <span>40+ CVEs Remediated in CI</span>
         </div>
         <div class="actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary resume-link" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">View / Download Resume (PDF)</a>
+          <a class="button primary" href="#projects">Explore Shipped Systems</a>
+          <a class="button secondary resume-link" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Download ATS Resume (PDF)</a>
         </div>
         <div class="contact-line">
-          <a class="icon-badge" aria-label="Email Nejamul Haque" href="mailto:nejamulhaque.05@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg><span>Email</span></a>
+          <a class="icon-badge" aria-label="Email Nejamul Haque" href="mailto:nejamulhaque.05@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg><span>nejamulhaque.05@gmail.com</span></a>
           <a class="icon-badge" aria-label="Nejamul Haque on GitHub" href="https://github.com/NejamulHaque" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-5.5-2m11 4v-3.1c0-1 .1-1.6-.5-2.2 1.7-.2 3.5-.8 3.5-4A3.1 3.1 0 0 0 17 9.5 2.9 2.9 0 0 0 17 7s-1.1-.4-3.5 1.3a12 12 0 0 0-6 0C5.1 6.6 4 7 4 7a2.9 2.9 0 0 0 0 2.5A3.1 3.1 0 0 0 3.5 12c0 3.2 1.8 3.8 3.5 4-.6.6-.6 1.2-.5 2.2V21"/></svg><span>GitHub</span></a>
           <a class="icon-badge" aria-label="Nejamul Haque on LinkedIn" href="https://linkedin.com/in/NejamulHaque" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 8v11M5 5v.1M10 19v-7a4 4 0 0 1 8 0v7M10 12V8"/></svg><span>LinkedIn</span></a>
         </div>
-        <p class="location-meta">📍 Bettiah, India</p>
+        <p class="location-meta">📍 Bettiah / Moradabad, India · Relocatable to Bengaluru, Hyderabad, Pune, Delhi NCR &amp; Remote</p>
       </div>
       <div class="hero-card card">
         <img src="assets/profile.png" alt="Nejamul Haque" width="600" height="750" fetchpriority="high">
-        <div class="hero-card-caption"><strong>Nejamul Haque</strong><span>Security automation · cloud security · secure delivery</span></div>
+        <div class="hero-card-caption">
+          <strong>Nejamul Haque</strong>
+          <span>Cloud Infrastructure · CI/CD Security · Site Reliability</span>
+        </div>
       </div>
     </section>
+
 
     <section class="section" id="projects">
       <div class="section-heading"><p class="kicker">Selected work</p><h2>Featured projects</h2><p>Repositories demonstrating practical security, SRE observability, and platform engineering.</p></div>
@@ -111,7 +120,7 @@
           <div class="status-row"><span class="badge">Security tool</span><span class="status">Active project</span></div>
           <h3>GitShield</h3>
           <p><strong>Problem:</strong> secrets and unsafe file permissions can enter a commit unnoticed.</p>
-          <p><strong>Approach:</strong> inspect staged changes with regex signatures and Shannon entropy ($H \ge 4.5$) before commit creation.</p>
+          <p><strong>Approach:</strong> inspect staged changes with regex signatures and Shannon entropy (H &ge; 4.5$) before commit creation.</p>
           <p><strong>Tech:</strong> Python, regex, Shannon entropy, Git hooks.</p>
           <p><strong>Result:</strong> blocks AWS keys, PEM keys, high-entropy tokens, and <code>chmod 777</code> before commit.</p>
           <div class="metric-row"><span>Zero Dependencies</span><span>Pre-Commit Secret &amp; chmod 777 Blocker</span></div>
@@ -148,8 +157,18 @@
     <section class="section" id="experience">
       <div class="section-heading"><p class="kicker">Experience &amp; education</p><h2>Experience, Certifications &amp; Achievements</h2></div>
       <div class="timeline-grid">
+        <article class="card content-card">
+         <p class="kicker">Jan 2024 – Present · Remote</p>
+         <h3>Full-Stack &amp; Platform Developer</h3>
+         <p class="muted">Haque &amp; Sons</p>
+         <p>Built and deployed production web platforms with containerized delivery, real-time WebSockets, and PostgreSQL.</p>
+        <ul>
+    <li>Engineered 3 full-stack applications (<em>CollabSheets-2</em>, <em>ProResume-Builder</em>, <em>Nestfy</em>) using React, Node.js, Express, and PostgreSQL.</li>
+    <li>Designed indexed relational schemas, role-based authentication, and automated CI checks.</li>
+  </ul>
+</article>
         <article class="card content-card"><p class="kicker">June 2026 – July 2026</p><h3>UP Police Cyber Security Intern</h3><p class="muted">APCSIP-2026</p><p>Focused on network forensics, threat log analysis, and automated Linux defense tooling.</p><ul><li>Audited server logs for brute-force and reconnaissance patterns.</li><li>Assisted with incident log tracing and digital forensics workflows.</li><li>Built Python/Bash scripts for server hardening from the findings.</li></ul><span class="verification-badge">Certificate of completion (APCSIP-2026)</span></article>
-        <article class="card content-card"><p class="kicker">Education &amp; credentials</p><h3>Teerthanker Mahaveer University</h3><p>B.Tech in Computer Science &amp; Engineering · 2023–2027</p><ul><li>Coursework: Data Structures &amp; Algorithms, Operating Systems, DBMS, Computer Networks</li><li class="secondary-detail">Other: Viksit Bharat Young Leaders Dialogue (VBYLD 2027) Essay Round Qualifier</li></ul><h4 class="credential-heading">Certifications</h4><div class="credential-list"><span class="credential-badge completed">NPTEL Certified: Python for Data Science, DBMS, Introduction to IoT</span><a class="credential-badge completed" href="https://www.datacamp.com/completed/statement-of-accomplishment/track/d8737c51f606a25dee75208dae2ee97156c7c3a2" target="_blank" rel="noopener noreferrer">DataCamp: AWS Cloud Practitioner course track</a><span class="credential-badge progress">CompTIA Security+ (In Progress)</span></div></article>
+        <article class="card content-card"><p class="kicker">Education &amp; credentials</p><h3>Teerthanker Mahaveer University</h3><p>B.Tech in Computer Science &amp; Engineering · 2023–2027</p><ul><li>Coursework: Data Structures &amp; Algorithms, Operating Systems, DBMS, Computer Networks</li><li class="secondary-detail">Other: Viksit Bharat Young Leaders Dialogue (VBYLD 2027) Essay Round Qualifier</li></ul><h4 class="credential-heading">Certifications</h4><div class="credential-list"><span class="credential-badge completed">IBM Certified: Python for Data Science</span><a class="credential-badge completed" href="https://www.datacamp.com/completed/statement-of-accomplishment/track/d8737c51f606a25dee75208dae2ee97156c7c3a2" target="_blank" rel="noopener noreferrer">DataCamp: AWS Cloud Practitioner course track</a><span class="credential-badge progress">CompTIA Security+ (In Progress)</span></div></article>
       </div>
     </section>
 
