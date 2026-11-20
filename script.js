@@ -89,26 +89,92 @@ $("#loadSafeSample")?.addEventListener("click", () => {
   scannerOutput.innerHTML = '<span class="result-badge clean">No secrets found</span><span>Safe sample loaded. No matched pattern.</span>';
 });
 
-fetch("data/writing.json").then((response) => response.ok ? response.json() : []).then((articles) => {
-  if (!Array.isArray(articles) || !articles.length) return;
+const renderArticles = (articles) => {
   const list = $("#writingList");
-  list.replaceChildren(...articles.slice(0, 3).map((article) => {
+  if (!list || !Array.isArray(articles) || !articles.length) return;
+
+  list.replaceChildren(...articles.slice(0, 4).map((article) => {
     const card = document.createElement("article");
     card.className = "card content-card writing-card";
+
+    if (article.date) {
+      const kicker = document.createElement("p");
+      kicker.className = "kicker";
+      kicker.textContent = article.date;
+      card.append(kicker);
+    }
+
     const title = document.createElement("h3");
-    const summary = document.createElement("p");
-    const link = document.createElement("a");
     title.textContent = article.title;
+
+    const summary = document.createElement("p");
     summary.textContent = article.summary;
+
+    card.append(title, summary);
+
+    if (Array.isArray(article.tags) && article.tags.length) {
+      const tagRow = document.createElement("div");
+      tagRow.className = "tag-row";
+      article.tags.slice(0, 3).forEach((tag) => {
+        const span = document.createElement("span");
+        span.textContent = tag;
+        tagRow.append(span);
+      });
+      card.append(tagRow);
+    }
+
+    const link = document.createElement("a");
     link.className = "text-link";
     link.href = article.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.textContent = "Read on Medium →";
-    card.append(title, summary, link);
+
+    card.append(link);
     return card;
   }));
-}).catch(() => {});
+};
+
+const loadMediumWriting = async () => {
+  const MEDIUM_RSS = "https://medium.com/feed/@nejamulhaque";
+  const RSS_API = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(MEDIUM_RSS)}`;
+
+  try {
+    const res = await fetch(RSS_API);
+    if (!res.ok) throw new Error("Medium RSS request failed");
+    const data = await res.json();
+
+    const posts = (data.items || [])
+      .filter((item) => Array.isArray(item.categories) && item.categories.length > 0)
+      .map((item) => {
+        const temp = document.createElement("div");
+        temp.innerHTML = item.description || "";
+        const plain = (temp.textContent || temp.innerText || "").trim();
+        return {
+          title: item.title,
+          summary: plain.length > 140 ? `${plain.slice(0, 140)}...` : plain,
+          url: item.link,
+          date: item.pubDate
+            ? new Date(item.pubDate).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+            : "",
+          tags: item.categories
+        };
+      });
+
+    if (posts.length) {
+      renderArticles(posts);
+      return;
+    }
+  } catch (_) {}
+
+  // Fallback to local data/writing.json if RSS feed is unavailable
+  fetch("data/writing.json")
+    .then((response) => (response.ok ? response.json() : []))
+    .then(renderArticles)
+    .catch(() => {});
+};
+
+loadMediumWriting();
 
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
